@@ -253,6 +253,9 @@ a.back-home {
   position: absolute;
   top: 50%;
   right: -7px; }
+  @media (max-width: 500px) {
+    .svg-m {
+      top: 80%; } }
 
 .svg-hand {
   position: absolute;
