@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viewport height with vertical center</title>
+<meta name="description" content="Quite often I find myself needing to responsively size a section to be 100% of theviewport height. This is really easy with CSS:">
+<link href='http://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,300,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+<header class="site-header">
+<div class="wrapper">
+<h1><a class="site-title" href="/">Ian Mcdonald</a></h1>
+</div>
+</header>
+
+<div class="page-content">
+<div class="wrapper">
+<div class="post">
+<header class="post-header">
+<h2 class="post-title">Viewport height with vertical center</h2>
+<!-- <p class="post-meta">April 20, 2015</p> -->
+</header>
+<article class="post-content">
+<p>Quite often I find myself needing to responsively size a section to be 100% of the
+viewport height. This is really easy with CSS:</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.full-height</span> <span class="p">{</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="n">vh</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Simple.</p>
+
+<p>This works great in most situations, but things can get ugly in older
+mobile browsers. While usage of mobile browsers that don’t fully support viewport units
+is quite low at the time of this writing, it is by no means non-existent. Here
+is an easy vanilla JavaScript solution for creating a full height, full width
+element (with some optional features we’ll talk about afterwards):</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="c1">// Viewport height with optional vertical center</span>
+<span class="kd">function</span> <span class="nx">viewportHeight</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">divideBy</span><span class="p">,</span> <span class="nx">alignElem</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">fH</span><span class="p">,</span> <span class="nx">vH</span><span class="p">,</span> <span class="nx">dB</span><span class="p">,</span> <span class="nx">vA</span><span class="p">;</span>
+    
+    <span class="c1">// Get the height of the viewport</span>
+    <span class="kd">function</span> <span class="nx">gH</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">fH</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">selector</span><span class="p">);</span>
+        <span class="nx">vH</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span>
+              <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">clientHeight</span>
+              <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">clientHeight</span><span class="p">;</span>
+         
+        <span class="c1">// Divide the viewport if specified</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">divideBy</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">dB</span> <span class="o">=</span> <span class="nx">vH</span> <span class="o">/</span> <span class="nx">divideBy</span><span class="p">;</span>
+            <span class="nx">vH</span> <span class="o">=</span> <span class="nx">dB</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Write the styles for the selected element</span>
+        <span class="kd">function</span> <span class="nx">writeHeight</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">fH</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span>   <span class="o">=</span> <span class="nx">vH</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+            <span class="nx">fH</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="s1">&#39;absolute&#39;</span><span class="p">;</span>
+            <span class="nx">fH</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span>      <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+            <span class="nx">fH</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span>     <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+            <span class="nx">fH</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span>    <span class="o">=</span> <span class="s1">&#39;100%&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">fH</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">writeHeight</span><span class="p">();</span>
+        
+            <span class="c1">// Vertically center inner element if specified</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">alignElem</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">vA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">alignElem</span><span class="p">);</span>
+                <span class="nx">vA</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">position</span>        <span class="o">=</span> <span class="s1">&#39;relative&#39;</span><span class="p">;</span>
+                <span class="nx">vA</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span>             <span class="o">=</span> <span class="s1">&#39;50%&#39;</span><span class="p">;</span>
+                <span class="nx">vA</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">webkitTransform</span> <span class="o">=</span> <span class="s1">&#39;translateY(-50%)&#39;</span><span class="p">;</span>
+                <span class="nx">vA</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">mozTransform</span>    <span class="o">=</span> <span class="s1">&#39;translateY(-50%)&#39;</span><span class="p">;</span>
+                <span class="nx">vA</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">msTransform</span>     <span class="o">=</span> <span class="s1">&#39;translateY(-50%)&#39;</span><span class="p">;</span>
+                <span class="nx">vA</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">oTransform</span>      <span class="o">=</span> <span class="s1">&#39;translateY(-50%)&#39;</span><span class="p">;</span>
+                <span class="nx">vA</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">transform</span>       <span class="o">=</span> <span class="s1">&#39;translateY(-50%)&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="c1">// Set height after page load and on resize</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="nx">gH</span><span class="p">);</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;resize&#39;</span><span class="p">,</span> <span class="nx">gH</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Initialize fullHeight</span>
+<span class="nx">viewportHeight</span><span class="p">(</span><span class="s1">&#39;.full-height&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;.vertical-center&#39;</span><span class="p">);</span></code></pre></div>
+
+<p>The first parameter requires you to pass in your selector when you initialize
+the function. The <em>optional</em> second and third parameters allow you to divide the viewport (creating
+a half or quarter height element for example), and pass in a nested element to be
+vertical centered within the section. If you don’t declare an argument for
+<code>divideBy</code>, it defaults to full height (1). Note that if
+you want to pass an argument to <code>alignElem</code> you need to declare a number first.</p>
+
+<p>In the snippet above, I set an element with a class of <code>full-height</code> to be 100% of the
+viewport height (divided by 1), with a nested element that has a class of
+<code>vertical-center</code> to be vertically aligned relative to <code>.full-height</code>.</p>
+
+<p>This script is set up to define a full height header that appears at the top of
+a page. That can be changed by adjusting the style values within <code>writeHeight()</code>.</p>
+
+</article>
+<a class="back-home" href="/#posts">Back to index</a>
+</div>
+
+</div>
+</div>
+<script src="/js/main.js"></script>
+
+</body>
+</html>

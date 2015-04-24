@@ -18,12 +18,10 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+    color: $dark;
+    background-color: $light;
     -webkit-text-size-adjust: 100%;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -35,8 +33,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -44,8 +40,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -55,10 +49,8 @@ figure > img {
 }
 
 figcaption {
-    font-size: $small-font-size;
+    font-size: 0.65em;
 }
-
-
 
 /**
  * Lists
@@ -74,73 +66,66 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
+h1 {
+    font-size: 1em;
+}
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
-
-
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $dark;
     text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
+    border-bottom: 1px solid $dark;
+    padding-left: 0.125em;
+    padding-right: 0.125em;
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: $light;
+        text-decoration: none;
+        background-color: $dark;
     }
 }
-
-
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $dark;
+    border-left: 4px solid $dark;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
+    font-size: 1em;
     > :last-child {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Code formatting
  */
 pre,
 code {
-    font-size: 15px;
-//    border: 1px solid $grey-color-light;
-    border-radius: 0.325em;
-    background-color: #eaeaea;
+    font-size: 0.85em;
+    border-radius: 0;
+    line-height: 1.325;
 }
 
 code {
-    padding: 1px 5px;
+    padding: 0.25em;
     font-family: 'Menlo', 'Inconsolata', monospace;
 }
 
 pre {
-    padding: 8px 12px;
+    padding: 1.5em;
+    margin: 2em 0;
     overflow-x: scroll;
+    background-color: $dark;
+    color: rgb(135,135,135);
 
     > code {
         border: 0;
@@ -148,8 +133,6 @@ pre {
         padding-left: 0;
     }
 }
-
-
 
 /**
  * Wrapper
@@ -171,36 +154,13 @@ pre {
     }
 }
 
-
-
 /**
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
         clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 1.5em;
-        height: 1.5em;
-        margin: 1em;
-        vertical-align: middle;
-
-        path {
-            fill: #000000;
-        }
     }
 }
