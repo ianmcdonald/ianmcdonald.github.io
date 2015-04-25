@@ -27,14 +27,14 @@ function copyrightInfo(selector, name, startDate) {
 }
 {% endhighlight %}
 
-To initialize it, just pass in the selector that you want to write the copyright info
+To invoke it, pass in the selector that you want to write the copyright info
 into, optionally including a name and a start date. For example:
 
 {% highlight javascript %}
 copyrightInfo('.copyright', 'Ian Mcdonald', '1986');
 {% endhighlight %}
 
-The initialization above would write:
+The invocation above would write:
 <br><em class="copyright"></em>
 
 <script>

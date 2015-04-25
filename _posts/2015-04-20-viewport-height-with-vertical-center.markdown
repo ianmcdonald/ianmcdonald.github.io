@@ -77,6 +77,6 @@ number first.
 viewportHeight('.full-height', 1, '.vertical-center');
 {% endhighlight %}
 
-In the initialization above, I set an element with a class of <code>full-height</code> to be 100% of the
+In the invocation above, I set an element with a class of <code>full-height</code> to be 100% of the
 viewport height (divided by 1), with a nested element that has a class of
 <code>vertical-center</code> to be vertically aligned relative to <code>.full-height</code>.
