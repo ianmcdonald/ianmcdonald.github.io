@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="full-height">
+<div class="full-height" id="color2">
 <div class="vertical-center">
 
 </div>
@@ -55,3 +55,11 @@ layout: default
 </li>{% endfor %}
 </ul>
 </div>
+<script>
+function colorPulse() {
+ var elem = document.querySelector('.full-height');
+ (elem.id === "color1") ? elem.id = "color2" : elem.id = "color1";
+ }
+ setInterval(colorPulse, 3000);
+ 
+</script>
