@@ -1,2 +1,4 @@
 # Ian Mcdonald
-My personal website built with Jekyll and hosted on GitHub pages.
+My personal website, collecting scraps of code, thoughts, and opinions.
+
+Built with Jekyll and hosted on GitHub pages.
