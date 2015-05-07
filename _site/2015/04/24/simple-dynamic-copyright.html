@@ -34,17 +34,17 @@ you desire.</p>
     <span class="kd">var</span> <span class="nx">elem</span><span class="p">,</span> <span class="nx">currentYear</span><span class="p">,</span> <span class="nx">date</span><span class="p">;</span>
     <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">selector</span><span class="p">);</span>
     <span class="nx">currentYear</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getFullYear</span><span class="p">();</span>
-    <span class="nx">date</span> <span class="o">=</span> <span class="nx">currentYear</span><span class="p">;;</span>
+    <span class="nx">date</span> <span class="o">=</span> <span class="nx">currentYear</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">startDate</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">date</span> <span class="o">=</span> <span class="nx">startDate</span> <span class="o">+</span> <span class="s2">&quot;\u2014&quot;</span> <span class="o">+</span> <span class="nx">currentYear</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="kd">function</span> <span class="nx">writeCopywriteInfo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">writeCopyrightInfo</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">elem</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;&amp;copy; &quot;</span> <span class="o">+</span> <span class="nx">date</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="nx">writeCopywriteInfo</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">writeCopyrightInfo</span><span class="p">();</span>
 <span class="p">}</span></code></pre></div>
 
 <p>To invoke it, pass in the selector that you want to write the copyright info
@@ -67,10 +67,10 @@ function copyrightInfo(selector, name, startDate) {
     if (startDate) {
         date = startDate + "\u2014" + currentYear;
     }
-    function writeCopywriteInfo() {
+    function writeCopyrightInfo() {
         elem.innerHTML = "&copy; " + date + " " + name;
     }
-    document.addEventListener('DOMContentLoaded', writeCopywriteInfo);
+    return writeCopyrightInfo();
 }
 copyrightInfo('.copyright', 'Ian Mcdonald', '1986');
 </script>

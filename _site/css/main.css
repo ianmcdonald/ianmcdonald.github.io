@@ -302,48 +302,18 @@ svg path {
   fill: #f9d6ff; }
 
 #color1 {
-  -webkit-transition: all 3s ease;
-  -moz-transition: all 3s ease;
-  -o-transition: all 3s ease;
-  transition: all 3s ease;
-  background-color: #ffffff;
-  /* .svg-hand, .svg-hand-2, .svg-hand-3, .svg-hand-4, .svg-hand-5 { */
-  /*     -webkit-transition: all 3s ease; */
-  /*     -moz-transition: all 3s ease; */
-  /*     -o-transition: all 3s ease; */
-  /*     transition: all 3s ease; */
-  /* } */
-  /* .svg-hand { */
-  /*     top: 30%; */
-  /*     left: 28% */
-  /* } */
-  /* .svg-hand-2 { */
-  /*     top: 35%; */
-  /*     left: 33%; */
-  /* } */
-  /* .svg-hand-3 { */
-  /*     top: 40%; */
-  /*     left: 38% */
-  /* } */
-  /* .svg-hand-4 { */
-  /*     top: 45%; */
-  /*     left: 43% */
-  /* } */
-  /* .svg-hand-5 { */
-  /*     top: 50%; */
-  /*     left: 48%; */
-  /* } */ }
+  -webkit-transition: background-color 3s ease;
+  -moz-transition: background-color 3s ease;
+  -o-transition: background-color 3s ease;
+  transition: background-color 3s ease;
+  background-color: #ffffff; }
 
 #color2 {
-  -webkit-transition: all 3s ease;
-  -moz-transition: all 3s ease;
-  -o-transition: all 3s ease;
-  transition: all 3s ease;
-  background-color: #fbe5ff;
-  -webkit-transform: scale(1.005);
-  -moz-transform: scale(1.005);
-  -o-transform: scale(1.005);
-  transform: scale(1.005); }
+  -webkit-transition: background-color 3s ease;
+  -moz-transition: background-color 3s ease;
+  -o-transition: background-color 3s ease;
+  transition: background-color 3s ease;
+  background-color: #fbe5ff; }
 
 /**
  * Syntax highlighting styles

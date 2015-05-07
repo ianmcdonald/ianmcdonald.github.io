@@ -13,17 +13,17 @@ function copyrightInfo(selector, name, startDate) {
     var elem, currentYear, date;
     elem = document.querySelector(selector);
     currentYear = new Date().getFullYear();
-    date = currentYear;;
+    date = currentYear;
     if (!name) {
         name = "";
     }
     if (startDate) {
         date = startDate + "\u2014" + currentYear;
     }
-    function writeCopywriteInfo() {
+    function writeCopyrightInfo() {
         elem.innerHTML = "&copy; " + date + " " + name;
     }
-    document.addEventListener('DOMContentLoaded', writeCopywriteInfo);
+    return writeCopyrightInfo();
 }
 {% endhighlight %}
 
@@ -49,10 +49,10 @@ function copyrightInfo(selector, name, startDate) {
     if (startDate) {
         date = startDate + "\u2014" + currentYear;
     }
-    function writeCopywriteInfo() {
+    function writeCopyrightInfo() {
         elem.innerHTML = "&copy; " + date + " " + name;
     }
-    document.addEventListener('DOMContentLoaded', writeCopywriteInfo);
+    return writeCopyrightInfo();
 }
 copyrightInfo('.copyright', 'Ian Mcdonald', '1986');
 </script>

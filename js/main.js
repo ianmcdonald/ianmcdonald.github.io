@@ -80,21 +80,21 @@ function copyrightInfo(selector, name, startDate) {
     var elem, currentYear, date;
     elem = document.querySelector(selector);
     currentYear = new Date().getFullYear();
-    date = currentYear;;
+    date = currentYear;
     if (!name) {
         name = "";
     }
     if (startDate) {
         date = startDate + "\u2014" + currentYear;
     }
-    function writeCopywriteInfo() {
+    function writeCopyrightInfo() {
         elem.innerHTML = "&copy; " + date + " " + name;
     }
-    document.addEventListener('DOMContentLoaded', writeCopywriteInfo);
+    return writeCopyrightInfo();
 }
 
 
-// Invocations
+
 viewportHeight('.full-height', 1, '.vertical-center');
 pushDown('.push-full', 1);
 
