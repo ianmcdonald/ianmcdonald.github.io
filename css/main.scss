@@ -50,7 +50,7 @@ figcaption {
 }
 ul {
     list-style-type: none;
-}
+} 
 li {
     > ul,
     > ol {
@@ -67,6 +67,7 @@ h1 {
     transition: all 0.5s ease;
     line-height: 1;
     display: inline-block;
+    width: 100%;
     &:hover, &:focus {
         outline: none;
         top: -0.125em;
