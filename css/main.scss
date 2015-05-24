@@ -191,8 +191,8 @@ ul.whatever li:first-child {
 .highlight {
     background: #fff;
     .c     { color: rgb(67,67,67); } // Comment
-    .err   { color: #ff000; background-color: #e3d2d2 } // Error
-    .k     { color: rgb(198,68,120) } // Keyword
+    .err   { color: #ff0000; background-color: #e3d2d2 } // Error
+    .k     { color: rgb(198,68,120) } // Keyword 
     .o     { font-weight: bold } // Operator
     .cm    { color: rgb(67,67,67); } // Comment.Multiline
     .cp    { color: rgb(67,67,67); font-weight: bold } // Comment.Preproc

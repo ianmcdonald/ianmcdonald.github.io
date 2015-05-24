@@ -165,7 +165,7 @@ ul.whatever li:first-child {
   .highlight .c {
     color: #434343; }
   .highlight .err {
-    color: #ff000;
+    color: #ff0000;
     background-color: #e3d2d2; }
   .highlight .k {
     color: #c64478; }
