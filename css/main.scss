@@ -59,8 +59,8 @@ li {
 }
 h1 {
     min-width: 240px;
-    position: absolute;
-    top: -0.45em;
+    position: fixed;
+    top: -0.45em; 
     left: 2vw;
     font-size: 2.25em;
     letter-spacing: 0.075em;
@@ -169,6 +169,34 @@ ul.whatever li {
 }
 ul.whatever li:first-child {
     display: block;
+}
+.st-catharines {
+    position: fixed;
+    right: 5em;
+    top: 5em;
+    max-width: 15em;
+    width: 50%;
+    z-index: -1;
+}
+#map {
+    fill: darken($light, 20%);
+    transition: all 0.5s ease;
+}
+#map-point {
+    fill: transparent;
+    -webkit-animation: pulse 2s ease infinite;
+    animation: pulse 2s ease infinite;
+    transition: all 0.5s ease;
+}
+@-webkit-keyframes pulse {
+    0%   { opacity: 0.75; stroke-width: 0; }
+    50%  { opacity: 1;    stroke-width: 2; }
+    100% { opacity: 0.75; stroke-width: 0; }
+}
+@keyframes pulse {
+    0%   { opacity: 0.75; stroke-width: 0; }
+    50%  { opacity: 1;    stroke-width: 2; }
+    100% { opacity: 0.75; stroke-width: 0; }
 }
 .post {
     margin-top: 33vh;
