@@ -39,12 +39,20 @@ li > ol {
   margin-bottom: 0; }
 
 h1 {
-  min-width: 15em;
+  min-width: 240px;
   position: absolute;
-  top: -0.85em;
+  top: -0.45em;
   left: 2vw;
   font-size: 2.25em;
-  letter-spacing: 0.075em; }
+  letter-spacing: 0.075em;
+  transition: all 0.5s ease;
+  line-height: 1;
+  display: inline-block; }
+  h1:hover, h1:focus {
+    outline: none;
+    top: -0.125em; }
+  h1 > a {
+    padding-bottom: 0.75em; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
@@ -52,16 +60,18 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #c64478;
   text-decoration: none;
-  border-bottom: none;
-  transition: all 0.5s ease; }
+  border-bottom: 2px dotted transparent;
+  transition: all 0.5s ease;
+  padding-bottom: 0.5em; }
   a:hover, a:focus, a:active {
     color: #292423;
-    border-bottom: 1px dashed #292423;
+    border-bottom-color: #292423;
     text-decoration: none;
     border-color: #c64478;
     outline: none;
     box-shadow: none;
-    -webkit-box-shadow: none; }
+    -webkit-box-shadow: none;
+    padding-bottom: 0.125em; }
 
 pre,
 code {
@@ -94,9 +104,9 @@ ul.post-list {
 
 ul.post-list li {
   width: 100%;
-  margin: 0.75em 0;
+  margin: 0.5em 0;
   font-size: 1em;
-  line-height: 1.5; }
+  line-height: 1.25; }
   @media (min-width: 500px) {
     ul.post-list li {
       font-size: 1.25em; } }
@@ -134,7 +144,8 @@ ul.whatever li:first-child {
   display: block; }
 
 .post {
-  margin-top: 33vh; }
+  margin-top: 33vh;
+  margin-bottom: 10em; }
 
 .post-title {
   font-size: 2em;
@@ -145,6 +156,7 @@ ul.whatever li:first-child {
   font-size: 1.25em; }
 
 .back-home {
+  position: absolute;
   display: inline-block;
   margin: 2em 0; }
 
