@@ -3,43 +3,234 @@
 ---
 @charset "utf-8";
 
+// Typography
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.7;
 
+// Colours
+$dark: lighten(rgb(27, 24, 23), 5%);
+$light: rgb(250,250,250);
+$secondary: rgb(198, 68, 120);
 
-// Our variables
-$base-font-family: 'Roboto', sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.6;
-
-$spacing-unit:     30px;
-
-$dark:             lighten(rgb(27, 24, 23), 3%);
-$light:            #ffffff;
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+// Base
+html {
+    font-size: $base-font-size;
+}
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+    font-family: $base-font-family;
+    font-size: 0.9em;
+    line-height: $base-line-height;
+    font-weight: 400;
+    color: $dark;
+    background-color: $light;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+figure > img {
+    display: block;
+}
+figcaption {
+    font-size: 0.65em;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+h1 {
+    min-width: 15em;
+    position: absolute;
+    top: -0.85em;
+    left: 2vw;
+    font-size: 2.25em;
+    letter-spacing: 0.075em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+a {
+    color: $dark;
+    text-decoration: none;
+    border-bottom: 0.125em dashed $dark;
+    transition: all 0.5s ease;
+    &:hover, &:focus, &:active {
+        color: $secondary;
+        text-decoration: none;
+        border-color: $secondary;
+        outline: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
+pre,
+code {
+    font-size: 0.95em;
+    border-radius: 0;
+    line-height: 1.325;
+}
+code {
+//    padding: 0.25em;
+    font-family: Menlo, "Droid Sans Mono", monospace;
+}
+pre {
+    margin: 1em 0;
+    padding: 1.5em;
+    overflow-x: scroll;
+    background-color: $dark;
+    color: lighten(rgb(135,135,135), 10%);
+    > code {
+        padding-right: 0;
+        padding-left: 0;
+        border: 0;
     }
 }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+// Layout
+ul.post-list {
+    min-height: 66vh;
+    margin-top: 9vh;
+    padding: 0.5em 1em 4em 1em;
+    border-color: $dark;
+    border-style: solid;
+    border-width: 8px;
+    transform: skewY(-10deg);
+}
+ul.post-list li {
+    width: 100%;
+    margin: 0.75em 0;
+    font-size: 1em;
+    line-height: 1.5;
+    @media (min-width: 500px) {
+        font-size: 1.25em;
+    }
+}
+ul.post-list li span {
+    display: inline-block;
+    padding-right: 0.25em;
+    color: $secondary;
+    @media (max-width: 400px) {
+        display: block;
+        width: 100%;
+    }
+}
+ul.post-list li a {
+    display: inline;
+    @media (max-width: 400px) {
+        width: 100%;
+    }
+}
+ul.whatever {
+    text-align: right;
+    font-size: 0.675em;
+    transform: rotate(-10deg);
+    @media (min-width: 500px) {
+        font-size: 0.85em;
+    }
+}
+ul.whatever li {
+    display: block;
+    padding-left: 0.25em;
+    @media (min-width: 300px) {
+        display: inline-block;
+    }
+}
+.post {
+    margin-top: 33vh;
+}
+.post-title {  
+    font-size: 2em;
+    line-height: 0.9;
+}
+.post-meta {    
+    margin-bottom: 2em;
+    color: $secondary;
+    font-size: 1.25em;
+}
+.back-home {
+    display: inline-block;
+    margin: 2em 0;
+}
+
+// Code styles
+.highlight {
+    background: #fff;
+    .c     { color: rgb(67,67,67); } // Comment
+    .err   { color: #ff000; background-color: #e3d2d2 } // Error
+    .k     { color: rgb(198,68,120) } // Keyword
+    .o     { font-weight: bold } // Operator
+    .cm    { color: rgb(67,67,67); } // Comment.Multiline
+    .cp    { color: rgb(67,67,67); font-weight: bold } // Comment.Preproc
+    .c1    { color: rgb(67,67,67); } // Comment.Single
+    .cs    { color: rgb(67,67,67); font-weight: bold; } // Comment.Special
+    .gd    { color: #000; background-color: #fdd } // Generic.Deleted
+    .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
+    .ge    { font-style: italic } // Generic.Emph
+    .gr    { color: #a00 } // Generic.Error
+    .gh    { color: #999 } // Generic.Heading
+    .gi    { color: #000; background-color: #dfd } // Generic.Inserted
+    .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
+    .go    { color: #888 } // Generic.Output
+    .gp    { color: #555 } // Generic.Prompt
+    .gs    { font-weight: bold } // Generic.Strong
+    .gu    { color: #aaa } // Generic.Subheading
+    .gt    { color: #a00 } // Generic.Traceback
+    .kc    { color: rgb(198,112,50) } // Keyword.Constant
+    .kd    { color: rgb(198,68,120) } // Keyword.Declaration
+    .kp    { color: rgb(198,68,120) } // Keyword.Pseudo
+    .kr    { color: rgb(198,68,120) } // Keyword.Reserved
+    .kt    { color: #458; font-weight: bold } // Keyword.Type
+    .m     { color: #099 } // Literal.Number
+    .s     { color: #d14 } // Literal.String
+    .na    { color: #008080 } // Name.Attribute
+    .nb    {  } // Name.Builtin
+    .nc    { color: rgb(127,155,71) } // Name.Class
+    .no    { color: #008080 } // Name.Constant
+    .ni    { color: #800080 } // Name.Entity
+    .ne    { color: #900; font-weight: bold } // Name.Exception
+    .nf    { color: #900; font-weight: bold } // Name.Function
+    .nn    { color: #555 } // Name.Namespace
+    .nt    { color: rgb(127,155,71) } // Name.Tag
+    .nv    { color: #008080 } // Name.Variable
+    .ow    { font-weight: bold } // Operator.Word
+    .w     { color: #bbb } // Text.Whitespace
+    .mf    { color: #099 } // Literal.Number.Float
+    .mh    { color: #099 } // Literal.Number.Hex
+    .mi    { color: #099 } // Literal.Number.Integer
+    .mo    { color: #099 } // Literal.Number.Oct
+    .sb    { color: #d14 } // Literal.String.Backtick
+    .sc    { color: #d14 } // Literal.String.Char
+    .sd    { color: #d14 } // Literal.String.Doc
+    .s2    { color: #d14 } // Literal.String.Double
+    .se    { color: #d14 } // Literal.String.Escape
+    .sh    { color: #d14 } // Literal.String.Heredoc
+    .si    { color: #d14 } // Literal.String.Interpol
+    .sx    { color: #d14 } // Literal.String.Other
+    .sr    { color: #009926 } // Literal.String.Regex
+    .s1    { color: rgb(89,141,165) } // Literal.String.Single
+    .ss    { color: #990073 } // Literal.String.Symbol
+    .bp    { color: #999 } // Name.Builtin.Pseudo
+    .vc    { color: #008080 } // Name.Variable.Class
+    .vg    { color: #008080 } // Name.Variable.Global
+    .vi    { color: #008080 } // Name.Variable.Instance
+    .il    { color: #099 } // Literal.Number.Integer.Long
+}

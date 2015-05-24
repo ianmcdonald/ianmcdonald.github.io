@@ -4,10 +4,10 @@ layout: default
 <div class="post">
 <header class="post-header">
 <h2 class="post-title">{{ page.title }}</h2>
-<!-- <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p> -->
+<p class="post-meta">{{ page.date | date: "%m.%d.%Y" }}</p>
 </header>
 <article class="post-content">
 {{ content }}
 </article>
-<a class="back-home" href="{{ site.baseurl }}/#posts">Back to index</a>
+<a href="{{ site.baseurl }}/" class="back-home">Back to index</a>
 </div>

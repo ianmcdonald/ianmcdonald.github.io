@@ -12,9 +12,7 @@ viewport height. This is really easy with CSS:
 }
 {% endhighlight %}
 
-Simple.
-
-This works great in most situations, but things can get ugly in older
+Simple. This works great in most situations, but things can get ugly in older
 mobile browsers. While usage of mobile browsers that don't fully support viewport units
 is quite low at the time of this writing, it is by no means non-existent. Here
 is a (no jQuery) JavaScript solution for creating a full height, full width
