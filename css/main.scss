@@ -69,12 +69,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 a {
-    color: $dark;
+    color: $secondary;
     text-decoration: none;
-    border-bottom: 0.125em dashed $dark;
+    border-bottom: none;
     transition: all 0.5s ease;
     &:hover, &:focus, &:active {
-        color: $secondary;
+        color: $dark;
+        border-bottom: 1px dashed $dark;                  
         text-decoration: none;
         border-color: $secondary;
         outline: none;
@@ -127,7 +128,6 @@ ul.post-list li {
 ul.post-list li span {
     display: inline-block;
     padding-right: 0.25em;
-    color: $secondary;
     @media (max-width: 400px) {
         display: block;
         width: 100%;
@@ -142,7 +142,7 @@ ul.post-list li a {
 ul.whatever {
     text-align: right;
     font-size: 0.675em;
-    transform: rotate(-10deg);
+    transform: skewY(-10deg);
     @media (min-width: 500px) {
         font-size: 0.85em;
     }
@@ -154,6 +154,9 @@ ul.whatever li {
         display: inline-block;
     }
 }
+ul.whatever li:first-child {
+    display: block;
+}
 .post {
     margin-top: 33vh;
 }
@@ -163,7 +166,6 @@ ul.whatever li {
 }
 .post-meta {    
     margin-bottom: 2em;
-    color: $secondary;
     font-size: 1.25em;
 }
 .back-home {

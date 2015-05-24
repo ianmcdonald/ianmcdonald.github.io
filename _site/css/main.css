@@ -50,12 +50,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 a {
-  color: #292423;
+  color: #c64478;
   text-decoration: none;
-  border-bottom: 0.125em dashed #292423;
+  border-bottom: none;
   transition: all 0.5s ease; }
   a:hover, a:focus, a:active {
-    color: #c64478;
+    color: #292423;
+    border-bottom: 1px dashed #292423;
     text-decoration: none;
     border-color: #c64478;
     outline: none;
@@ -102,8 +103,7 @@ ul.post-list li {
 
 ul.post-list li span {
   display: inline-block;
-  padding-right: 0.25em;
-  color: #c64478; }
+  padding-right: 0.25em; }
   @media (max-width: 400px) {
     ul.post-list li span {
       display: block;
@@ -118,7 +118,7 @@ ul.post-list li a {
 ul.whatever {
   text-align: right;
   font-size: 0.675em;
-  transform: rotate(-10deg); }
+  transform: skewY(-10deg); }
   @media (min-width: 500px) {
     ul.whatever {
       font-size: 0.85em; } }
@@ -130,6 +130,9 @@ ul.whatever li {
     ul.whatever li {
       display: inline-block; } }
 
+ul.whatever li:first-child {
+  display: block; }
+
 .post {
   margin-top: 33vh; }
 
@@ -139,7 +142,6 @@ ul.whatever li {
 
 .post-meta {
   margin-bottom: 2em;
-  color: #c64478;
   font-size: 1.25em; }
 
 .back-home {
