@@ -101,7 +101,8 @@ ul.post-list {
   border-color: #292423;
   border-style: solid;
   border-width: 8px;
-  transform: skewY(-10deg); }
+  transform: skewY(-10deg);
+  box-shadow: -2px -2px 0 0px #fafafa, -4px -4px 0 0px #292423, -6px -6px 0 0px #fafafa, -8px -8px 0 0px #292423; }
 
 ul.post-list li {
   width: 100%;
@@ -145,10 +146,10 @@ ul.whatever li:first-child {
   display: block; }
 
 .st-catharines {
-  position: fixed;
-  right: 5em;
-  top: 5em;
-  max-width: 15em;
+  position: relative;
+  margin-left: 41em;
+  margin-top: -32.5em;
+  max-width: 6em;
   width: 50%;
   z-index: -1; }
 
@@ -158,29 +159,29 @@ ul.whatever li:first-child {
 
 #map-point {
   fill: transparent;
-  -webkit-animation: pulse 2s ease infinite;
-  animation: pulse 2s ease infinite;
+  -webkit-animation: pulse 1.5s ease infinite;
+  animation: pulse 1.5s ease infinite;
   transition: all 0.5s ease; }
 
 @-webkit-keyframes pulse {
   0% {
-    opacity: 0.75;
+    opacity: 0.6;
     stroke-width: 0; }
   50% {
     opacity: 1;
-    stroke-width: 2; }
+    stroke-width: 4; }
   100% {
-    opacity: 0.75;
+    opacity: 0.6;
     stroke-width: 0; } }
 @keyframes pulse {
   0% {
-    opacity: 0.75;
+    opacity: 0.6;
     stroke-width: 0; }
   50% {
     opacity: 1;
-    stroke-width: 2; }
+    stroke-width: 4; }
   100% {
-    opacity: 0.75;
+    opacity: 0.6;
     stroke-width: 0; } }
 .post {
   margin-top: 33vh;
