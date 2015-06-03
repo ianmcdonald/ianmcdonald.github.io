@@ -1,4 +1,4 @@
 # Ian Mcdonald
-My personal website, collecting scraps of code, thoughts, and opinions.
+My personal website, collecting scraps of code, works in progress, thoughts, and opinions.
 
-Built with Jekyll.
+_Built with Jekyll._
