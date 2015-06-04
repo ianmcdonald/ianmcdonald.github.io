@@ -145,44 +145,6 @@ ul.whatever li {
 ul.whatever li:first-child {
   display: block; }
 
-.st-catharines {
-  position: relative;
-  margin-left: 44em;
-  margin-top: -20em;
-  max-width: 6em;
-  width: 50%;
-  z-index: -1; }
-
-#map {
-  fill: #c7c7c7;
-  transition: all 0.5s ease; }
-
-#map-point {
-  fill: transparent;
-  -webkit-animation: pulse 1.5s ease infinite;
-  animation: pulse 1.5s ease infinite;
-  transition: all 0.5s ease; }
-
-@-webkit-keyframes pulse {
-  0% {
-    opacity: 0.6;
-    stroke-width: 0; }
-  50% {
-    opacity: 1;
-    stroke-width: 4; }
-  100% {
-    opacity: 0.6;
-    stroke-width: 0; } }
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-    stroke-width: 0; }
-  50% {
-    opacity: 1;
-    stroke-width: 4; }
-  100% {
-    opacity: 0.6;
-    stroke-width: 0; } }
 .post {
   margin-top: 33vh;
   margin-bottom: 10em; }
