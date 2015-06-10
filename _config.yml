@@ -1,8 +1,10 @@
 # Site settings
 title: Ian Mcdonald
 email: iangregoryjames@gmail.com
-description: > 
-  Ian Mcdonald is a front-end developer living in St. Catharines, Canada.
+description: Ian Mcdonald is a front-end developer living in St. Catharines, Canada.
 
 # Build settings
 markdown: kramdown
+permalink: /:title/
+sass:
+    style: :compressed

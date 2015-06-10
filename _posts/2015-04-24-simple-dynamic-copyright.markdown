@@ -15,13 +15,13 @@ function copyrightInfo(selector, name, startDate) {
     currentYear = new Date().getFullYear();
     date = currentYear;
     if (!name) {
-        name = "";
+        name = '';
     }
     if (startDate) {
-        date = startDate + "\u2014" + currentYear;
+        date = startDate + '\u2014' + currentYear;
     }
     function writeCopyrightInfo() {
-        elem.innerHTML = "&copy; " + date + " " + name;
+        elem.innerHTML = '&copy; ' + date + ' ' + name;
     }
     return writeCopyrightInfo();
 }
@@ -44,13 +44,13 @@ function copyrightInfo(selector, name, startDate) {
     currentYear = new Date().getFullYear();
     date = currentYear;;
     if (!name) {
-        name = "";
+        name = '';
     }
     if (startDate) {
-        date = startDate + "\u2014" + currentYear;
+        date = startDate + '\u2014' + currentYear;
     }
     function writeCopyrightInfo() {
-        elem.innerHTML = "&copy; " + date + " " + name;
+        elem.innerHTML = '&copy; ' + date + ' ' + name;
     }
     return writeCopyrightInfo();
 }
