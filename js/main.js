@@ -97,4 +97,3 @@ function copyrightInfo(selector, name, startDate) {
 
 viewportHeight('.full-height', 1, '.vertical-center');
 pushDown('.push-full', 1);
-

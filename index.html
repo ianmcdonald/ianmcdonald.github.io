@@ -1,15 +1,18 @@
 ---
 layout: default
 ---
+<div class="home">
+<ul class="connect">
+<li><a href="http://twitter.com/ianmcdonald_">Twitter</a> /</li>
+<li><a href="http://github.com/ianmcdonald">GitHub</a> /</li>
+<li><a href="mailto:iangregoryjames@gmail.com">Email</a></li>
+</ul>
+<nav>
 <ul class="post-list">{% for post in site.posts %}
 <li>
 <span>{{ post.date | date: "%d.%m.%Y" }}</span>
 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 </li>{% endfor %}
 </ul>
-<ul class="whatever">
-<li>I live in <a href="http://en.wikipedia.org/wiki/St._Catharines" class="link-stc">St. Catharines</a> and work at <a href="http://formandaffect.com" class="link-fa">Form &amp; Affect</a>.</li>
-<li><a href="http://twitter.com/ianmcdonald_">Twitter</a></li>
-<li><a href="http://github.com/ianmcdonald">GitHub</a></li>
-<li><a href="mailto:iangregoryjames@gmail.com">Email</a></li>
-</ul>
+</nav>
+</div>
