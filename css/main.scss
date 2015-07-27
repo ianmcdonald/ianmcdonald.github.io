@@ -71,22 +71,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
 }
 a {
-    color: $accent;
+    color: $accent;  
     text-decoration: none;
-    border-bottom: 2px dotted transparent;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    outline: none;
-    border: 0;
-    box-shadow: none;
-    &:hover, &:focus, &:active {
-        color: darken($accent, 15%);
-        text-decoration: underline;
-        outline: none;
-        box-shadow: none;
-        -webkit-box-shadow: none;
-        padding-bottom: 0.125em;
+    transition: color 0.33s ease;
+    &:hover,
+    &:focus,
+    &:active {
+         border-bottom: 1px dashed $accent;
     }
 }
 pre, code {
