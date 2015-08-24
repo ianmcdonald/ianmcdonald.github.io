@@ -1,0 +1,3 @@
+#+TITLE: Ian Mcdonald
+My personal website, collecting scraps of code, personal projects, works in progress, thoughts, and opinions.
+
