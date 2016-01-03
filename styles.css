@@ -4,9 +4,10 @@ body {
     font-size: 16px;
     font-family: 'Lucida Grande', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.4;
-    margin: 0;
+    margin: 0 auto;
     padding: 1em;
-    background-color: floralwhite;
+    max-width: 65em;
+    background-color: floralwhite;    
     color: palevioletred;;
 }
 p {
@@ -25,8 +26,7 @@ a:hover {
 }
 ul {
     display: table;
-    width: 100%;
-    max-width: 65em;
+    width: 100%; 
     padding: 0;
     margin: 0 auto;
     list-style-type: none;
