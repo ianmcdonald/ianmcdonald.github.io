@@ -35,6 +35,9 @@
         }
     }
 
+    // Run fader once on load
+    fader();
+
     // Invoke timed fader cycle
     setInterval(function() {
         fader();
@@ -51,12 +54,9 @@
         }
     });
 
-    // Run fader once on load
-    window.addEventListener('load', fader);   
-    
     // Fade in shape on load
     window.addEventListener('load', function() {
         document.querySelector('.shape').style.opacity = '1';
     });
-    
+
 })();
