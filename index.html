@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 <meta name="description" content="Designer and developer from St. Catharines, Canada.">
 <title>Ian Mcdonald | Web developer</title>
+
 <style>
  body {
      font-size: 14px;
@@ -90,6 +91,7 @@
      transform: skew(-26.5deg,-10deg);     
  }
 </style>
+
 <body>
     <h1>Ian Mcdonald</h1>
     <ul>
@@ -98,11 +100,65 @@
         <li><a href="https://github.com/ianmcdonald">GitHub</a></li>
         <li><a href="mailto:iangregoryjames@gmail.com">Email</a></li>
     </ul>
-    <div class="shape"><img src="/assets/circle.svg" alt="ian mcdonald, designer and developer from st catharines canada"></div>
+    <div class="shape">
+        <img src="#" alt="ian mcdonald, designer and developer from st catharines canada">
+        <script async>
+         (function shape() {
+             var num = Math.random(),
+                 shp = document.querySelector('.shape img');
+             if (num < 0.333333) {
+                 shp.src = '/assets/circle.svg';
+             } else if (num < 0.666667) {
+                 shp.src = '/assets/square.svg';
+             } else {
+                 shp.src = '/assets/triangle.svg';
+             }
+         })();
+        </script>
+    </div>
     <div class="info">
         <p>I'm a developer and designer from <a href="//en.wikipedia.org/wiki/St._Catharines">St. Catharines</a>, Canada. I make stuff for the web and learn new things every day with a fantastic group of people at <a href="http://formandaffect.com">Form &amp; Affect</a>.</p>
     </div>
-    <script src="/assets/main.js" async></script>
+
+    <script async>
+     (function() {
+         document.querySelector('.shape img').addEventListener('click', function() {
+             var shape = this.src;
+             if (shape.search('circle') !== -1) this.src = '/assets/square.svg';
+             if (shape.search('square') !== -1) this.src = '/assets/triangle.svg';
+             if (shape.search('triangle') !== -1) this.src = '/assets/circle.svg';
+         });
+
+         window.addEventListener('load', function() {
+             document.querySelector('.shape').style.opacity = '1';
+         });
+         
+         function fader() {
+             var el  = document.body;
+             if (el.className !== 'fade') {
+                 el.className = 'fade';
+             } else {
+                 el.className = '';
+             }
+         }
+         fader();
+
+         setInterval(function() {
+             fader();
+         }, 5000);
+
+         document.querySelector('.show-info').addEventListener('click', function(e) {
+             e.preventDefault();
+             var info = document.querySelector('.info');
+             if (info.style.display !== 'inline-block') {
+                 info.style.display = 'inline-block';
+             } else {
+                 info.style.display = 'none';
+             }
+         });         
+     })();
+    </script>    
+
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;
          i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
@@ -111,4 +167,5 @@
          (window,document,'script','//www.google-analytics.com/analytics.js','ga');
      ga('create', 'UA-39674900-1', 'auto');ga('send', 'pageview');
     </script>
+    
 </body>
