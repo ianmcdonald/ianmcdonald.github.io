@@ -2,8 +2,7 @@
 
 (function() {
 
-    // Random shape on page load
-    window.addEventListener('load', function() {
+    // Random shape on page load    
         (function shape() {
             var num = Math.random(),
                 shp = document.querySelector('.shape img');
@@ -15,7 +14,6 @@
                 shp.src = '/assets/triangle.svg';
             }
         })();
-    });
 
     // Cycle shapes on click
     document.querySelector('.shape img').addEventListener('click', function() {
