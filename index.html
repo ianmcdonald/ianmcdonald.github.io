@@ -100,9 +100,7 @@
         <li><a href="https://github.com/ianmcdonald">GitHub</a></li>
         <li><a href="mailto:iangregoryjames@gmail.com">Email</a></li>
     </ul>
-    <div class="shape">
-        <img src="/assets/empty.jpg" alt="ian mcdonald, designer and developer from st catharines canada">
-    </div>
+    <div class="shape"></div>
     <div class="info">
         <p>I'm a developer and designer from <a href="//en.wikipedia.org/wiki/St._Catharines">St. Catharines</a>, Canada. I make stuff for the web and learn new things every day with a fantastic group of people at <a href="http://formandaffect.com">Form &amp; Affect</a>.</p>
     </div>
@@ -112,13 +110,13 @@
 
          (function shape() {
              var num = Math.random(),
-                 shp = document.querySelector('.shape img');
+                 shp = document.querySelector('.shape');
              if (num < 0.333333) {
-                 shp.src = '/assets/circle.svg';
+                 shp.innerHTML = '<img src="/assets/circle.svg" alt="">';
              } else if (num < 0.666667) {
-                 shp.src = '/assets/square.svg';
+                 shp.innerHTML = '<img src="/assets/square.svg" alt="">';
              } else {
-                 shp.src = '/assets/triangle.svg';
+                 shp.innerHTML = '<img src="/assets/triangle.svg" alt="">';
              }
          })();
 
