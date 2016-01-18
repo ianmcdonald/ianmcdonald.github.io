@@ -88,7 +88,7 @@
      width: 60%;
      box-shadow: 2px 2px 1px rgba(35,35,35,0.75);
      -webkit-transform: skew(-26.5deg,-10deg);
-     transform: skew(-26.5deg,-10deg);     
+     transform: skew(-26.5deg,-10deg);
  }
 </style>
 
@@ -102,7 +102,14 @@
     </ul>
     <div class="shape">
         <img src="/assets/empty.jpg" alt="ian mcdonald, designer and developer from st catharines canada">
-        <script>
+    </div>
+    <div class="info">
+        <p>I'm a developer and designer from <a href="//en.wikipedia.org/wiki/St._Catharines">St. Catharines</a>, Canada. I make stuff for the web and learn new things every day with a fantastic group of people at <a href="http://formandaffect.com">Form &amp; Affect</a>.</p>
+    </div>
+
+    <script>
+     (function() {
+
          (function shape() {
              var num = Math.random(),
                  shp = document.querySelector('.shape img');
@@ -114,14 +121,7 @@
                  shp.src = '/assets/triangle.svg';
              }
          })();
-        </script>
-    </div>
-    <div class="info">
-        <p>I'm a developer and designer from <a href="//en.wikipedia.org/wiki/St._Catharines">St. Catharines</a>, Canada. I make stuff for the web and learn new things every day with a fantastic group of people at <a href="http://formandaffect.com">Form &amp; Affect</a>.</p>
-    </div>
 
-    <script>
-     (function() {
          document.querySelector('.shape img').addEventListener('click', function() {
              var shape = this.src;
              if (shape.search('circle') !== -1) this.src = '/assets/square.svg';
@@ -132,7 +132,7 @@
          window.addEventListener('load', function() {
              document.querySelector('.shape').style.opacity = '1';
          });
-         
+
          function fader() {
              var el  = document.body;
              if (el.className !== 'fade') {
@@ -155,9 +155,9 @@
              } else {
                  info.style.display = 'none';
              }
-         });         
+         });
      })();
-    </script>    
+    </script>
 
     <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;
@@ -167,5 +167,5 @@
          (window,document,'script','//www.google-analytics.com/analytics.js','ga');
      ga('create', 'UA-39674900-1', 'auto');ga('send', 'pageview');
     </script>
-    
+
 </body>
