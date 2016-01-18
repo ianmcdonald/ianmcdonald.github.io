@@ -47,11 +47,16 @@
     document.querySelector('.show-info').addEventListener('click', function(e) {
         e.preventDefault();
         var info = document.querySelector('.info');
-        if (info.id === 'active') {
-            info.id = '';
+        if (info.style.display !== 'inline-block') {
+            info.style.display = 'inline-block';
         } else {
-            info.id = 'active';
+            info.style.display = 'none';
         }
     });
 
+    // Fade in shape on load
+    window.addEventListener('load', function() {
+        document.querySelector('.shape').style.opacity = '1';
+    });
+    
 })();

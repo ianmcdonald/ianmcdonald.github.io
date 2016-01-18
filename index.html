@@ -1,8 +1,95 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 <meta name="description" content="Designer and developer from St. Catharines, Canada.">
-<title>index.html | Ian Mcdonald</title>
-<link rel="stylesheet" href="/assets/styles.css">
+<title>Ian Mcdonald | Web developer</title>
+<style>
+ body {
+     font-size: 14px;
+     font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+     font-weight: 400;
+     line-height: 1.5;
+     margin: 0 auto;
+     background-color: white;
+     color: rgb(35,35,35);
+     overflow: hidden;
+     -webkit-transition: all 5s linear;
+     transition: all 5s linear;
+ }
+ .fade  {
+     opacity: 0.325;
+     background-color: floralwhite;
+ }
+ h1 {
+     display: inline-block;
+     position: absolute;
+     bottom: 3.25em;
+     left: -2.5em;
+     font-size: 1em;
+     font-weight: 400;
+     z-index: 1;
+     -webkit-transform: rotate(-90deg);
+     transform: rotate(-90deg);
+ }
+ a {
+     color: rgb(35,35,35);
+     text-decoration: none;
+     border-bottom: 2px solid;
+     outline: none;
+ }
+ ul {
+     position: fixed;
+     right: 0.75em;
+     top: 0;
+     z-index: 1;
+     width: 100%;
+     list-style-type: none;
+     margin-top: -0.55em;
+     text-align: right;
+     padding: 0.5em;
+     font-size: 0.95em;
+ }
+ li {
+     display: inline-block;
+     margin: 0 0.5em;
+ }
+ .shape {
+     position: absolute;
+     left: 0;
+     top: 0;
+     z-index: -1;
+     width: 100vw;
+     height: 100vh;
+     text-align: center;
+     opacity: 0;
+     -webkit-transition: opacity 0.5s linear;
+     transition: opacity 0.5s linear;
+ }
+ .shape img {
+     max-width: 90%;
+     max-height: 90%;
+     width: 100%;
+     margin: 0 auto;
+     position: relative;
+     top: 50%;
+     opacity: 1;
+     cursor: help;
+     -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
+ }
+ .info {
+     display: none;
+     background-color: inherit;
+     padding: 5em 2em;
+     position: absolute;
+     bottom: 15%;
+     right: 2em;
+     max-width: 30em;
+     width: 60%;
+     box-shadow: 2px 2px 1px rgba(35,35,35,0.75);
+     -webkit-transform: skew(-26.5deg,-10deg);
+     transform: skew(-26.5deg,-10deg);     
+ }
+</style>
 <body>
     <h1>Ian Mcdonald</h1>
     <ul>
