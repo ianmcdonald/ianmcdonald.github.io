@@ -75,9 +75,27 @@
                 width: 100vw;
                 height: 100vh;
                 text-align: center;
-                opacity: 0;
                 -webkit-transition: opacity 0.5s linear;
                 transition: opacity 0.5s linear;">
+        <svg width="1000px"
+             height="1000px"
+             viewBox="0 0 213 213"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             style="max-width: 90%;
+                    max-height:90%;
+                    width:100%;
+                    margin:0 auto;
+                    position:relative;
+                    top:50%;
+                    cursor:help;
+                    -webkit-transform:translateY(-50%);
+                    transform:translateY(-50%);">
+                <circle id="circle" fill="#232222" cx="106.5" cy="106.5" r="106.5" style="opacity:0"></circle>
+                <rect id="square" fill="#232323" x="0" y="0" width="211" height="211" style="opacity:0"></rect>
+                <polygon id="triangle" fill="#232323" points="106 0 212 212 0 212" style="opacity:0"></polygon>
+        </svg>
     </div>
     <div class="info"
          style="display: none;
@@ -113,35 +131,28 @@
              var num = Math.random(),
                  shp = document.querySelector('.shape');
              if (num < 0.333333) {
-                 shp.innerHTML = '<img src="/assets/circle.svg" alt="">';
+                 document.getElementById('circle').style.opacity = '1';
              } else if (num < 0.666667) {
-                 shp.innerHTML = '<img src="/assets/square.svg" alt="">';
+                 document.getElementById('square').style.opacity = '1';
              } else {
-                 shp.innerHTML = '<img src="/assets/triangle.svg" alt="">';
+                 document.getElementById('triangle').style.opacity = '1';
              }
          })();
-         // Shape styles
-         var shpStyl = "max-width: 90%; \
-                        max-height:90%; \
-                        width:100%; \
-                        margin:0 auto; \
-                        position:relative; \
-                        top:50%; \
-                        opacity:1; \
-                        cursor:help; \
-                        -webkit-transform:translateY(-50%); \
-                        transform:translateY(-50%);"
-         document.querySelector('.shape img').setAttribute('style', shpStyl);
-         // Fade-in shape on load
-         window.addEventListener('load', function() {
-             document.querySelector('.shape').style.opacity = '1';
-         });
          // Cycle shapes on click
-         document.querySelector('.shape img').addEventListener('click', function() {
-             var shape = this.src;
-             if (shape.search('circle') !== -1) this.src = '/assets/square.svg';
-             if (shape.search('square') !== -1) this.src = '/assets/triangle.svg';
-             if (shape.search('triangle') !== -1) this.src = '/assets/circle.svg';
+         document.querySelector('.shape svg').addEventListener('click', function() {
+             if (document.getElementById('circle').style.opacity == '1') {
+                 document.getElementById('circle').style.opacity = '0';
+                 document.getElementById('square').style.opacity = '1';
+                 document.getElementById('triangle').style.opacity = '0';
+             } else if (document.getElementById('square').style.opacity == '1') {
+                 document.getElementById('circle').style.opacity = '0';
+                 document.getElementById('square').style.opacity = '0';
+                 document.getElementById('triangle').style.opacity = '1';
+             } else {
+                 document.getElementById('circle').style.opacity = '1';
+                 document.getElementById('square').style.opacity = '0';
+                 document.getElementById('triangle').style.opacity = '0';
+             }
          });
          // Page body fade styles
          function fader() {
@@ -149,6 +160,7 @@
              if (el.style.opacity !== '0.325') {
                  el.style.opacity = '0.325';
                  el.style.backgroundColor = 'floralwhite';
+
              } else {
                  el.style.opacity = '1';
                  el.style.backgroundColor = 'white';
