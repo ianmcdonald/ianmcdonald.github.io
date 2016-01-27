@@ -139,19 +139,19 @@
              }
          })();
          // Cycle shapes on click
+         var a = document.getElementById('circle'),
+             b = document.getElementById('square'),
+             c = document.getElementById('triangle');
          document.querySelector('.shape svg').addEventListener('click', function() {
-             if (document.getElementById('circle').style.opacity == '1') {
-                 document.getElementById('circle').style.opacity = '0';
-                 document.getElementById('square').style.opacity = '1';
-                 document.getElementById('triangle').style.opacity = '0';
-             } else if (document.getElementById('square').style.opacity == '1') {
-                 document.getElementById('circle').style.opacity = '0';
-                 document.getElementById('square').style.opacity = '0';
-                 document.getElementById('triangle').style.opacity = '1';
+             if (a.style.opacity == '1') {
+                 a.style.opacity = '0';
+                 b.style.opacity = '1';
+             } else if (b.style.opacity == '1') {
+                 b.style.opacity = '0';
+                 c.style.opacity = '1';
              } else {
-                 document.getElementById('circle').style.opacity = '1';
-                 document.getElementById('square').style.opacity = '0';
-                 document.getElementById('triangle').style.opacity = '0';
+                 c.style.opacity = '0';
+                 a.style.opacity = '1';
              }
          });
          // Page body fade styles
