@@ -128,20 +128,20 @@
      (function() {
          // Random shape on load
          (function shape() {
-             var num = Math.random(),
+             var a   = document.getElementById('circle'),
+                 b   = document.getElementById('square'),
+                 c   = document.getElementById('triangle'),
+                 num = Math.random(),
                  shp = document.querySelector('.shape');
              if (num < 0.333333) {
-                 document.getElementById('circle').style.opacity = '1';
+                 a.style.opacity = '1';
              } else if (num < 0.666667) {
-                 document.getElementById('square').style.opacity = '1';
+                 b.style.opacity = '1';
              } else {
-                 document.getElementById('triangle').style.opacity = '1';
+                 c.style.opacity = '1';
              }
          })();
          // Cycle shapes on click
-         var a = document.getElementById('circle'),
-             b = document.getElementById('square'),
-             c = document.getElementById('triangle');
          document.querySelector('.shape svg').addEventListener('click', function() {
              if (a.style.opacity == '1') {
                  a.style.opacity = '0';
