@@ -1,1 +1,58 @@
-<!DOCTYPE html><head><meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no"><meta name="description" content="Designer and developer from St. Catharines, Canada."><title>Ian Mcdonald | Web developer</title></head><body style="font-size:14px;font-family:'Lucida Grande',sans-serif;line-height:1.5;margin:0;background-color:white;color:rgb(35,35,35);overflow:hidden;-webkit-transition:all 5s linear;transition:all 5s linear"><h1 style="display:inline-block;position:absolute;bottom:2.5em;left:-2.5em;font-size:1em;font-weight:400;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)">Ian Mcdonald</h1><ul style="position:fixed;right:0.5em;top:0;z-index:1;list-style-type:none;margin-top:0;text-align:right"><li style="display:inline-block"><a href="#" class="show-info" style="color:rgb(35,35,35);margin:0.25em">Info</a></li><li style="display:inline-block"><a href="https://twitter.com/ianmcdonald_" style="color:rgb(35,35,35);margin:0.25em">Twitter</a></li><li style="display:inline-block"><a href="https://github.com/ianmcdonald" style="color:rgb(35,35,35);margin:0.25em">GitHub</a></li><li style="display:inline-block"><a href="https://jsfiddle.net/user/ianmcdonald/fiddles/" style="color:rgb(35,35,35);margin:0.25em">JSFiddle</a></li><li style="display:inline-block"><a href="mailto:iangregoryjames@gmail.com" style="color:rgb(35,35,35);margin:0.25em">Email</a></li></ul><div class="shape" style="position:absolute;left:0;top:0;z-index:-1;width:100vw;height:100vh;text-align:center;-webkit-transition:opacity 0.5s linear;transition:opacity 0.5s linear"><svg width="1000px" height="1000px" viewBox="0 0 213 213" style="max-width:90%;max-height:90%;width:100%;margin:0 auto;position:relative;top:50%;cursor:help;-webkit-transform:translateY(-50%);transform:translateY(-50%)"><circle id="circle" fill="#232222" cx="106.5" cy="106.5" r="106.5" style="opacity:0"></circle><rect id="square" fill="#232323" x="0" y="0" width="211" height="211" style="opacity:0"></rect><polygon id="triangle" fill="#232323" points="106 0 212 212 0 212" style="opacity:0"></polygon></svg></div><div class="info" style="display:none;background-color:inherit;padding:5em 2em;position:absolute;bottom:15%;right:2em;max-width:30em;width:60%;box-shadow:2px 2px 1px rgba(35,35,35,0.75);-webkit-transform:skew(-26.5deg,-10deg);transform:skew(-26.5deg,-10deg);"><p>I'm a developer and designer from <a href="//en.wikipedia.org/wiki/St._Catharines" style="color:rgb(35,35,35);">St. Catharines</a>, Canada. I make stuff for the web and learn new things every day with a fantastic group of people at <a href="http://formandaffect.com" style="color:rgb(35,35,35);">Form &amp; Affect</a>. I made <a href="http://ianmcdonald.ca/kaleidoscope/" style="color:rgb(35,35,35)">Kaleidoscope</a> and <a href="http://ianmcdonald.ca/anxiety-blocks/" style="color:rgb(35,35,35)">Anxiety Blocks</a>.</p></div><script>(function(){var a=document.getElementById('circle'),b=document.getElementById('square'),c=document.getElementById('triangle'),num=Math.random();if(num<0.333333){a.style.opacity='1'}else if(num<0.666667){b.style.opacity='1'}else{c.style.opacity='1'}document.querySelector('.shape svg').addEventListener('click',function(){if(a.style.opacity=='1'){a.style.opacity='0';b.style.opacity='1'}else if(b.style.opacity=='1'){b.style.opacity='0';c.style.opacity='1'}else{c.style.opacity='0';a.style.opacity='1'}});function fader(){var el=document.body;if(el.style.opacity!=='0.325'){el.style.opacity='0.325';el.style.backgroundColor='floralwhite'}else{el.style.opacity='1';el.style.backgroundColor='white'}}setTimeout(function(){fader()},100);setInterval(function(){fader()},5000);document.querySelector('.show-info').addEventListener('click',function(e){e.preventDefault();var info=document.querySelector('.info');if(info.style.display!=='inline-block'){info.style.display='inline-block'}else{info.style.display='none'}});})();</script></body>
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+<meta name="description" content="Designer and developer from St. Catharines, Canada.">
+<title>Ian Mcdonald | Web developer</title>
+<body style="padding:0;margin:0;background:rgb(34,34,34);font-family:Menlo,monospaced;font-size:14px;overflow:hidden">
+    <h1 style="position:absolute;top:15px;font-size:14px;color:floralwhite;text-align:center;width:100%;font-weight:normal;margin:0;padding:0">Ian Mcdonald</h1>
+    <svg style="margin:50px;border:3px solid floralwhite;border-radius:6px"></svg>
+    <div style="position:absolute;bottom:15px;text-align:center;margin:0;padding:0;color:floralwhite;width:100%;font-size:12px;">
+        <a href="http://twitter.com/ianmcdonald_" style="color:floralwhite;text-decoration:none">Twitter</a>&nbsp;/&nbsp;<a href="http://github.com/ianmcdonald" style="color:floralwhite;text-decoration:none">GitHub</a>&nbsp;/&nbsp;<a href="mailto:iangregoryjames@gmail.com" style="color:floralwhite;text-decoration:none">Email</a>
+    </div>
+    <script>
+     var num = 75;
+     
+     function lineQty(num) {
+         document.querySelector('svg')
+                 .innerHTML = '<line style="stroke: floralwhite;stroke-width: 1;"/>'
+        .repeat(num);
+     }
+     
+     function sizeSvg() {
+         var svgs  = Array.from(document.querySelectorAll('svg'));
+         svgs.map(function(svg) {
+             svg.setAttribute('width', innerWidth - 100);
+             svg.setAttribute('height', innerHeight - 100);
+             svg.style.position = 'absolute';
+         });
+         window.addEventListener('resize', sizeSvg);
+     }
+     
+     function animate() {
+         var lines = Array.from(document.querySelectorAll('line')),
+             init  = 0,
+             time  = 5;
+         function animateLines() {
+             if (init % time === 0) {
+                 lines.map(function(line) {
+                     ['x1', 'x2', 'y1', 'y2'].map(function(coord) {
+                         line.setAttribute(
+                             coord,
+                             Math.random() * (
+                                 innerWidth < innerHeight ? innerHeight : innerWidth
+                             ) - 50
+                         );
+                     });
+                 });
+             }
+             init++
+             
+             requestAnimationFrame(animateLines);
+         }
+         animateLines();
+     }
+     
+     lineQty(num);
+     sizeSvg();
+     animate();
+     
+    </script>
