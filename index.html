@@ -9,16 +9,14 @@
         <a href="http://twitter.com/ianmcdonald_" style="color:floralwhite;text-decoration:none">Twitter</a>&nbsp;/&nbsp;<a href="http://github.com/ianmcdonald" style="color:floralwhite;text-decoration:none">GitHub</a>&nbsp;/&nbsp;<a href="mailto:iangregoryjames@gmail.com" style="color:floralwhite;text-decoration:none">Email</a>
     </div>
     <script>
-     var num = 75;
-     
+     var num = 150;
      function lineQty(num) {
          document.querySelector('svg')
-                 .innerHTML = '<line style="stroke: floralwhite;stroke-width: 1;"/>'
-        .repeat(num);
+                 .innerHTML = '<line style="stroke:floralwhite;stroke-width:1;"/>'
+                 .repeat(num);
      }
-     
      function sizeSvg() {
-         var svgs  = Array.from(document.querySelectorAll('svg'));
+         var svgs  = [].slice.call(document.querySelectorAll('svg'));
          svgs.map(function(svg) {
              svg.setAttribute('width', innerWidth - 100);
              svg.setAttribute('height', innerHeight - 100);
@@ -26,9 +24,8 @@
          });
          window.addEventListener('resize', sizeSvg);
      }
-     
      function animate() {
-         var lines = Array.from(document.querySelectorAll('line')),
+         var lines = [].slice.call(document.querySelectorAll('line')),
              init  = 0,
              time  = 5;
          function animateLines() {
@@ -45,14 +42,11 @@
                  });
              }
              init++
-             
              requestAnimationFrame(animateLines);
          }
          animateLines();
      }
-     
      lineQty(num);
      sizeSvg();
      animate();
-     
     </script>
