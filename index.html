@@ -9,7 +9,6 @@
         <a href="http://twitter.com/ianmcdonald_" style="color:floralwhite;text-decoration:none">Twitter</a>&nbsp;/&nbsp;<a href="http://github.com/ianmcdonald" style="color:floralwhite;text-decoration:none">GitHub</a>&nbsp;/&nbsp;<a href="mailto:iangregoryjames@gmail.com" style="color:floralwhite;text-decoration:none">Email</a>
     </div>
     <script>
-     var num = 75;
      function lineQty(num) {
          document.querySelector('svg')
                  .innerHTML = '<line style="stroke:floralwhite;stroke-width:1;"/>'
@@ -27,7 +26,7 @@
      function animate() {
          var lines = [].slice.call(document.querySelectorAll('line')),
              init  = 0,
-             time  = 5;
+             time  = 3;
          function animateLines() {
              if (init % time === 0) {
                  lines.map(function(line) {
@@ -46,7 +45,7 @@
          }
          animateLines();
      }
-     lineQty(num);
+     lineQty(75);
      sizeSvg();
      animate();
     </script>
