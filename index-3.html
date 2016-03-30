@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+<meta name="description" content="Designer and developer from St. Catharines, Canada.">
+<title>Ian Mcdonald | Web developer</title>
+<body style="padding:0;margin:0;background:rgb(34,34,34);font-family:Menlo,monospaced;font-size:14px;overflow:hidden">
+    <h1 style="position:absolute;top:15px;font-size:14px;color:floralwhite;text-align:center;width:100%;font-weight:normal;margin:0;padding:0">Ian Mcdonald</h1>
+    <svg style="margin:50px;border:3px solid floralwhite;border-radius:6px"></svg>
+    <div style="position:absolute;bottom:15px;text-align:center;margin:0;padding:0;color:floralwhite;width:100%;font-size:12px;">
+        <a href="http://twitter.com/ianmcdonald_" style="color:floralwhite;text-decoration:none">Twitter</a>&nbsp;/&nbsp;<a href="http://github.com/ianmcdonald" style="color:floralwhite;text-decoration:none">GitHub</a>&nbsp;/&nbsp;<a href="mailto:iangregoryjames@gmail.com" style="color:floralwhite;text-decoration:none">Email</a>
+    </div>
+    <script>
+     function lineQty(num, strokewidth) {
+         document.querySelector('svg')
+                 .innerHTML = '<line style="stroke:floralwhite;stroke-width:' + strokewidth + ';"/>'
+                 .repeat(num);
+     }
+     function sizeSvg() {
+         var svgs  = [].slice.call(document.querySelectorAll('svg'));
+         svgs.map(function(svg) {
+             svg.setAttribute('width', innerWidth - 100);
+             svg.setAttribute('height', innerHeight - 100);
+             svg.style.position = 'absolute';
+         });
+         window.addEventListener('resize', sizeSvg);
+     }
+     function animate() {
+         var lines = [].slice.call(document.querySelectorAll('line')),
+             init  = 0,
+             time  = 15;
+         function animateLines() {
+             if (init % time === 0) {
+                 lines.map(function(line) {
+                     ['x1', 'x2', 'y1', 'y2'].map(function(coord) {
+                         line.setAttribute(
+                             coord,
+                             Math.random() * (
+                                 innerWidth < innerHeight ? innerHeight * 2: innerWidth * 2
+                             ) - innerWidth * 0.5
+                         );
+                     });
+                 });
+             }
+             init++
+             requestAnimationFrame(animateLines);
+         }
+         sizeSvg();
+         animateLines();
+     }
+
+     lineQty(5, innerWidth);
+     animate();
+    </script>

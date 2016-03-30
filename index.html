@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 <meta name="description" content="Designer and developer from St. Catharines, Canada.">
-<title>Ian Mcdonald | Web developer</title>
-<body style="padding:0;margin:0;background:rgb(34,34,34);font-family:Menlo,monospaced;font-size:14px;overflow:hidden">
-    <h1 style="position:absolute;top:15px;font-size:14px;color:floralwhite;text-align:center;width:100%;font-weight:normal;margin:0;padding:0">Ian Mcdonald</h1>
-    <svg style="margin:50px;border:3px solid floralwhite;border-radius:6px"></svg>
-    <div style="position:absolute;bottom:15px;text-align:center;margin:0;padding:0;color:floralwhite;width:100%;font-size:12px;">
-        <a href="http://twitter.com/ianmcdonald_" style="color:floralwhite;text-decoration:none">Twitter</a>&nbsp;/&nbsp;<a href="http://github.com/ianmcdonald" style="color:floralwhite;text-decoration:none">GitHub</a>&nbsp;/&nbsp;<a href="mailto:iangregoryjames@gmail.com" style="color:floralwhite;text-decoration:none">Email</a>
-    </div>
-    <script>
-     function lineQty(num) {
-         document.querySelector('svg')
-                 .innerHTML = '<line style="stroke:floralwhite;stroke-width:1;"/>'
-                 .repeat(num);
-     }
-     function sizeSvg() {
-         var svgs  = [].slice.call(document.querySelectorAll('svg'));
-         svgs.map(function(svg) {
-             svg.setAttribute('width', innerWidth - 100);
-             svg.setAttribute('height', innerHeight - 100);
-             svg.style.position = 'absolute';
-         });
-         window.addEventListener('resize', sizeSvg);
-     }
-     function animate() {
-         var lines = [].slice.call(document.querySelectorAll('line')),
-             init  = 0,
-             time  = 3;
-         function animateLines() {
-             if (init % time === 0) {
-                 lines.map(function(line) {
-                     ['x1', 'x2', 'y1', 'y2'].map(function(coord) {
-                         line.setAttribute(
-                             coord,
-                             Math.random() * (
-                                 innerWidth < innerHeight ? innerHeight : innerWidth
-                             ) - 50
-                         );
-                     });
-                 });
-             }
-             init++
-             requestAnimationFrame(animateLines);
-         }
-         animateLines();
-     }
-     lineQty(75);
-     sizeSvg();
-     animate();
-    </script>
+<title>Ian Mcdonald</title>
+<style>
+ body {
+     margin: 0;
+     padding: 2em 1em 8em 1em;
+     background: white;
+     color: #262626;
+     font-size: 1em;
+     font-family: sans-serif;
+     font-weight: normal;
+     line-height: 1.6;
+ }
+ @media screen and (min-width: 50em) { body { font-size: 1.25em }}
+ @media screen and (min-width: 80em) { body { font-size: 1.5em  }}
+ main {
+     margin: 0 auto;
+     max-width: 25em;
+ }
+ h1 {
+     margin: 1.5em auto;
+     font-weight: 100;
+     font-size: 1.5em;
+     text-align: center;
+ } 
+</style>
+<body>
+    <main>
+        <h1>Ian Mcdonald</h1>
+        <p>I am a JavaScript developer and graphic designer from <a href="https://wikipedia.org/wiki/St._Catharines">St. Catharines</a>, <a href="https://wikipedia.org/wiki/Canada">Canada</a>. I build stuff for the web with a fantastic group of people at <a href="http://formandaffect.com">Form &amp; Affect</a> and learn new things every day.</p>
+        <p>You can find me on <a href="https://twitter.com/ianmcdonald_">Twitter</a>, <a href="https://github.com/ianmcdonald">GitHub</a>, and <a href="https://jsfiddle.net/user/ianmcdonald/">JSFiddle</a>. In my spare time I make things like <a href="http://ianmcdonald.ca/kaleidoscope/">Kaleidoscope</a> and <a href="http://ianmcdonald.ca/anxiety-blocks/">Anxiety Blocks</a>.</p>
+    </main>
