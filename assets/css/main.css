@@ -1,28 +1,32 @@
 body {
     margin: 0;
-    padding: 2em 1em 8em 1em;
+    padding: 2em 1em;
     background: floralwhite;
     color: #262626;
     font-size: 1em;
-    font-family: sans-serif;
+    font-family: 'Lucida Grande Unicode', 'Lucida Grande', sans-serif;
     font-weight: normal;
     line-height: 1.6;
 }
-@media screen and (min-width:  50em) { body { font-size: 1.25em  }}
-@media screen and (min-width:  80em) { body { font-size: 1.675em }}
-@media screen and (min-width: 120em) { body { font-size: 2em     }}
+@media screen and (min-width:  75em) { body { font-size: 1.25em  }}
 main {
+    display: block;
     margin: 0 auto;
-    max-width: 25em;
+    max-width: 35em;
 }
 h1 {
-    margin: 1.5em auto;
-    font-weight: 100;
-    font-size: 1.75em;
+    margin: 1em auto;
+    font-weight: 400;
+    font-size: 1.5em;
     text-align: center;
+}
+p {
+    margin: 0 0 1em 0;
+    font-size: 1em;
 }
 small {
     display: block;
+    margin: 0 auto;
     text-align: center;
-    font-size: 0.625em;
+    font-size: 0.75em;
 }
