@@ -1,32 +1,61 @@
 body {
+    display: block;
+    overflow-x: hidden;
+    max-width: 100%;
     margin: 0;
     padding: 2em 1em;
-    background: floralwhite;
-    color: #262626;
+    background: rgb(252,252,252);
+    color: rgb(30,30,30);
     font-size: 1em;
-    font-family: 'Lucida Grande Unicode', 'Lucida Grande', sans-serif;
+    font-family: 'georgia', serif;
     font-weight: normal;
     line-height: 1.6;
 }
-@media screen and (min-width:  75em) { body { font-size: 1.25em  }}
+@media screen and (min-width:  50em) { body { font-size: 1.375em  }}
 main {
     display: block;
     margin: 0 auto;
     max-width: 35em;
 }
+section {
+    display: block;
+}
+header {
+    display: block;
+}
+footer {
+    display: block;
+    margin: 2em 0;
+}
 h1 {
     margin: 1em auto;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.5em;
-    text-align: center;
+    text-align: left;;
 }
 p {
     margin: 0 0 1em 0;
     font-size: 1em;
 }
-small {
-    display: block;
+a:visited {
+    color: rgb(30,30,30);
+}
+a:hover {
+    color: rgb(30,30,30);
+    background-color: rgb(30,30,30);
+}
+a:active {
+    color: rgb(30,30,30);
+    background-color: rgb(30,30,30);
+}
+small { 
     margin: 0 auto;
-    text-align: center;
-    font-size: 0.75em;
+    text-align: left;
+    font-size: 0.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+small a {
+    text-decoration: none;
 }
