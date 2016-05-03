@@ -37,15 +37,13 @@ p {
     margin: 0 0 1em 0;
     font-size: 1em;
 }
-a:visited {
+a {
     color: rgb(30,30,30);
 }
-a:hover {
-    color: rgb(30,30,30);
+a:hover { 
     background-color: rgb(30,30,30);
 }
 a:active {
-    color: rgb(30,30,30);
     background-color: rgb(30,30,30);
 }
 small { 
