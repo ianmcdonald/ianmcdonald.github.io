@@ -1,20 +1,22 @@
-/* Base */
+/* ===========================
+Base
+=========================== */
 body {
   display: block;
   overflow-x: hidden;
   max-width: 100%;
   margin: 0;
-  padding: 1em;
+  padding: 1em 1em 5em 1em;
   font-size: 1em;
   font-family: 'georgia', serif;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.7;
   background: white;
 }
 main {
   display: block;
   margin: 0 auto;
-  max-width: 50em;
+  max-width: 40em;
 }
 header {
   display: block;
@@ -25,15 +27,48 @@ img {
   height: auto;
   vertical-align: middle;
 }
+pre {
+  background-color: #383838;
+  color: floralwhite;
+  padding: 1.5em 1em;
+  margin: 2em 0;
+  border-radius: 0 2em;
+  font-family: 'menlo', monospace;
+}
+
+
+/* ===========================
+Typography
+=========================== */
 h1 {
   margin: 0;
   padding: 0;
-  font-size: 1.25em;
   line-height: 1.5;
   text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 h1 a {
   border-bottom: none;
+}
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 0.85em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  letter-spacing: 0.25em;
+}
+p {
+  margin: 0.75em 0 1.25em 0;
 }
 a {
   text-decoration: none;
@@ -45,19 +80,24 @@ a:hover {
 }
 
 
-/* Helpers */
+/* ===========================
+Helpers
+=========================== */
 .center {
   display: block;
   text-align: center;
 }
+.uppercase {
+  text-transform: uppercase;
+}
 .avatar {  
   display: block;
   position: relative;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 3em auto;
   max-width: 15em;
   border-radius: 0 2em;
   overflow: hidden;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 .avatar::after {
   content: '';
@@ -73,7 +113,10 @@ a:hover {
   filter: grayscale(1);
 }
 
-/* Boxes */
+
+/* ===========================
+Boxes
+=========================== */
 .boxes {
   display: flex;
   flex-direction: row;
@@ -109,26 +152,26 @@ Themes
 
 /* Kind of blue */
 body, a { color: steelblue; background: white; }
-a:hover, .avatar::after { background-color: steelblue; }
+pre, a:hover, .avatar::after { background-color: steelblue; color: white;}
 .boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em steelblue; }
 
 /* Tomato havest
 body, a { color: tomato; background: white; }
-a:hover, .avatar::after { background-color: tomato; }
+pre, a:hover, .avatar::after { background-color: tomato; color: white; }
 .boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em tomato; }
 */
 /* Blueprint
 body, a { color: white; background: steelblue; }
-a:hover, .avatar::after { background-color: white; color: steelblue; }
+pre, a:hover, .avatar::after { background-color: white; color: steelblue; }
 .boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em white; }
 */
 /* Terminal
 body, a { color: #fafafa; background: #383838; }
-a:hover, .avatar::after { background-color: #fafafa; color: #383838; }
+pre, a:hover, .avatar::after { background-color: #fafafa; color: #383838; }
 .boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em #fafafa; }
 */
 /* Easter bonnet
 body, a { color: aqua; background: plum; }
-a:hover, .avatar::after { background-color: aqua; color: plum; }
+pre, a:hover, .avatar::after { background-color: aqua; color: plum; }
 .boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em aqua; }
 */
