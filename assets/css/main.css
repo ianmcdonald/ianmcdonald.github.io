@@ -111,6 +111,7 @@ Helpers
 .avatar img {
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
+  min-width: 100%;
 }
 
 
