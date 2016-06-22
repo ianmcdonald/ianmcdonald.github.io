@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   margin: 0;
-  padding: 1em 1em 5em 1em;
+  padding: 1em;
   font-size: 1em;
   font-family: 'georgia', serif;
   font-weight: normal;
@@ -20,7 +20,8 @@ main {
 }
 header {
   display: block;
-  margin: 0 auto 3em auto;
+  text-align: center;
+  margin: 0 auto 1em auto;
 }
 img {
   max-width: 100%;
@@ -73,6 +74,7 @@ p {
 a {
   text-decoration: none;
   border-bottom: 1px dashed;
+  background: transparent;
 }
 a:hover {
   color: white;
@@ -86,14 +88,22 @@ Helpers
 .center {
   display: block;
   text-align: center;
+  margin: 0 auto;
 }
 .uppercase {
   text-transform: uppercase;
 }
+.original {
+  margin-bottom: 0.25em;
+}
+.mirror {
+  -webkit-transform: scale(1,-1);
+  transform: scale(1,-1);
+}
 .avatar {  
   display: block;
   position: relative;
-  margin: 0 auto 3em auto;
+  margin: 3em auto;
   max-width: 15em;
   border-radius: 0 2em;
   overflow: hidden;
@@ -106,7 +116,7 @@ Helpers
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.325;
+  opacity: 0.5;
 }
 .avatar img {
   -webkit-filter: grayscale(1);
