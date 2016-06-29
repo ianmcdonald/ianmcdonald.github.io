@@ -1,27 +1,74 @@
 /* ===========================
-Base
+ianmcdonald.ca
 =========================== */
+html {
+  background: #F7EF6A;
+}
 body {
   display: block;
   overflow-x: hidden;
   max-width: 100%;
   margin: 0;
-  padding: 1em;
+  padding: 0;
   font-size: 1em;
-  font-family: 'georgia', serif;
+  font-family: 'avenir', 'helvetica neue', 'helvetica', 'arial',  sans-serif;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.65;
   background: white;
+  color: #314162;
 }
 main {
   display: block;
-  margin: 0 auto;
-  max-width: 40em;
+  margin: 0;
+  padding: 1em;
+  max-width: 35em;
+}
+article {
+  display: block;
+  margin: 4em 0 0 0;
+  padding: 0;
+}
+ul {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 header {
   display: block;
-  text-align: center;
-  margin: 0 auto 1em auto;
+  margin: 0 auto;
+  padding: 1em;
+}
+footer {
+  display: block;
+  margin: 5em 0 0 0;
+  background: #F7EF6A;
+  padding-bottom: 2em;
+}
+footer ul {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 0;
+  margin: 0 1em;
+  list-style-type: none;
+  border-top: 0.25em solid;
+}
+footer li {
+  margin-right: 1em;
+  font-weight: bold;
+}
+footer > div {
+  position: relative;
+  top: -0.5em;
+  font-size: 2.25em;
+  padding-left: 0.5em;
+  line-height: 1.125;
+  font-weight: bold;
 }
 img {
   max-width: 100%;
@@ -29,160 +76,90 @@ img {
   vertical-align: middle;
 }
 pre {
-  background-color: #383838;
-  color: floralwhite;
+  display: block;
   padding: 1.5em 1em;
   margin: 2em 0;
-  border-radius: 0 2em;
+  background-color: #314162;
+  color: white;
   font-family: 'menlo', monospace;
 }
-
-
-/* ===========================
-Typography
-=========================== */
+code {
+  font-family: 'menlo', monospace;
+  font-size: 0.9em;
+}
+hr {
+  margin: 1.5em 0;
+  border: none;
+  border-bottom: 0.25em solid;
+}
 h1 {
+  display: block;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
-  text-align: center;
-  font-size: 1.25em;
+  text-align: left;
+  font-size: 1em;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
 }
-h1 a {
-  border-bottom: none;
+h1 a,
+h1 a:hover {
+  color: #314162;
+  background: transparent;
 }
 h2 {
   font-size: 2em;
   font-weight: bold;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.125;
 }
-h3 {
-  font-size: 0.85em;
+h3, h4 {
+  font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.375em;
 }
 p {
   margin: 0.75em 0 1.25em 0;
 }
 a {
   text-decoration: none;
-  border-bottom: 1px dashed;
-  background: transparent;
+  background: #F7EF6A;
+  color: #314162;
+  outline: none;
+  box-shadow: none;
 }
-a:hover {
-  color: white;
-  border-color: transparent;
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  background: #314162;
+  color: #F7EF6A;
 }
-
-
-/* ===========================
-Helpers
-=========================== */
-.center {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
+.intro {
+  font-size: 1.25em;
 }
-.uppercase {
+.btn {
+  display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 800;
+  padding: 0.5em 2em;
+  margin: 1em 0;
+  vertical-align: middle;
 }
-.original {
-  margin-bottom: 0.25em;
+.list {
+  margin: 2em auto;
+  font-size: 2em;
 }
-.mirror {
-  -webkit-transform: scale(1,-1);
-  transform: scale(1,-1);
-}
-.avatar {  
+.list li {
   display: block;
-  position: relative;
-  margin: 3em auto;
-  max-width: 15em;
-  border-radius: 0 2em;
-  overflow: hidden;
-  opacity: 0.5;
+  line-height: 1.325;
+  margin-bottom: 0.5em;
 }
-.avatar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-}
-.avatar img {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
-  min-width: 100%;
-}
-
-
-/* ===========================
-Boxes
-=========================== */
-.boxes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 0 -0.5em;
-  padding: 0;
-  list-style-type: none;
-}
-.boxes li {
-  display: block;
-  flex-grow: 1;
-  margin: 0.5em;
-  text-align: center;
-}
-.boxes a {
-  display: block;
-  padding: 3em;
-  border: 1px dashed;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  border-radius: 0 2em;
-}
-.boxes a:hover {
-  border-color: transparent;
-}
-
-
-/* ===========================
-Themes 
-=========================== */
-
-/* Kind of blue */
-body, a { color: steelblue; background: white; }
-pre, a:hover, .avatar::after { background-color: steelblue; color: white;}
-.boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em steelblue; }
-
-/* Tomato havest
-body, a { color: tomato; background: white; }
-pre, a:hover, .avatar::after { background-color: tomato; color: white; }
-.boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em tomato; }
-*/
-/* Blueprint
-body, a { color: white; background: steelblue; }
-pre, a:hover, .avatar::after { background-color: white; color: steelblue; }
-.boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em white; }
-*/
-/* Terminal
-body, a { color: #fafafa; background: #383838; }
-pre, a:hover, .avatar::after { background-color: #fafafa; color: #383838; }
-.boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em #fafafa; }
-*/
-/* Easter bonnet
-body, a { color: aqua; background: plum; }
-pre, a:hover, .avatar::after { background-color: aqua; color: plum; }
-.boxes a, .boxes a:hover { box-shadow: 0.25em 0.25em aqua; }
-*/
