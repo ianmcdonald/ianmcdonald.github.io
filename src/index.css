@@ -9,34 +9,24 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   margin: 0;
-  padding: 0;
-  font-size: 1.5em;
+  padding: 0.5em;
+  font-size: 1em;
   font-family: 'helvetica neue', 'helvetica', 'arial',  sans-serif;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.0175em;
   background: white;
-  color: #383838;
+  color: #383838;  
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 60em) {
   body {
-    font-size: 2em;
-  }
-}
-@media screen and (min-width: 40em) {
-  body {
-    font-size: 2.5em;
-  }
-}
-@media screen and (min-width: 50em) {
-  body {
-    font-size: 3em;
+    font-size: 1.25em;
   }
 }
 main {
   display: block;
   margin: 0;
-  padding: 0.5em;
+  padding: 0;
 }
 ul {
   display: block;
@@ -56,6 +46,10 @@ img {
   vertical-align: middle;
   margin-bottom: 0.5em;
   opacity: 0.9;
+}
+header {
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
 h1 {
   display: block;
@@ -81,4 +75,57 @@ a:active {
   background: #383838;
   color: white;
   text-decoration: none;
+}
+.project {
+  position: relative;
+  display: block;
+  margin: 1.5em 0;
+  line-height: 1.25;
+  max-width: 40em;
+}
+.project:hover::after {
+  content: '';
+  position: absolute;
+  width: 150%;
+  left: -50%;
+//  border-bottom: 1px dashed #888;
+  bottom: -0.775em;
+}
+.project > span {
+  display: block
+}
+.project-note {
+  font-style: italic;
+  font-weight: 300;
+  color: #888;
+}
+@media screen and (min-width: 40em) {
+  .project {
+    display: flex;
+    flex-grow: 1;
+  }
+  .project-link {
+    width: 70%;
+  }
+  .project-date {
+    width: 10%;
+  }
+  .project-note {
+    width: 20%;
+//    text-align: right;
+  }
+}
+.home {
+  font-size: 1.5em;
+}
+.portfolio h2 {
+  font-size: 0.75em;
+  font-weight: 400;
+  margin: 6em 0 2em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+.portfolio .links {
+  margin: 2em 0;
+  font-size: 1.5em;
 }
