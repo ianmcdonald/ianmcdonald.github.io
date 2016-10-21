@@ -1,0 +1,45 @@
+body {
+  position: relative;
+  background: white;
+  margin: 0;
+  height: 100vh;
+  font-size: 22px;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  color: #484848;
+  overflow: hidden;
+  line-height: 1;
+}
+h1 {
+  position: relative;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0.25em;
+  padding: 0;
+}
+h1 span {
+  font-size: 1.125em;
+}
+h1 .first {
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+}
+h1 .last {
+  position: absolute;
+  right: 0;
+  top: 0.25em;
+}
+a {
+  color: inherit;
+  padding-right: 1em;
+  font-size: 1em;
+  text-decoration: none;
+}
+footer {  
+  position: absolute;
+  left: -0.25em;
+  bottom: 0;
+  padding: 0.5em;
+  width: auto;
+  text-align: left;
+}
