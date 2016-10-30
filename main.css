@@ -1,32 +1,27 @@
 body {
   position: relative;
   margin: 0;
-  padding: 0;
-  height: 100vh;
-  font-size: 16px;
+  padding: 2.5em 0.5em 1em 0.5em;
+  font-size: 18px;
+  font-weight: 300;
   font-family: "helvetica neue", helvetica, arial, sans-serif;
+  color: #383838;
   background: white;
-  color: #484848;
-  overflow: hidden;
-  line-height: 1.325;
+  overflow-x: hidden;
+  line-height: 1.5;
+  max-width: 25em;
 }
 h1 {
   font-size: 1em;
-  font-weight: 700;
-  margin: 0;
+  font-weight: 400;
+  margin: 0 0 1em 0;
   padding: 0;
 }
 p {
-  margin: 0;
+  margin: 0 0 1.25em 0;
   padding: 0;
 }
 a {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  margin: 1.325em 1em 0 0;
-  left: 0;
-  min-width: 4em;
   text-decoration: underline;
   color: inherit;
   outline: none;
@@ -37,20 +32,16 @@ a:hover {
   border: none;
   outline: none;
 }
-main {
-  z-index: 1;
-  background: white;
-  padding: 1em 1em 8em 1em;
-  box-shadow: 0 0 1em rgba(72,72,72,0.25);
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
-svg {
-  position: absolute;
-  top: 0;
-  left: -50%;
-  height: 150%;
-  width: 200%;
-  z-index: -1;
-  opacity: 0.5;
-  -webkit-filter: blur(100px);
-  filter: blur(100px);
+li {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin-right: 0.5em;
+  left: 0;
+  min-width: 4em;
 }
