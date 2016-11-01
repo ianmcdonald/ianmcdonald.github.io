@@ -33,12 +33,12 @@ p {
 }
 a {
   text-decoration: none;
-  color: royalblue;
+  color: darkturquoise;
   outline: none;
   border: none;
+  border-bottom: 1px solid;
 }
 a:hover {
-  text-decoration: underline;
   border: none;
   outline: none;
 }
