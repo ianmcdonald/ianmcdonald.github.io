@@ -66,3 +66,7 @@ main {
     font-size: 4em;
   }
 }
+em {
+  display: block;
+  font-style: italic;
+}
