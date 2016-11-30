@@ -12,6 +12,7 @@ body {
   max-width: 100%;
   width: 100%;
   height: auto;
+  min-height: 100vh;
 }
 h1 {
   font-size: 1em;
@@ -69,4 +70,53 @@ main {
 em {
   display: block;
   font-style: italic;
+}
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #894ABA;
+  font-weight: 400;
+  max-width: 100%;
+  padding: 2em 0.5em 0.5em 0.5em;
+  line-height: 1.45;
+  font-size: 1.5em;
+}
+.info a {
+  color: #894ABA;
+  border: none;
+  text-decoration: underline;
+}
+.info a:hover {
+  text-decoration: none;
+}
+.info h1 {
+  font-weight: 400;
+}
+.glyphs {
+  position: relative;
+  height: 66.66vh;
+}
+.glyphs-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 25em;
+}
+.glyphs-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  display: none;
+}
+@media (min-width: 40em) {
+  .glyphs-left {
+    width: 50%;
+    min-width: 50%;
+  }
+  .glyphs-right {
+    display: block;
+  }
 }
