@@ -3,120 +3,82 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-weight: 300;
-  font-family: 'helvetica neue', helvetica, roboto, noto, ubuntu, 'segoe ui', arial, sans-serif;
-  color: #484848;
-  background: #ffffff;
+  font-weight: 400;
+  font-family: helvetica, roboto, noto, ubuntu, 'segoe ui', arial, sans-serif;
+  color: #894ABA;
+  background: white;
   overflow-x: hidden;
-  line-height: 1.7;
+  line-height: 1.1;
   max-width: 100%;
-  width: 100%;
+  width: 100vw;
   height: auto;
   min-height: 100vh;
+  font-size: 2em;
 }
 h1 {
-  font-size: 1em;
-  font-weight: 300;
   margin: 0;
   padding: 0;
+  font-size: 1em;
+  font-weight: 400;
 }
 h2 {
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 0 0 2rem 0;
+  margin: 0 0 0.5em 0;
   padding: 0;
-  line-height: 1;
+  font-size: 1em;
+  font-weight: 700;
 }
 p {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1em 0;
   padding: 0;
-  max-width: 30rem;
+  font-size: 1em;
 }
 a {
-  text-decoration: none;
-  color: #5aabff;
   outline: none;
   border: none;
-  border-bottom: 1px solid;
+  color: #894ABA;
 }
 a:hover {
-  border: none;
   outline: none;
+  border: none;
+  background: #894ABA;
 }
 ul {
-  list-style-type: none;
+  margin: 1em;
   padding: 0;
-  margin: 0 0 5rem 0;
-}
-li {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  margin-right: 0.5em;
-  left: 0;
-  min-width: 4em;
-}
-main {
-  display: block;
-  margin: 0 auto;
-  max-width: 50rem;
-  padding: 2em 0.5em 4em 0.5em;
-}
-@media (min-width: 30em) {
-  h2 {
-    font-size: 4em;
-  }
 }
 em {
   display: block;
   font-style: italic;
 }
-.info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: #894ABA;
-  font-weight: 400;
-  max-width: 100%;
-  padding: 2em 0.5em 0.5em 0.5em;
-  line-height: 1.45;
-  font-size: 1.5em;
-}
-.info a {
-  color: #894ABA;
-  border: none;
-  text-decoration: underline;
-}
-.info a:hover {
-  text-decoration: none;
-}
-.info h1 {
-  font-weight: 400;
-}
-.glyphs {
-  position: relative;
-  height: 66.66vh;
-}
-.glyphs-left {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+img {
   width: 100%;
-  min-width: 25em;
+  max-width: 100%;
+  height: 100%;
 }
-.glyphs-right {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  display: none;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
 }
-@media (min-width: 40em) {
-  .glyphs-left {
-    width: 50%;
-    min-width: 50%;
+header {
+  display: block;
+  width: 100%;
+  margin: 0 0 2em 0;
+}
+header > div {
+  padding: 0.25em;
+}
+.col {
+  width: 100vw;
+}
+@media (min-width: 60em) {
+  .col {
+    width: 50vw;
   }
-  .glyphs-right {
-    display: block;
-  }
+}
+.col > div {
+  padding: 0.25em;
+}
+.headshot {
+  width: 8em;
 }
