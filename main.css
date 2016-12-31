@@ -8,12 +8,17 @@ body {
   color: #894ABA;
   background: white;
   overflow-x: hidden;
-  line-height: 1.1;
+  line-height: 1.15;
   max-width: 100%;
   width: 100vw;
   height: auto;
   min-height: 100vh;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+@media (min-width: 80em) {
+  body {
+    font-size: 2em;
+  }
 }
 h1 {
   margin: 0;
@@ -27,17 +32,26 @@ h2 {
   font-size: 1em;
   font-weight: 700;
 }
+h3 {
+  margin-top: 2em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  opacity: 0.75;
+}
 p {
   margin: 0 0 1em 0;
   padding: 0;
   font-size: 1em;
+  max-width: 25em;
 }
 a {
   outline: none;
   border: none;
   color: #894ABA;
 }
-a:hover {
+a:hover,
+a:focus {
   outline: none;
   border: none;
   background: #894ABA;
@@ -58,7 +72,7 @@ img {
 main {
   display: flex;
   flex-wrap: wrap;
-  margin: 1em 0;
+  margin: 1em 0 0 0;
 }
 header {
   display: block;
@@ -75,10 +89,27 @@ header > div {
   .col {
     width: 50vw;
   }
+  .col > div {
+    max-width: 85%;
+  }
 }
 .col > div {
   padding: 0 0.25em;
 }
 .headshot {
   width: 8em;
+}
+.invert {
+  display: flex;
+  flex-wrap: wrap;
+  background: #894ABA;
+  color: white;
+}
+.invert a {
+  color: white;
+}
+.invert a:hover,
+.invert a:focus {
+  color: white;
+  background: white;
 }
