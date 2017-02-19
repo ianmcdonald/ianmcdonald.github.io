@@ -5,7 +5,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-family: helvetica, roboto, noto, ubuntu, 'segoe ui', arial, sans-serif;
-  color: #894ABA;
+  color: #000000;
   background: white;
   overflow-x: hidden;
   line-height: 1.2;
@@ -48,13 +48,13 @@ p {
 a {
   outline: none;
   border: none;
-  color: #894ABA;
+  color: #000000;
 }
 a:hover,
 a:focus {
   outline: none;
   border: none;
-  background: #894ABA;
+  background: #000000;
 }
 ul {
   margin: 1em;
@@ -102,7 +102,7 @@ header > div {
 .invert {
   display: flex;
   flex-wrap: wrap;
-  background: #894ABA;
+  background: #000000;
   color: white;
 }
 .invert a {
