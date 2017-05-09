@@ -8,7 +8,7 @@ EDUCATION
 Niagara College, Graphic Design, 2014
 
 SKILLS
-JavaScript, Node.js, C, HTML, CSS, PHP, SQL, Lisp
+JavaScript, Node.js, C, HTML, CSS, PHP, SQL, Lisp, Python
 
 TOOLS
 Glyphs, Emacs, Git, Sketch, Adobe CC
