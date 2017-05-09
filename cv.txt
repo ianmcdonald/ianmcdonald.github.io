@@ -1,0 +1,24 @@
+IAN MCDONALD
+b. 1986
+Designer, developer & educator
+St. Catharines, Canada
+iangregoryjames[at]gmail[dot]com
+
+EDUCATION
+Niagara College, Graphic Design, 2014
+
+SKILLS
+JavaScript, Node.js, C, HTML, CSS, PHP, SQL, Lisp
+
+TOOLS
+Glyphs, Emacs, Git, Sketch, Adobe CC
+
+EXPERIENCE
+Niagara College, web designer and developer, 2017—present
+Niagara College, graphic/web design instructor, 2016—present
+Form & Affect, web developer, 2014—16
+Freelance/contract, designer and developmer, 2011—present
+Modern Arrangements, online small-run art imprint, 2010—2013
+
+INSTALLATION
+The Electrical Room, Surrey Art Centre, 2009
