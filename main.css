@@ -1,5 +1,5 @@
 body {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   margin: 0;
@@ -19,18 +19,37 @@ body {
 main {
   position: relative;
   padding: 1em;
-  font-size: 1.25em
 }
-@media (min-width: 40em) {
-  main {
-    font-size: 2em;
-  }
+header {
+  margin: 0 auto;
+  max-width: 40em;
+}
+section {
+  margin: 0 auto;
+  max-width: 40em;
 }
 a {
   text-decoration: none;
-  color: slategrey;
+  color: lightsteelblue;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+a:hover {
+  color: steelblue;
+}
+h1 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-align: left;
+}
+p {
+  margin: 0 0 1em 0;
 }
 .pane-box {
+  font-size: 1.25em;
   -webkit-perspective: 700;
   perspective: 700;
   width: 10em;
@@ -39,6 +58,21 @@ a {
   z-index: 999;
   -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
+}
+@media (min-width: 40em) {
+  .pane-box {
+    font-size: 2em;
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
 }
 @keyframes spin {
   from {
@@ -58,11 +92,15 @@ a {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transform-origin: 10em 10em 0;
-  transform-origin: 10em 10em 0
+  transform-origin: 10em 10em 0;
   margin: 1em auto;
+  -webkit-animation-name: spin;
   animation-name: spin;
+  -webkit-animation-duration: 20s;
   animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 .face {
@@ -73,7 +111,7 @@ a {
   backface-visibility: visible;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
-  background: rgba(180,180,220,0.25);
+  background: rgba(176,196,222,0.5);
   overflow: hidden;
   border: 1px dashed;
   border-radius: 50%;
@@ -87,6 +125,7 @@ a {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   text-decoration: none;
+  -webkit-transition: color 1s ease;
   transition: color 1s ease;
   color: white;
 }
@@ -111,6 +150,7 @@ a {
 }
 .side a,
 .side-two a {
+  -webkit-transform: scale(-1,1) translateY(-50%);
   transform: scale(-1,1) translateY(-50%);
 }
 .back {
@@ -118,4 +158,18 @@ a {
   -webkit-transform: rotateY(-180deg);
   z-index: 1;
   left: 20em;
+}
+.selected-work {
+  padding: 2em 0;
+}
+.selected-work ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-top: 1px dashed;
+}
+.selected-work li {
+  border-bottom: 1px dashed;
+  display: block;
+  padding: 0.5em 0;
 }
