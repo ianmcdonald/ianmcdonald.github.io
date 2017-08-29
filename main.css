@@ -6,170 +6,40 @@ body {
   padding: 0;
   font-size: 16px;
   font-weight: 400;
-  font-family: menlo, "Lucida Console", Monaco, monospace;
-  color: steelblue;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  color: #4a4a4a;
   background: white;
   overflow-x: hidden;
   line-height: 1.6;
   max-width: 100vw;
   width: 100vw;
   height: auto;
-  font-size: 1em;
-}
-main {
-  position: relative;
-  padding: 1em;
-}
-header {
-  margin: 0 auto;
-  max-width: 40em;
-}
-section {
-  margin: 0 auto;
-  max-width: 40em;
+  min-height: 100vh;
 }
 a {
+  color: #4a4a4a;
+  display: inline-block;
   text-decoration: none;
-  color: lightsteelblue;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  border-bottom: 0.1em solid white;
 }
 a:hover {
-  color: steelblue;
+  color: white;
+  border-bottom: 0.1em solid #4a4a4a;
 }
 h1 {
-  font-size: 1em;
+  font-size: 2.5em;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 0.25em 0;
   padding: 0;
-  line-height: 1;
-  text-align: left;
+  line-height: 1.1;
 }
-p {
-  margin: 0 0 1em 0;
-}
-.pane-box {
-  font-size: 1.25em;
-  -webkit-perspective: 700;
-  perspective: 700;
-  width: 10em;
-  height: 10em;
-  margin: 4em auto;
-  z-index: 999;
-  -webkit-transform: rotate(-10deg);
-  transform: rotate(-10deg);
-}
-@media (min-width: 40em) {
-  .pane-box {
-    font-size: 2em;
-  }
-}
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(-360deg);
-    transform: rotateY(-360deg);
-  }
-}
-@keyframes spin {
-  from {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(-360deg);
-    transform: rotateY(-360deg);
-  }
-}
-.panes {
-  width: 10em;
-  height: 10em;
-  position: relative;
-  left: -5em;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform-origin: 10em 10em 0;
-  transform-origin: 10em 10em 0;
-  margin: 1em auto;
-  -webkit-animation-name: spin;
-  animation-name: spin;
-  -webkit-animation-duration: 20s;
-  animation-duration: 20s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-.face {
-  position: absolute;
+main {
+  display: block;
   width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  background: rgba(176,196,222,0.5);
-  overflow: hidden;
-  border: 1px dashed;
-  border-radius: 50%;
-}
-.face a {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 100%;
-  text-align: center;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  text-decoration: none;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
-  color: white;
-}
-.face a:hover {
-  color: steelblue;
-}
-.front {
-  -webkit-transform: rotateY(0deg);
-  z-index: 2;
-}
-.side {
-  transform: rotateY(90deg);
-  -webkit-transform: rotateY(90deg);
-  z-index: 1;
-  left: 10em;
-}
-.side-two {
-  transform: rotateY(-90deg);
-  -webkit-transform: rotateY(-90deg);
-  z-index: 1;
-  left: 10em;
-}
-.side a,
-.side-two a {
-  -webkit-transform: scale(-1,1) translateY(-50%);
-  transform: scale(-1,1) translateY(-50%);
-}
-.back {
-  transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
-  z-index: 1;
-  left: 20em;
-}
-.selected-work {
-  padding: 2em 0;
-}
-.selected-work ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  border-top: 1px dashed;
-}
-.selected-work li {
-  border-bottom: 1px dashed;
-  display: block;
-  padding: 0.5em 0;
+  text-align: center;
 }
