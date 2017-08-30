@@ -17,13 +17,13 @@ body {
   min-height: 100vh;
 }
 a {
-  color: #4a4a4a;
+  color: white;
   display: inline-block;
   text-decoration: none;
   border-bottom: 0.1em solid white;
 }
 a:hover {
-  color: white;
+  color: #4a4a4a;
   border-bottom: 0.1em solid #4a4a4a;
 }
 h1 {
