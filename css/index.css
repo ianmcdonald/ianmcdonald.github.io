@@ -58,6 +58,7 @@ small {
 a {
   color: inherit;
   text-decoration: underline;
+  text-decoration-skip: ink;
 }
 a:hover {
   text-decoration: none;
