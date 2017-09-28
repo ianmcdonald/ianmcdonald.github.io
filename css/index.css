@@ -23,6 +23,8 @@ body {
   line-height: 1.6;
   box-sizing: content-box;
   background: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .invert {
   color: white;
@@ -152,7 +154,7 @@ g {
   stroke-width: 0;
 }
 .inverter {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   cursor: pointer;
