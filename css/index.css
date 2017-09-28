@@ -1,0 +1,161 @@
+/* IAN MCDONALD */
+
+/* Color */
+body        { color:      royalblue; }
+g           { stroke:     royalblue; }
+.inverter g { fill:       royalblue; }
+.invert     { background: royalblue; }
+
+/* Base */
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 55em;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  box-sizing: content-box;
+  background: white;
+}
+.invert {
+  color: white;
+}
+header {
+  display: block;
+  padding: 2em 1em 0 1em;
+}
+main {
+  display: block;
+  padding: 0 1em;
+}
+footer {
+  margin: 4em 0 2em 0;
+}
+h1 {
+  margin: 0 0 0.75em 0;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+}
+p {
+  max-width: 30em;
+  margin: 0 0 0.75em 0;
+}
+small {
+  display: inline-block;
+  font-size: 0.75em;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 2em 0 4em 0;
+  border-collapse: collapse;
+  border-color: inherit;
+  border-spacing: 0;
+}
+tr {
+  margin-bottom: 1.25em;
+  display: block;
+}
+th {
+  display: none;
+}
+td {
+  display: block;
+  padding: 0;
+}
+th {
+  padding: 1em 0 0.75em 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1em;
+}
+td {
+  margin: 0;
+  border: none;
+}
+@media (min-width: 40em) {
+  table {
+    display: table;
+  }
+  tr {
+    display: table-row;
+  }
+  th {
+    display: table-cell;
+    padding: 1em 0 0.75em 0;
+  }
+  td {
+    display: table-cell;
+    padding: 1.25em 0 0 0;
+  }
+}
+.magick {
+  position: relative;
+  margin: 0 auto;
+  max-width: 35em;
+  height: 15em;
+}
+@media (min-width: 15em) {
+  .magick {
+    height: 25em;
+  }
+}
+@media (min-width: 25em) {
+  .magick {
+    height: 35em;
+  }
+}
+.magick svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: all 0s ease;
+  transition: all 0s ease;
+}
+#opaque {
+  opacity: 1 !important;
+}
+g {
+  fill: none;
+  fill-rule: evenodd;
+  stroke-width: 1.5;
+}
+.invert g {
+  stroke: white;
+}
+.invert .inverter g {
+  fill: white;
+  stroke-width: 0;
+}
+.inverter {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  height: 1.5em;
+  width: 1.5em;
+}
+.inverter g {
+  stroke: none;
+}
