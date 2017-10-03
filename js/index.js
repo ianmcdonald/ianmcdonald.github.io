@@ -4,7 +4,7 @@
   var magicks = document.querySelectorAll('.magick svg')
   var hours = new Date().getHours()
 
-  if (hours && (hours > 18))
+  if (hours && (hours > 12))
     document.body.className = 'invert';
   
   function magick(x) {
