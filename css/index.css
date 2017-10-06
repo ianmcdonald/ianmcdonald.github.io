@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  max-width: 55em;
+  max-width: 100vw;
   height: auto;
   min-height: 100vh;
   position: relative;
@@ -35,7 +35,7 @@ header {
 }
 main {
   display: block;
-  padding: 0 1em;
+  padding: 2em 1em;
 }
 footer {
   margin: 4em 0 2em 0;
