@@ -30,13 +30,17 @@ body {
   color: white;
 }
 header {
-  display: block;
+  display: none;
   padding: 2em 1em 0 1em;
 }
 main {
   display: block;
   padding: 2em 1em;
-  margin-bottom: 4em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
 }
 footer {
   margin: 4em 0 2em 0;
