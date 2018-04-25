@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "On Archivability"
 date:   2018-02-16
 ---

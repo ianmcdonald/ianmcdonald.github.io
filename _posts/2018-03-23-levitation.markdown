@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Levitation"
 date:   2018-03-23
 ---

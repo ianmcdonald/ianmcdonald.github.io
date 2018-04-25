@@ -1,13 +1,11 @@
 ---
-layout: post
+layout: default
 title:  "Info"
 date:   1986-11-18
 ---
 Ian McDonald is a web designer, developer, and educator. Currently working at Niagara College. Previously at Form &amp; Affect.
 
 [GitHub](https://github.com/ianmcdonald)
-
-&nbsp;
 
 ## Selected work
 * [NCMYK](http://ncmyk.com) _2018_ <sup>∞</sup>
@@ -26,16 +24,10 @@ Ian McDonald is a web designer, developer, and educator. Currently working at Ni
 † at Form &amp; Affect
 </small>
 
-
-&nbsp;
-
-
 ## Skills and software
 JavaScript, HTML, CSS, Node.js, Emacs, Unix, Git, Sketch, Adobe CC.
 
-&nbsp;
-
-
-
+## Colophon
+This site is built with [Jekyll](https://jekyllrb.com/), hosted on [GitHub Pages](https://pages.github.com/), written in [Emacs](https://www.gnu.org/software/emacs/), and uses system default fonts.
 
 

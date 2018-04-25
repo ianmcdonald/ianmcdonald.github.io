@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Authenticity and Authorship in Internet Art"
 date:   2018-04-17
 ---
