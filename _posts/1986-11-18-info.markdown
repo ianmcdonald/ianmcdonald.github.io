@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Info"
+date:   1986-11-18
+---
+Ian McDonald is a web designer, developer, and educator. Currently working at Niagara College. Previously at Form &amp; Affect.
+
+[GitHub](https://github.com/ianmcdonald)
+
+&nbsp;
+
+## Selected work
+* [NCMYK](http://ncmyk.com) _2018_ <sup>∞</sup>
+* [Niagara College Suwon](https://suwon.niagaracollege.ca) _2018_ <sup>ℵ</sup>
+* [Mushroom Maven](http://mushroom-maven.com) _2017_ <sup>∞</sup>
+* [Be World Ready](https://beworldready.ca) _2017_ <sup>ℵ</sup>
+* [Ravine Estate Winery](https://ravinevineyard.com) _2016_ <sup>†</sup>
+* [United Way of St. Catharines &amp; District](https://unitedwaysc.ca) _2017_ <sup>†</sup>
+* [Innovate Niagara](http://innovateniagara.com) _2016_ <sup>†</sup>
+* [Niagara Falls Business Development](https://niagarafallsbusiness.ca) _2015_ <sup>†</sup>
+* [Gallery Players](https://galleryplayers.ca) _2015_ <sup>†</sup>
+
+<small style="display: block; line-height: 1.4;">
+∞ as Ian McDonald<br>
+ℵ at Niagara College<br>
+† at Form &amp; Affect
+</small>
+
+
+&nbsp;
+
+
+## Skills and software
+JavaScript, HTML, CSS, Node.js, Emacs, Unix, Git, Sketch, Adobe CC.
+
+&nbsp;
+
+
+
+
+

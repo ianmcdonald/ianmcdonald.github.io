@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<main>
+  <article>
+    <h1>{{ page.title | escape }}</h1>
+    <span rel="author"
+          style="display: none;">Ian G. McDonald</span>
+    {{ content }}
+    <p>
+      <time datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished">
+        {{ page.date | date: "%b %-d, %Y"}}
+      </time>
+    </p>
+    <hr>
+    <footer>
+      <a href="{{ "/" | relative_url }}">Back to index</a>
+    </footer>
+  </article>
+</main>
