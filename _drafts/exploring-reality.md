@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Exploring Reality"
 date:   2018-04-24
 ---
