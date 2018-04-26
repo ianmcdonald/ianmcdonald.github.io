@@ -7,55 +7,55 @@
   <title>{{ page.title | default: site.title }}</title>
   {% assign today =  site.time | date: '%m%d' %}
   {% if today > '1221' %}
-    {% assign zodiac = "Capricorn" %}
+    {% assign zodiac = "Capricorn ♑" %}
     {% assign bc = "blue" %}
     {% assign fc = "white" %}
   {% elsif today > '1122' %}
-    {% assign zodiac = "Sagittatius" %}
+    {% assign zodiac = "Sagittatius ♐" %}
     {% assign bc = "violet" %}
     {% assign fc = "white" %}
   {% elsif today > '1023' %}
-    {% assign zodiac = "Scorpio" %}
+    {% assign zodiac = "Scorpio ♏" %}
     {% assign bc = "red" %}
     {% assign fc = "white" %}
   {% elsif today > '0923' %}
-    {% assign zodiac = "Libra" %}
+    {% assign zodiac = "Libra ♎" %}
     {% assign bc = "green" %}
     {% assign fc = "white" %}
   {% elsif today > '0822' %}
-    {% assign zodiac = "Virgo" %}
+    {% assign zodiac = "Virgo ♍" %}
     {% assign bc = "blue" %}
     {% assign fc = "white" %}
   {% elsif today > '0722' %}
-    {% assign zodiac = "Leo" %}
+    {% assign zodiac = "Leo ♌" %}
     {% assign bc = "yellow" %}
     {% assign fc = "white" %}
   {% elsif today > '0621' %}
-    {% assign zodiac = "Cancer" %}
+    {% assign zodiac = "Cancer ♋" %}
     {% assign bc = "violet" %}
     {% assign fc = "white" %}
   {% elsif today > '0521' %}
-    {% assign zodiac = "Gemini" %}
+    {% assign zodiac = "Gemini ♊" %}
     {% assign bc = "orange" %}
     {% assign fc = "white" %}
   {% elsif today > '0420' %}
-    {% assign zodiac = "Taurus" %}
+    {% assign zodiac = "Taurus ♉" %}
     {% assign bc = "#55ab55" %}
     {% assign fc = "#fdfdfd" %}
   {% elsif today > '0320' %}
-    {% assign zodiac = "Aries" %}
+    {% assign zodiac = "Aries ♈" %}
     {% assign bc = "red" %}
     {% assign fc = "white" %}
   {% elsif today > '0219' %}
-    {% assign zodiac = "Pisces" %}
+    {% assign zodiac = "Pisces ♓" %}
     {% assign bc = "green" %}
     {% assign fc = "white" %}
   {% elsif today > '0120' %}
-    {% assign zodiac = "Aquarius" %}
+    {% assign zodiac = "Aquarius ♒" %}
     {% assign bc = "green" %}
     {% assign fc = "white" %}
   {% else %}
-    {% assign zodiac = "Capricorn" %}
+    {% assign zodiac = "Capricorn ♑" %}
     {% assign bc = "blue" %}
     {% assign fc = "white" %}
   {% endif %}
@@ -100,23 +100,23 @@
     }
     h1 {
       font-size: 1.5em;
-      line-height: 1.4;
+      margin-bottom: 1em;
+      line-height: 1.3;
     }
     h2 {
-      margin: 2em 0 0 0;
-      font-weight: 600;
+      font-size: 0.75em;
+      margin: 2.5em 0 0.5em 0;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     a {
-      text-decoration: underline;
-      -webkit-text-decoration-style: dotted;
-      text-decoration-style: dotted;
-      -webkit-text-decoration-skip: ink;
-      text-decoration-skip: ink;
+      text-decoration: none;
       color: inherit;
+      border-bottom: 2px dotted;
     }
     a:hover {
-      -webkit-text-decoration-style: solid;
-      text-decoration-style: solid;
+      border-bottom: 2px solid;
     }
     pre, blockquote {
       display: block;
@@ -154,6 +154,10 @@
     header a {
       display: inline-block;
       width: 5em;
+      border: none;
+    }
+    header a:hover {
+      border: none;
     }
     header svg g {
       fill: {{ fc }};
@@ -180,6 +184,28 @@
       background: {{ fc }};
       color: {{ bc }};
       border: 2px solid {{ fc }};
+    }
+    table {
+      display: table;
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: none;
+    }
+    tr {
+      display: table-row;
+      border-bottom: 1px solid {{ fc }};
+      padding: 0;
+      vertical-align: middle;
+    }
+    td {
+      padding: 1em 0.25em;
+    }
+    td:first-child {
+      padding-left: 0;
+    }
+    td:last-child {
+      text-align: center;
     }
     @media (min-width:40em){
       main, .items {
@@ -214,13 +240,21 @@
         <span rel="author" style="display: none;">Ian G. McDonald</span>
         {{ content }}
         {% if page.title != "Info" %}
+        <br>
         <p><time datetime="{{ page.date | date_to_xmlschema }}"
                  itemprop="datePublished">
             {{ page.date | date: "%b %-d, %Y"}}
         </time></p>
         {% else %}
-        <p>The colors of the site rotate with the zodiac.
-          The current theme is <em>{{ zodiac }}</em>.</p><br>
+        <h2>Skills &amp; software</h2>
+        <p>JavaScript, HTML, CSS, Node.js, PHP, SQL, Git, Unix, Sketch, Adobe CC.</p>
+        <h2>Colophon</h2>
+        <p>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>,
+          hosted on <a href="https://pages.github.com/">GitHub Pages</a>,
+          written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>,
+          and uses system default fonts. The colors of the site rotate along with
+          the tropical zodiac; {{ zodiac }} is the current theme. All of the code is
+          available on <a href="https://github.com/ianmcdonald">GitHub</a>.</p><br>
         {% endif %}
         <hr>
         <footer>

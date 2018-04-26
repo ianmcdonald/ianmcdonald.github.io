@@ -3,31 +3,32 @@ layout: default
 title:  "Info"
 date:   1986-11-18
 ---
-Ian McDonald is a web designer, developer, and educator. Currently working at Niagara College. Previously at Form &amp; Affect.
+<figure>
+<img src="assets/img/face.jpg" alt="" style="opacity: 0.666; width: 20em;">
+</figure>
+[Ian McDonald](mailto:&#105;&#097;&#110;&#103;&#114;&#101;&#103;&#111;&#114;&#121;&#106;&#097;&#109;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;) is a St. Catharines-based web designer, developer, and educator. Currently working at [Niagara College](https://www.niagaracollege.ca/). Previously at [Form &amp; Affect](http://formandaffect.com/). 
 
-[GitHub](https://github.com/ianmcdonald)
+## Selected projects
 
-## Selected work
-* [NCMYK](http://ncmyk.com) _2018_ <sup>∞</sup>
-* [Niagara College Suwon](https://suwon.niagaracollege.ca) _2018_ <sup>ℵ</sup>
-* [Mushroom Maven](http://mushroom-maven.com) _2017_ <sup>∞</sup>
-* [Be World Ready](https://beworldready.ca) _2017_ <sup>ℵ</sup>
-* [Ravine Estate Winery](https://ravinevineyard.com) _2016_ <sup>†</sup>
-* [United Way of St. Catharines &amp; District](https://unitedwaysc.ca) _2017_ <sup>†</sup>
-* [Innovate Niagara](http://innovateniagara.com) _2016_ <sup>†</sup>
-* [Niagara Falls Business Development](https://niagarafallsbusiness.ca) _2015_ <sup>†</sup>
-* [Gallery Players](https://galleryplayers.ca) _2015_ <sup>†</sup>
+|---|---|---|
+| [NCMYK](http://ncmyk.com) | 2018 | ∞ |
+| [Niagara College Suwon](https://suwon.niagaracollege.ca) | 2018 | ℵ |
+| [Ask](http://ianmcdonald.ca/ask) | 2018 | ∞ |
+| [Mushroom Maven](http://mushroom-maven.com) | 2017 | ∞ |
+| [Web Synth 1A](http://ianmcdonald.ca/websynth-1a) | 2017 | ∞ |
+| [Be World Ready](http://beworldready.ca) | 2017 | ℵ |
+| [Ravine Estate Winery](https://ravinevineyard.com) | 2016 | † |
+| [United Way of St. Catharines &amp; District](https://unitedwaysc.ca) | 2017 | † |
+| [Innovate Niagara](http://innovateniagara.com) | 2016 | † |
+| [Niagara Falls Business Development](https://niagarafallsbusiness.ca) | 2015 | † |
+| [Gallery Players](https://galleryplayers.ca) | 2015 | † |
+| [Awful Affirmations](http://ianmcdonald.ca/awful-affirmations) | 2015 | ∞ |
+| [Anxiety Blocks](http://ianmcdonald.ca/anxiety-blocks) | 2015 | ∞ |
+| [Kaleidoscope](http://ianmcdonald.ca/kaleidoscope) | 2015 | ∞ |
+| [Untitled](http://ianmcdonald.ca/untitled) | 2015 | ∞ |
 
-<small style="display: block; line-height: 1.4;">
-∞ as Ian McDonald<br>
-ℵ at Niagara College<br>
-† at Form &amp; Affect
+<small style="display: block; margin-top:1em; line-height: 1.4;">
+<span style="width:1em;display:inline-block;">∞</span> as Ian McDonald<br>
+<span style="width:1em;display:inline-block;">ℵ</span> at Niagara College<br>
+<span style="width:1em;display:inline-block;">†</span> at Form &amp; Affect
 </small>
-
-## Skills and software
-JavaScript, HTML, CSS, Node.js, Emacs, Unix, Git, Sketch, Adobe CC.
-
-## Colophon
-This site is built with [Jekyll](https://jekyllrb.com/), hosted on [GitHub Pages](https://pages.github.com/), written in [Emacs](https://www.gnu.org/software/emacs/), and uses system default fonts.
-
-
