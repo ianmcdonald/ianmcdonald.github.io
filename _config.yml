@@ -8,3 +8,7 @@ defaults:
       path: "assets/img"
     values:
       image: true
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
