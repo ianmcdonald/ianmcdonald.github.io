@@ -63,7 +63,9 @@ layout: compress
     {% assign fc = "white" %}
   {% endif %}
   <style>
-    *, *:before, *:after {
+    *,
+    *:before,
+    *:after {
       box-sizing: border-box;
     }
     body {
@@ -92,10 +94,16 @@ layout: compress
       display: block;
       margin: 2em auto;
     }
-    figcaption, small {
+    figcaption,
+    small {
       font-size: 0.75em;
     }
-    h1, h2, h3, h4, h5, p {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
       display: block;
       margin: 0 0 1em 0;
       font-weight: 400;
@@ -108,10 +116,10 @@ layout: compress
     }
     h2 {
       font-size: 0.75em;
-      margin: 4em 0 0.5em 0;
+      margin: 4em 0 1em 0;
       font-weight: 400;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.1666em;
     }
     p {
       -ms-hyphens: auto;
@@ -126,7 +134,8 @@ layout: compress
     a:hover {
       border-bottom: 2px solid;
     }
-    pre, blockquote {
+    pre,
+    blockquote {
       display: block;
       padding: 1em;
       margin: 1em 0;
@@ -141,7 +150,8 @@ layout: compress
     blockquote {
       font-size: 1.25em;
     }
-    blockquote:before, blockquote:after {
+    blockquote:before,
+    blockquote:after {
       content: '';
     }
     blockquote * {
@@ -154,7 +164,7 @@ layout: compress
       position: fixed;
       top: 1em;
       left: 0;
-      width: 100%;
+      width: auto;
       padding: 0 1em;
       text-align: left;
       z-index: 666;
@@ -188,7 +198,8 @@ layout: compress
       text-align: left;
       background: none;
     }
-    .items a:hover, .items a:focus {
+    .items a:hover,
+    .items a:focus {
       background: {{ fc }};
       color: {{ bc }};
       border: 2px solid {{ fc }};
@@ -215,8 +226,9 @@ layout: compress
     td:last-child {
       text-align: center;
     }
-    @media (min-width:40em){
-      main, .items {
+    @media (min-width:40em) {
+      main,
+      .items {
         font-size: 1.25em;
       }
     }
@@ -224,7 +236,60 @@ layout: compress
   <body>
     <header>
       <a href="{{ "/" | relative_url }}">
-        <svg viewBox="0 0 121 54"><g stroke="none" fill-rule="evenodd"><path d="M14.434,19.888 L13.138,19.888 C7.59399999,19.888 4.92999999,15.352 4.92999999,11.176 C4.92999999,5.56 10.69,0.304 17.458,0.304 C21.922,0.304 25.234,1.816 28.042,3.256 C30.922,4.768 33.226,6.28 35.53,6.28 C37.474,6.28 39.85,5.272 39.994,1.6 L41.434,1.6 C41.29,9.52 35.602,14.056 30.49,14.056 C24.514,14.056 18.25,8.728 14.074,8.728 C10.834,8.728 8.81799999,10.816 8.81799999,13.552 C8.81799999,16.432 10.258,18.376 14.434,18.376 L14.434,19.888 Z M2.33799999,44.872 L0.969999988,44.872 C0.897999988,39.256 5.14599999,35.008 10.618,35.008 C13.57,35.008 16.234,36.088 18.466,38.392 C21.85,41.776 23.434,49.048 28.042,49.048 C30.418,49.048 33.082,47.176 33.082,43.576 C33.082,38.608 26.746,32.2 26.746,25.36 C26.746,19.024 32.362,16.072 35.962,16.072 C38.122,16.072 40.354,16.648 42.154,18.232 L42.154,19.744 C41.002,19.096 40.066,18.88 39.346,18.88 C37.762,18.88 37.042,19.96 37.042,21.328 C37.042,24.784 42.802,29.68 42.802,37.672 C42.802,45.808 33.802,52.792 22.426,52.792 C9.32199999,52.792 10.906,40.624 5.86599999,40.624 C3.99399999,40.624 2.33799999,42.136 2.33799999,44.872 Z M88.782,11.464 L88.782,36.016 C88.782,46.456 80.358,46.888 73.95,53.008 L68.334,47.32 L63.726,51.496 L62.502,50.416 L73.23,40.264 L79.35,46.456 C79.638,45.52 79.71,44.512 79.71,43.504 C79.71,39.904 78.99,36.448 78.99,32.848 L78.99,11.608 C78.99,5.848 77.478,3.112 75.102,3.112 C71.646,3.112 71.214,7.576 71.214,11.608 L71.214,33.424 C71.214,37.096 69.918,39.256 65.31,43.864 C60.99,48.256 56.814,51.136 55.59,53.08 L49.182,46.456 L45.654,49.408 L44.574,48.04 L54.726,39.544 L60.702,45.808 C61.206,44.44 61.422,42.64 61.422,41.056 L61.422,14.344 C61.422,10.96 60.486,3.184 55.734,3.184 C54.15,3.184 52.494,4.624 52.494,7.288 C52.494,12.904 57.894,17.008 57.966,22.768 C57.966,29.032 54.006,31.552 47.094,34.072 L46.59,33.136 C48.966,31.768 50.262,31.12 50.262,28.312 C50.262,23.632 44.862,20.464 44.862,13.552 C44.862,5.488 53.142,0.304 58.758,0.304 C63.222,0.304 67.038,2.752 69.702,6.208 C69.99,3.184 73.23,0.232 78.054,0.232 C82.446,0.232 86.838,2.536 87.702,6.136 C89.502,2.392 92.31,0.232 96.774,0.232 C102.678,0.232 106.566,3.688 106.71,10.096 C106.854,13.48 108.294,16 111.966,15.928 L111.966,17.44 C106.926,17.872 104.55,20.464 104.55,31.048 L104.55,35.944 C104.55,40.48 105.99,43.792 108.222,43.792 C109.302,43.792 110.526,43.072 111.894,41.488 L111.894,43.36 C108.294,46.744 105.342,49.696 102.534,53.08 C97.35,48.76 94.83,46.744 94.83,38.464 L94.83,30.616 C94.83,21.832 100.662,18.808 108.366,17.008 C104.694,16.504 99.366,15.784 97.638,14.056 C94.11,10.528 98.286,3.688 92.814,3.688 C89.646,3.688 88.782,7.504 88.782,11.464 Z"></path><circle cx="115.761292" cy="44.666626" r="5"></circle></g></svg>
+        <svg viewBox="0 0 121 54">
+          <g stroke="none" fill-rule="evenodd">
+            <path d="M14.434,19.888 L13.138,19.888 C7.59399999,19.888
+            4.92999999,15.352 4.92999999,11.176 C4.92999999,5.56
+            10.69,0.304 17.458,0.304 C21.922,0.304 25.234,1.816
+            28.042,3.256 C30.922,4.768 33.226,6.28 35.53,6.28
+            C37.474,6.28 39.85,5.272 39.994,1.6 L41.434,1.6
+            C41.29,9.52 35.602,14.056 30.49,14.056 C24.514,14.056
+            18.25,8.728 14.074,8.728 C10.834,8.728 8.81799999,10.816
+            8.81799999,13.552 C8.81799999,16.432 10.258,18.376
+            14.434,18.376 L14.434,19.888 Z M2.33799999,44.872
+            L0.969999988,44.872 C0.897999988,39.256 5.14599999,35.008
+            10.618,35.008 C13.57,35.008 16.234,36.088 18.466,38.392
+            C21.85,41.776 23.434,49.048 28.042,49.048 C30.418,49.048
+            33.082,47.176 33.082,43.576 C33.082,38.608 26.746,32.2
+            26.746,25.36 C26.746,19.024 32.362,16.072 35.962,16.072
+            C38.122,16.072 40.354,16.648 42.154,18.232 L42.154,19.744
+            C41.002,19.096 40.066,18.88 39.346,18.88 C37.762,18.88
+            37.042,19.96 37.042,21.328 C37.042,24.784 42.802,29.68
+            42.802,37.672 C42.802,45.808 33.802,52.792 22.426,52.792
+            C9.32199999,52.792 10.906,40.624 5.86599999,40.624
+            C3.99399999,40.624 2.33799999,42.136 2.33799999,44.872 Z
+            M88.782,11.464 L88.782,36.016 C88.782,46.456 80.358,46.888
+            73.95,53.008 L68.334,47.32 L63.726,51.496 L62.502,50.416
+            L73.23,40.264 L79.35,46.456 C79.638,45.52 79.71,44.512
+            79.71,43.504 C79.71,39.904 78.99,36.448 78.99,32.848
+            L78.99,11.608 C78.99,5.848 77.478,3.112 75.102,3.112
+            C71.646,3.112 71.214,7.576 71.214,11.608 L71.214,33.424
+            C71.214,37.096 69.918,39.256 65.31,43.864 C60.99,48.256
+            56.814,51.136 55.59,53.08 L49.182,46.456 L45.654,49.408
+            L44.574,48.04 L54.726,39.544 L60.702,45.808 C61.206,44.44
+            61.422,42.64 61.422,41.056 L61.422,14.344 C61.422,10.96
+            60.486,3.184 55.734,3.184 C54.15,3.184 52.494,4.624
+            52.494,7.288 C52.494,12.904 57.894,17.008 57.966,22.768
+            C57.966,29.032 54.006,31.552 47.094,34.072 L46.59,33.136
+            C48.966,31.768 50.262,31.12 50.262,28.312 C50.262,23.632
+            44.862,20.464 44.862,13.552 C44.862,5.488 53.142,0.304
+            58.758,0.304 C63.222,0.304 67.038,2.752 69.702,6.208
+            C69.99,3.184 73.23,0.232 78.054,0.232 C82.446,0.232
+            86.838,2.536 87.702,6.136 C89.502,2.392 92.31,0.232
+            96.774,0.232 C102.678,0.232 106.566,3.688 106.71,10.096
+            C106.854,13.48 108.294,16 111.966,15.928 L111.966,17.44
+            C106.926,17.872 104.55,20.464 104.55,31.048 L104.55,35.944
+            C104.55,40.48 105.99,43.792 108.222,43.792 C109.302,43.792
+            110.526,43.072 111.894,41.488 L111.894,43.36
+            C108.294,46.744 105.342,49.696 102.534,53.08 C97.35,48.76
+            94.83,46.744 94.83,38.464 L94.83,30.616 C94.83,21.832
+            100.662,18.808 108.366,17.008 C104.694,16.504
+            99.366,15.784 97.638,14.056 C94.11,10.528 98.286,3.688
+            92.814,3.688 C89.646,3.688 88.782,7.504 88.782,11.464
+            Z"></path>
+            <circle cx="115.761292" cy="44.666626" r="5"></circle>
+          </g>
+        </svg>
       </a>
     </header>
     {% if page.url == '/' %}
@@ -246,29 +311,64 @@ layout: compress
       <article>
         <h1>{{ page.title | escape }}</h1>
         <span rel="author" style="display: none;">Ian G. McDonald</span>
-        {{ content }}
         {% if page.title != "Info" %}
+        {{ content }}
         <br>
-        <p><time datetime="{{ page.date | date_to_xmlschema }}"
-                 itemprop="datePublished">
+        <p>
+          <time datetime="{{ page.date | date_to_xmlschema }}"
+                itemprop="datePublished">
             {{ page.date | date: "%b %-d, %Y"}}
-        </time></p>
+          </time>
+        </p>
         {% else %}
+        <figure>
+          <img src="assets/img/face.jpg" alt="100%"
+               style="opacity: 0.666; width: 20em;">
+        </figure>
+        <p>
+          <a href="mailto:&#105;&#097;&#110;&#103;&#114;&#101;&#103;&#111;&#114;&#121;&#106;&#097;&#109;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Ian McDonald</a>
+          is a St. Catharines-based web designer, developer, and educator.
+          Currently teaching web design and building websites at
+          <a href="https://www.niagaracollege.ca/">Niagara College</a>.
+          Previously at <a href="http://formandaffect.com/">Form &amp; Affect</a>.
+          He has studied design, arts, and culture at both Niagara
+          College and Brock University, and writes about the societal
+          effects of the Web and technology.
+        </p>
+        <h2>Selected projects</h2>
+        {{ content }}
+        <small style="display: block; margin-top: 1em; line-height: 1.4;">
+          <span style="width: 1em; display: inline-block;">∞</span>
+          as Ian McDonald
+          <br>
+          <span style="width: 1em; display: inline-block;">ℵ</span>
+          at Niagara College
+          <br>
+          <span style="width: 1em; display: inline-block;">†</span>
+          at Form &amp; Affect
+        </small>
         <h2>Languages &amp; software</h2>
-        <p>JavaScript, HTML, CSS/SCSS, Node.js, React, PHP, WordPress,
-          SQL, Git, Unix, Sketch, Adobe CC.</p>
+        <p>
+          JavaScript, HTML, CSS/SCSS, Node.js, React, PHP, WordPress,
+          SQL, Git, Unix, Sketch, Adobe CC.
+        </p>
         <h2>Elsewhere</h2>
-        <p><a href="https://github.com/ianmcdonald/">GitHub</a>,
+        <p>
+          <a href="https://github.com/ianmcdonald/">GitHub</a>,
           <a href="https://jsfiddle.net/user/ianmcdonald/">JSFiddle</a>,
-          <a href="https://www.npmjs.com/~ianmcdonald">npm</a>.</p>
+          <a href="https://www.npmjs.com/~ianmcdonald">npm</a>.
+        </p>
         <h2>Colophon</h2>
-        <p>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>,
+        <p>
+          This site is built with <a href="https://jekyllrb.com/">Jekyll</a>,
           hosted on <a href="https://pages.github.com/">GitHub Pages</a>,
           written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>,
           and uses system default fonts. The colors of the site rotate along
           with the tropical zodiac; {{ zodiac }} is the current theme.
           All of the code is available on
-          <a href="https://github.com/ianmcdonald/ianmcdonald.github.io">GitHub</a>.</p><br>
+          <a href="https://github.com/ianmcdonald/ianmcdonald.github.io">GitHub</a>.
+        </p>
+        <br>
         {% endif %}
         <hr>
         <footer>
