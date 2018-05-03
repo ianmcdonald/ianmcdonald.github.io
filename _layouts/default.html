@@ -308,10 +308,10 @@ layout: compress
     <small>Last modified: {{ modified }}</small>
     {% else %}
     <main>
-      <article>
+      <article>        
+        {% if page.title != "Info" %}
         <h1>{{ page.title | escape }}</h1>
         <span rel="author" style="display: none;">Ian G. McDonald</span>
-        {% if page.title != "Info" %}
         {{ content }}
         <br>
         <p>
