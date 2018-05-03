@@ -83,7 +83,7 @@ layout: compress
     hr {
       margin: 1em 0;
       border: none;
-      border-top: 2px dotted {{ fc }};
+      border-top: 1px solid {{ fc }};
     }
     img {
       max-width: 100%;
@@ -147,6 +147,9 @@ layout: compress
       font-family: monospace;
       overflow: auto;
     }
+    article p {
+      text-align: justify;
+    }
     blockquote {
       font-size: 1.25em;
       line-height: 1.333;
@@ -157,9 +160,14 @@ layout: compress
     }
     blockquote * {
       margin: 0;
+      text-align: left;
     }
-    article p {
-      text-align: justify;
+    blockquote p {
+      text-align: left;
+    }
+    blockquote small {
+      display: block;
+      margin-top: 1em;
     }
     header {
       position: fixed;
