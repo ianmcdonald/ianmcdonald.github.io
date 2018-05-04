@@ -11,54 +11,67 @@ layout: compress
   {% assign today =  site.time | date: '%m%d' %}
   {% if today > '1221' %}
     {% assign zodiac = "Capricorn ♑" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "blue" %}
     {% assign fc = "white" %}
   {% elsif today > '1122' %}
     {% assign zodiac = "Sagittatius ♐" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "violet" %}
     {% assign fc = "white" %}
   {% elsif today > '1023' %}
     {% assign zodiac = "Scorpio ♏" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "red" %}
     {% assign fc = "white" %}
   {% elsif today > '0923' %}
     {% assign zodiac = "Libra ♎" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "green" %}
     {% assign fc = "white" %}
   {% elsif today > '0822' %}
     {% assign zodiac = "Virgo ♍" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "blue" %}
     {% assign fc = "white" %}
   {% elsif today > '0722' %}
     {% assign zodiac = "Leo ♌" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "yellow" %}
     {% assign fc = "white" %}
   {% elsif today > '0621' %}
     {% assign zodiac = "Cancer ♋" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "violet" %}
     {% assign fc = "white" %}
   {% elsif today > '0521' %}
     {% assign zodiac = "Gemini ♊" %}
-    {% assign bc = "orange" %}
-    {% assign fc = "white" %}
+    {% assign fc = "#b056ad" %}
+    {% assign bc = "#fdff9f" %}
+    {% assign ff = "Georgia,Times,Times New Roman,serif" %}
   {% elsif today > '0420' %}
     {% assign zodiac = "Taurus ♉" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "#55ab55" %}
     {% assign fc = "#fdfdfd" %}
   {% elsif today > '0320' %}
     {% assign zodiac = "Aries ♈" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "red" %}
     {% assign fc = "white" %}
   {% elsif today > '0219' %}
     {% assign zodiac = "Pisces ♓" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "green" %}
     {% assign fc = "white" %}
   {% elsif today > '0120' %}
     {% assign zodiac = "Aquarius ♒" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "green" %}
     {% assign fc = "white" %}
   {% else %}
     {% assign zodiac = "Capricorn ♑" %}
+    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
     {% assign bc = "blue" %}
     {% assign fc = "white" %}
   {% endif %}
@@ -73,7 +86,7 @@ layout: compress
       padding: 1em 1em 5em 1em;
       background: {{ bc }};
       color: {{ fc }};
-      font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      font-family: {{ ff }};
       font-size: 16px;
       line-height: 1.666;
     }
