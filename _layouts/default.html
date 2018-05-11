@@ -1,4 +1,6 @@
-
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8">
@@ -130,12 +132,12 @@
       hyphens: auto;
     }
     a {
-      text-decoration: none;
-      color: inherit;
-      border-bottom: 2px dotted;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      color: inherit;      
     }
     a:hover {
-      border-bottom: 2px solid;
+      text-decoration-style: solid;
     }
     pre, blockquote {
       display: block;
@@ -173,25 +175,17 @@
     header {
       position: relative;
       width: 100%;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-      font-size: 1em;
-      background: {{ fc }};
-    }
-    header a {
-      display: block;
-      max-width: 45em;
+      max-width: 40em;
       padding: 1em;
       margin: 0 auto;
-      color: {{ bc }};
-      border: none;
+      text-align: left;
+      font-size: 1em;
     }
-    header a:hover {
-      border: none;
+    header a {     
+      text-decoration: none;
     }
     main {
-      max-width: 45em;
+      max-width: 40em;
       margin: 5em auto 1em auto;
       padding: 1em 1em 5em 1em;
       transition: font-size 0.3s ease;
@@ -308,7 +302,7 @@
         <small>Last modified: {{ modified }}</small>
         <hr style="margin-top: 0.25em;">
         </div>
-        {% endif %}
+        {% endif %}        
         {% assign count = count | plus: 1 %}
         {% assign cat = post.categories | first | downcase %}
         {% if cat == 'website' %}
@@ -317,7 +311,7 @@
         <a href="{{ post.url | relative_url }}" class="{{ cat }}">{{ post.title | escape }}</a>
         {% endif %}
         {% endfor %}
-      </div>      
+      </div>
     </main>
     <script>
       var writing = document.querySelector('.filter.writing');
