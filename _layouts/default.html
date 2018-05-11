@@ -1,6 +1,4 @@
----
-layout: compress
----
+
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8">
@@ -217,6 +215,45 @@ layout: compress
       color: {{ bc }};
       border: 2px solid {{ fc }};
     }
+    .items .writing {
+      border-style: dotted;
+    }
+    .items .website {
+      border-style: dashed;
+    }
+    .items .other {
+      border-style: solid;
+    }
+    .filter {
+      display: inline-block;
+      font-size: 0.75em;
+      border-width: 2px;
+      margin: 0 0 1em 0.75em;
+      padding: 0 0.5em;
+      line-height: 1.5;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    #filtering .items a {
+      display: none;
+    }
+    #filtering.writing .items .writing {
+      display: inline-block;
+    }
+    #filtering.website .items .website {
+      display: inline-block;
+    }
+    #filtering.other .items .other {
+      display: inline-block;
+    }
+    #filtering .filter {
+      opacity: 0.25;
+    }
+    #filtering.writing .filter.writing,
+    #filtering.website .filter.website,
+    #filtering.other .filter.other {
+      opacity: 1;
+    }
     table {
       display: table;
       border-collapse: collapse;
@@ -313,16 +350,45 @@ layout: compress
     {% assign count = 0 %}
     {% if site.posts.size > 0 %}
     <main class="items">
+      <div class="filter writing">Writings</div>
+      <div class="filter website">Websites</div>
+      <div class="filter other">Other</div>
       {% for post in site.posts %}
-      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       {% if count == 0 %}
       {% assign modified = post.date | date: "%b %-d, %Y" %}
+      <div style="margin:0  0.5em;">
+      <small>Last modified: {{ modified }}</small>
+      <hr style="margin-top: 0.25em;">
+      </div>
       {% endif %}
       {% assign count = count | plus: 1 %}
+      <a href="{{ post.url | relative_url }}" class="{{ post.categories | first | downcase }}">{{ post.title | escape }}</a>
       {% endfor %}
     </main>
-    {% endif %}
-    <small>Last modified: {{ modified }}</small>
+    <script>
+      var writing = document.querySelector('.filter.writing');
+      var website = document.querySelector('.filter.website');
+      var other = document.querySelector('.filter.other');
+      writing.addEventListener('click', function() { filterToggle('writing') });
+      website.addEventListener('click', function() { filterToggle('website') });
+      other.addEventListener('click', function() { filterToggle('other') });
+      function filterToggle(clsNm) {
+        if (document.querySelector('body.' + clsNm)) {
+          document.body.className = '';
+        } else {
+          document.body.className = clsNm;
+        }
+        if (document.body.className !== '') {
+          if (document.body.id !== 'filtering') {
+            document.body.id = 'filtering';
+          }
+        }
+        if (document.body.className.trim() === '') {
+          document.body.id = '';
+        }
+      }
+    </script>    
+    {% endif %}    
     {% else %}
     <main>
       <article>        
