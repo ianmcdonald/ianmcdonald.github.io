@@ -197,7 +197,8 @@
     }
     .items {
       margin: 10em -0.5em 0 -0.5em;
-      transition: font-size 0.3s ease;
+      min-height: 40em;
+      transition: font-size 0.3s ease;    
     }
     .items a {
       display: inline-block;
@@ -349,21 +350,28 @@
     {% if page.url == '/' %}
     {% assign count = 0 %}
     {% if site.posts.size > 0 %}
-    <main class="items">
-      <div class="filter writing">Writings</div>
-      <div class="filter website">Websites</div>
-      <div class="filter other">Other</div>
-      {% for post in site.posts %}
-      {% if count == 0 %}
-      {% assign modified = post.date | date: "%b %-d, %Y" %}
-      <div style="margin:0  0.5em;">
-      <small>Last modified: {{ modified }}</small>
-      <hr style="margin-top: 0.25em;">
-      </div>
-      {% endif %}
-      {% assign count = count | plus: 1 %}
-      <a href="{{ post.url | relative_url }}" class="{{ post.categories | first | downcase }}">{{ post.title | escape }}</a>
-      {% endfor %}
+    <main>
+      <div class="items">
+        <div class="filter writing">Writings</div>
+        <div class="filter website">Websites</div>
+        <div class="filter other">Other</div>
+        {% for post in site.posts %}
+        {% if count == 0 %}
+        {% assign modified = post.date | date: "%b %-d, %Y" %}
+        <div style="margin:0  0.5em;">
+        <small>Last modified: {{ modified }}</small>
+        <hr style="margin-top: 0.25em;">
+        </div>
+        {% endif %}
+        {% assign count = count | plus: 1 %}
+        {% assign cat = post.categories | first | downcase %}
+        {% if cat == 'website' %}
+        <a href="{{ post.content | strip_html }}" class="{{ cat }}">{{ post.title | escape }}</a>
+        {% else %}
+        <a href="{{ post.url | relative_url }}" class="{{ cat }}">{{ post.title | escape }}</a>
+        {% endif %}
+        {% endfor %}
+      </div>      
     </main>
     <script>
       var writing = document.querySelector('.filter.writing');
