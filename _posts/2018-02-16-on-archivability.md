@@ -2,7 +2,7 @@
 layout: default
 title:  "On Archivability"
 date:   2018-02-16
-category: "Writing"
+category: "Writings"
 ---
 Depending on when you were born and when you first started using [the World Wide Web](http://info.cern.ch/hypertext/WWW/TheProject.html), you may or may not have memories of an online era that is now behind us. By design, the Web—invented by [Tim Berners Lee](https://www.w3.org/People/Berners-Lee/) in 1989—made the Internet far more accessible to those outside of scientific and research communities than ever before, reducing the technical barrier to online access. In the 1990s the Web experienced rapid growth and expanded user adoption; with this surge of users also came an increase of content, in no small part due to the phenomenon of the personal web page. Individuals, hobbyists, companies, fan clubs, pet owners, etc., were all making their unique presence known on the Web, and all were on theoretically equal footing. It was an era that embraced personal style, amateur design, loosely moderated authorship, [webring](https://en.wikipedia.org/wiki/Webring) communities, low fidelity animated GIFs, and free expression which was restricted only by the technical capabilities of [browsers of the time](https://en.wikipedia.org/wiki/History_of_the_web_browser#Early_1990s:_WWW_browsers).
 

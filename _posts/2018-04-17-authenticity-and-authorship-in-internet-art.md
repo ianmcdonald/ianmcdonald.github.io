@@ -2,7 +2,7 @@
 layout: default
 title:  "Authenticity and Authorship in Internet Art"
 date:   2018-04-17
-category: "Writing"
+category: "Writings"
 ---
 Since the 1970s artists have been using the Internet to create and distribute works of art. With its expansion and present day ubiquity, it has increasingly become a platform for communicating and sharing artistic ideas, concepts, and objects in a variety of forms. As many new technologies have done in the past, the technology that constitutes the network of networks that we refer to as the Internet, has changed and challenged the ways in which we think about, discuss, and create works of art. If everything that one experiences on the Internet is a digital reproduction—an image of something presented on a screen for example—is there a cyberspace equivalent to the physical concept of an authentic work of art or is internet art always a reproduction? To whom can we attribute the authorship of a work of internet art? Although modern art has historically been entwined with discourse on the authenticity and authorship of works, and despite being a part of the modern art tradition in a so many ways, internet art exists on the periphery of this dialogue, requiring an altered perspective.
 

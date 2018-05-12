@@ -119,15 +119,12 @@ layout: compress
     }
     h1 {
       font-size: 1.5em;
-      margin-bottom: 1em;
       line-height: 1.25;
     }
     h2 {
-      font-size: 0.75em;
-      margin: 4em 0 1em 0;
-      font-weight: 400;
+      font-size: 1em;
       text-transform: uppercase;
-      letter-spacing: 0.1666em;
+      letter-spacing: 0.1em;
     }
     p {
       display: block;
@@ -176,19 +173,12 @@ layout: compress
     main {
       max-width: 40em;
       margin: 0 auto;
-      padding: 4em 1em;
-    }
-    article h1 {
-      margin-bottom: 2em;
-    }
-    .items {
-      margin: 0;
-      min-height: 40rem;
+      padding: 2em 0.5em;
     }
     .items a {
       display: inline-block;
-      margin: 0 0.5em 0.5em 0;
-      padding: 1em 0.5em;
+      margin: 0 0.5em 0.75em 0;
+      padding: 0.125em 0.25em;
       border: 2px dotted;
       color: inherit;
       text-decoration: none;
@@ -202,37 +192,41 @@ layout: compress
       color: {{ bc }};
       border: 2px solid {{ fc }};
     }
-    .items .writing,
-    .items .writing:hover,
-    .items .writing:active,
-    #filtering .items .writing {
+    .items .writings,
+    .items .writings:hover,
+    .items .writings:active,
+    .items .writings:focus,
+    #filtering .items .writings {
       border-style: dotted;
     }
-    .items .website,
-    .items .website:hover,
-    .items .website:active,
-    #filtering .items .website  {
+    .items .websites,
+    .items .websites:hover,
+    .items .websites:active,
+    .items .websitess:focus,
+    #filtering .items .websites  {
       border-style: dashed;
     }    
     .items .other,
-    .items .other:hover,
+    .items .other:hover,    
     .items .other:active,
+    .items .other:focus,
     #filtering .items .other {
       border-style: solid;
     }
     .items .filter,
     .items .filter:hover,
     .items .filter:active,
+    .items .filter:focus,
     #filtering .items .filter {
       display: inline-block;
       font-size: 0.75em;
       border-width: 2px;
       margin: 0 1em 0 0;
-      padding: 0 0.5em;
+      padding: 0.125em 0.25em;
       line-height: 1.5;
       cursor: pointer;
       color: {{ fc }};
-      background-color: transparent;
+      background-color: {{ bc }};
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
@@ -240,44 +234,18 @@ layout: compress
     #filtering .items a {
       display: none;
     }    
-    #filtering.writing .items .writing {
-      display: inline-block;
-    }
-    #filtering.website .items .website {
-      display: inline-block;
-    }
+    #filtering.writings .items .writings,
+    #filtering.websites .items .websites,
     #filtering.other .items .other {
       display: inline-block;
-    }    
+    }
     #filtering .filter {
       opacity: 0.25;
     }
-    #filtering.writing .filter.writing,
-    #filtering.website .filter.website,
+    #filtering.writings .filter.writings,
+    #filtering.websites .filter.websites,
     #filtering.other .filter.other {
       opacity: 1;
-    }
-    table {
-      display: table;
-      border-collapse: collapse;
-      border-spacing: 0;
-      width: 100%;
-      border: none;
-    }
-    tr {
-      display: table-row;
-      border-bottom: 1px solid {{ fc }};
-      padding: 0;
-      vertical-align: middle;
-    }
-    td {
-      padding: 1.25em 0.25em;
-    }
-    td:first-child {
-      padding-left: 0;
-    }
-    td:last-child {
-      text-align: center;
     }
     @media (min-width: 30em) {
       body {
@@ -298,14 +266,14 @@ layout: compress
         {% for post in site.posts %}
         {% if count == 0 %}
         {% assign modified = post.date | date: "%b %-d, %Y" %}
-        <a href="#writings" class="filter writing">Writings</a>
-        <a href="#websites" class="filter website">Websites</a>
+        <a href="#writings" class="filter writings">Writings</a>
+        <a href="#websites" class="filter websites">Websites</a>
         <a href="#other" class="filter other">Other</a>
         <hr>
         {% endif %}
         {% assign count = count | plus: 1 %}
         {% assign cat = post.categories | first | downcase %}
-        {% if cat == 'website' %}
+        {% if cat == 'websites' %}
         <a href="{{ post.content | strip_html }}" class="{{ cat }}">
           {{ post.title | escape }}
         </a>
@@ -319,18 +287,19 @@ layout: compress
       </div>
     </main>
     <script>
-      var writing = document.querySelector('.filter.writing');
-      var website = document.querySelector('.filter.website');
+      var writings = document.querySelector('.filter.writings');
+      var websites = document.querySelector('.filter.websites');
       var other = document.querySelector('.filter.other');
-      writing.addEventListener('click', function() { filterToggle('writing') });
-      website.addEventListener('click', function() { filterToggle('website') });
+      writings.addEventListener('click', function() { filterToggle('writings') });
+      websites.addEventListener('click', function() { filterToggle('websites') });
       other.addEventListener('click', function() { filterToggle('other') });
       function filterToggle(clsNm) {
         if (document.querySelector('body.' + clsNm)) {
           document.body.className = '';
-          window.location = '/'
+          document.querySelector('.filter.' + clsNm).href = '#';
         } else {
-          document.body.className = clsNm;          
+          document.body.className = clsNm;
+          document.querySelector('.filter.' + clsNm).href = '#' + clsNm;
         }
         if (document.body.className !== '') {
           if (document.body.id !== 'filtering') {
@@ -345,15 +314,8 @@ layout: compress
         if (window.location.hash !== '') {
           var hash = window.location.hash;
           hash = hash.replace('#', '');
-          if (hash === 'websites' || hash === 'writings') {
-            hash = hash.slice(0, hash.length - 1);
-            document.body.id = 'filtering';         
-            filterToggle(hash);
-          }
-          if (hash === 'other') {
-            document.body.id = 'filtering';         
-            filterToggle(hash);
-          }
+          document.body.id = 'filtering';         
+          filterToggle(hash);
         }
       }
       hashCheck();
@@ -376,14 +338,12 @@ layout: compress
         {% else %}
         <p>
           <a href="mailto:&#105;&#097;&#110;&#103;&#114;&#101;&#103;&#111;&#114;&#121;&#106;&#097;&#109;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Ian G. McDonald</a>
-          is a St. Catharines-based web designer, developer, and educator.
-          Currently teaching web design and building websites at
-          <a href="https://www.niagaracollege.ca/">Niagara College</a>, as well as
-          working at <a href="http://mushroom-maven.com">Mushroom Maven</a>.
-          Previously at <a href="http://formandaffect.com/">Form &amp; Affect</a>.
-          He has studied design, arts, and culture at both Niagara
-          College and Brock University, and writes about the societal
-          effects of the Web and technology.
+          is a St. Catharines-based web designer, developer, and
+          educator.  Currently teaching web design and building
+          websites at Niagara College.  Previously at Form &amp;
+          Affect. He has studied design, arts, and culture at both
+          Niagara College and Brock University, and writes about the
+          societal effects of the Web and technology.
         </p>
         <p>
           This site is built with <a href="https://jekyllrb.com/">Jekyll</a>,

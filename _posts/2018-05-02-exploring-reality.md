@@ -2,7 +2,7 @@
 layout: default
 title:  "Exploring Reality"
 date:   2018-05-02
-category: "Writing"
+category: "Writings"
 ---
 I saw a billboard the other day. It was an advertisement for real estate services, the kind which usually goes unnoticed, but a misreading of the text caused this particular billboard to stand out. What had at first glance appeared to be a subtle call to action—one of unimaginable existential depth—was merely a marketing tagline whose value extended no further than its surface: Explore realty. Even after catching my error, I couldn’t shake the misreading from my brain.
 
