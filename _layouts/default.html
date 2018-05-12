@@ -173,25 +173,13 @@ layout: compress
       display: block;
       margin-top: 1em;
     }
-    header {
-      position: relative;
-      width: 100%;
-      max-width: 40em;
-      padding: 1em;
-      margin: 0 auto;
-      text-align: left;
-      font-size: 1em;
-    }
-    header a {
-      border: none;
-    }
-    header a:hover {
-      border-bottom: 2px solid;
-    }
     main {
       max-width: 40em;
-      margin: 3em auto 1em auto;
-      padding: 1em 1em 5em 1em;
+      margin: 0 auto;
+      padding: 4em 1em;
+    }
+    article h1 {
+      margin-bottom: 2em;
     }
     .items {
       margin: 0;
@@ -200,7 +188,7 @@ layout: compress
     .items a {
       display: inline-block;
       margin: 0 0.5em 0.5em 0;
-      padding: 1.25em;
+      padding: 1em 0.5em;
       border: 2px dotted;
       color: inherit;
       text-decoration: none;
@@ -214,16 +202,28 @@ layout: compress
       color: {{ bc }};
       border: 2px solid {{ fc }};
     }
-    .items .writing {
+    .items .writing,
+    .items .writing:hover,
+    .items .writing:active,
+    #filtering .items .writing {
       border-style: dotted;
     }
-    .items .website {
+    .items .website,
+    .items .website:hover,
+    .items .website:active,
+    #filtering .items .website  {
       border-style: dashed;
-    }
-    .items .other {
+    }    
+    .items .other,
+    .items .other:hover,
+    .items .other:active,
+    #filtering .items .other {
       border-style: solid;
     }
-    .filter {
+    .items .filter,
+    .items .filter:hover,
+    .items .filter:active,
+    #filtering .items .filter {
       display: inline-block;
       font-size: 0.75em;
       border-width: 2px;
@@ -231,13 +231,15 @@ layout: compress
       padding: 0 0.5em;
       line-height: 1.5;
       cursor: pointer;
+      color: {{ fc }};
+      background-color: transparent;
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
     }
     #filtering .items a {
       display: none;
-    }
+    }    
     #filtering.writing .items .writing {
       display: inline-block;
     }
@@ -246,7 +248,7 @@ layout: compress
     }
     #filtering.other .items .other {
       display: inline-block;
-    }
+    }    
     #filtering .filter {
       opacity: 0.25;
     }
@@ -287,24 +289,33 @@ layout: compress
     }
   </style>
   <body>
-    <header>
-      <p><a href="{{ "/" | relative_url }}">{{ site.title }}</a></p>
-    </header>
     {% if page.url == '/' %}
     {% assign count = 0 %}
     {% if site.posts.size > 0 %}
     <main>
+      <h1>{{ site.title }}</h1>
       <div class="items">
         {% for post in site.posts %}
         {% if count == 0 %}
         {% assign modified = post.date | date: "%b %-d, %Y" %}
-        <div><small>Last modified: {{ modified }}</small></div>
-        <div class="filter writing">Writings</div>
-        <div class="filter website">Websites</div>
-        <div class="filter other">Other</div>
+        <a href="#writings" class="filter writing">Writings</a>
+        <a href="#websites" class="filter website">Websites</a>
+        <a href="#other" class="filter other">Other</a>
         <hr>
         {% endif %}
-        {% assign count = count | plus: 1 %}{% assign cat = post.categories | first | downcase %}{% if cat == 'website' %}<a href="{{ post.content | strip_html }}" class="{{ cat }}">{{ post.title | escape }}</a>{% else %}<a href="{{ post.url | relative_url }}" class="{{ cat }}">{{ post.title | escape }}</a>{% endif %}{% endfor %}
+        {% assign count = count | plus: 1 %}
+        {% assign cat = post.categories | first | downcase %}
+        {% if cat == 'website' %}
+        <a href="{{ post.content | strip_html }}" class="{{ cat }}">
+          {{ post.title | escape }}
+        </a>
+        {% else %}
+        <a href="{{ post.url | relative_url }}" class="{{ cat }}">
+          {{ post.title | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+        <div><small>Last modified: {{ modified }}</small></div>
       </div>
     </main>
     <script>
@@ -317,8 +328,9 @@ layout: compress
       function filterToggle(clsNm) {
         if (document.querySelector('body.' + clsNm)) {
           document.body.className = '';
+          window.location = '/'
         } else {
-          document.body.className = clsNm;
+          document.body.className = clsNm;          
         }
         if (document.body.className !== '') {
           if (document.body.id !== 'filtering') {
@@ -326,9 +338,25 @@ layout: compress
           }
         }
         if (document.body.className.trim() === '') {
-          document.body.id = '';
+          document.body.id = '';          
         }
       }
+      function hashCheck() {
+        if (window.location.hash !== '') {
+          var hash = window.location.hash;
+          hash = hash.replace('#', '');
+          if (hash === 'websites' || hash === 'writings') {
+            hash = hash.slice(0, hash.length - 1);
+            document.body.id = 'filtering';         
+            filterToggle(hash);
+          }
+          if (hash === 'other') {
+            document.body.id = 'filtering';         
+            filterToggle(hash);
+          }
+        }
+      }
+      hashCheck();
     </script>
     {% endif %}
     {% else %}
