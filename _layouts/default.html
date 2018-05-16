@@ -114,7 +114,6 @@ layout: compress
       margin-top: 1em;
     }
     main {
-      max-width: 35em;
       margin: 0;
       padding: 0.5em;
     }
@@ -144,17 +143,19 @@ layout: compress
     .items a {
       display: inline-block;
       position: relative;
-      margin: 0 0 0.5em 0;
+      margin: 0 0 1.5em 0;
       color: inherit;
       background: {{ bc }};
       text-decoration: none;
       text-align: left;
       vertical-align: top;
       width: 100%;
-      min-height: 4em;
-      line-height: 1.2;
+      line-height: 0.9;
       border-top: 0.125em solid;
       padding: 0.125em;
+      word-spacing: 40em;
+      letter-spacing: -0.05em;
+      text-transform: uppercase; 
     }
     .items a:hover, .items a:focus {
       background: {{ fc }};
@@ -163,13 +164,13 @@ layout: compress
     }
     article h1 {
       padding-bottom: 0.75rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0;
       word-spacing: 40em;      
     }
     time {
-      display: inline-block;
-      margin: 0 0 4em 0;
-    }
+      display: block;
+      margin: -0.5em 0 4em 0;
+    }    
     footer {
       padding: 4em 0;
     }
@@ -218,6 +219,14 @@ layout: compress
          width: 23%;
       }
     }
+    @media (min-width: 65em) {
+      header, .content {
+        display: inline-block;
+        width: 48%;
+        margin-right: 1%;
+        vertical-align: top;
+      }
+    }
   </style>
   <body>
     <main>
@@ -261,14 +270,16 @@ layout: compress
             {{ page.date | date: "%b %-d, %Y"}}
           </time>
         </header>
-        {{ content }}
-        <footer>
-          <a href="{{ "/" | relative_url }}">
-            <svg viewBox="0 0 815 424" xmlns="http://www.w3.org/2000/svg">
-              <path d="M202.4,423.3 L8,229 C-1.4,219.6 -1.4,204.4 8,195.1 L202.4,0.7 L258.1,57.2 L137.6,172 L815,172 L815,252 L137.6,252 L258.1,366.8 L202.4,423.3 Z"></path>
-            </svg>
-          </a>
-        </footer>
+        <div class="content">
+          {{ content }}
+          <footer>
+            <a href="{{ "/" | relative_url }}">
+              <svg viewBox="0 0 815 424" xmlns="http://www.w3.org/2000/svg">
+                <path d="M202.4,423.3 L8,229 C-1.4,219.6 -1.4,204.4 8,195.1 L202.4,0.7 L258.1,57.2 L137.6,172 L815,172 L815,252 L137.6,252 L258.1,366.8 L202.4,423.3 Z"></path>
+              </svg>
+            </a>
+          </footer>
+        </div>
       </article>
     {% endif %}
     </main>
