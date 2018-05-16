@@ -2,7 +2,7 @@
 layout: compress
 ---
 {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-{% assign fc = "#484848" %}
+{% assign fc = "#383838" %}
 {% assign bc = "#FFF" %}
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@ layout: compress
       padding: 0;
       background: {{ bc }};
       color: {{ fc }};
-      font-family: {{ ff }};      
+      font-family: {{ ff }};
       line-height: 1.5;
       font-size: 1.25em;
     }
@@ -54,10 +54,11 @@ layout: compress
       font-size: 1em;
     }
     h1 {
-      font-size: 1.5em;
-      line-height: 1;
+      font-size: 1.75em;
+      text-transform: uppercase;
+      line-height: 0.875;
       font-weight: 400;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }
     h2 {
       font-size: 1em;
@@ -89,19 +90,6 @@ layout: compress
       background: {{ fc }};
       color: {{ bc }};
     }
-    time {
-      display: inline-block; 
-      margin: 0 0 2em 0;
-      padding: 0 0.25em;
-      background: {{ fc }};
-      color: {{ bc }};
-    }
-    .inverse {
-      display: inline-block;
-      padding: 0 0.25em;
-      background: {{ fc }};
-      color: {{ bc }};
-    }
     pre {
       font-family: monospace;
       overflow: auto;
@@ -127,22 +115,10 @@ layout: compress
     main {
       max-width: 40em;
       margin: 0 auto;
-      padding: 4em 0.5em;
+      padding: 0.5em 0.5em 4em 0.5em;
     }
-    footer small {
-      display: block;
-      line-height: 1.4;
-      margin-top: 0.75em;
-      max-width: 40em;
-    }
-    footer svg {
-      fill: {{ fc }};
-      max-width: 100%;
-      width: 1.5em;
-      margin: 0.25em;
-    }
-    footer a:hover svg {
-      fill: {{ bc }};
+    .index-heading {
+      margin-bottom: 4em;
     }
     .index-heading h1,
     .index-heading span,
@@ -164,35 +140,59 @@ layout: compress
     .items {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;      
+      justify-content: flex-start;
     }
     .items a {
       margin: 0 0 0.5em 0;
       padding: 0.25em;
-      border: 1px solid;
+      border-top: 0.25rem solid;
       color: inherit;
       text-decoration: none;
       text-align: left;
       background: none;
       vertical-align: middle;
-      width: 100%;      
-      min-height: 8em;
+      width: 100%;
+      min-height: 7em;
       line-height: 1.1;
     }
     .items a:hover, .items a:focus {
       background: {{ fc }};
       color: {{ bc }};
-      border: 2px solid {{ fc }};
+      border-top: 0.25rem solid {{ fc }};
     }
-    @media (min-width: 15em) {
-      .items a {
-         width: 49%;
-         margin: 0 1% 1% 0;
-      }      
+    article h1 {
+      border-bottom: 0.25rem solid;
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.5rem;      
     }
-    @media (min-width: 30em) {      
+    time {
+      display: inline-block;
+      margin: 0 0 5em 0;
+    }
+    footer {
+      padding-top: 2em;
+    }
+    article footer a {
+      display: inline-block;
+      line-height: 0;
+    }
+    article footer svg {
+      fill: {{ fc }};
+      max-width: 100%;
+      width: 2.5em;
+    }
+    article footer a:hover {
+      background: {{ bc }};
+    }
+    @media (min-width: 20em) {
       .items a {
-         width: 32.33%;
+         width: 48%;
+         margin: 0 2% 2% 0;
+      }
+    }
+    @media (min-width: 30em) {
+      .items a {
+         width: 31.33%;
       }
       .index-heading h1,
       .index-heading span,
@@ -208,7 +208,7 @@ layout: compress
         font-size: 3em;
       }
       .items a {
-         width: 24%;
+         width: 23%;
       }
     }
   </style>
@@ -234,15 +234,15 @@ layout: compress
         {% endfor %}
       </div>
       <footer>
-        <small>
+        <p>
           This site is built with <a href="https://jekyllrb.com/">Jekyll</a>,
           hosted on <a href="https://pages.github.com/">GitHub Pages</a>,
           written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>,
           and uses system default fonts.
           All of the code is available on
           <a href="https://github.com/ianmcdonald/">GitHub</a>.
-        </small>
-        <small>Last modified: {{ modified }}</small>
+        </p>
+        <p>Last modified: {{ modified }}</p>
       </footer>
     {% else %}
       <article>
@@ -254,8 +254,10 @@ layout: compress
         </time>
         {{ content }}
         <footer>
-          <a href="{{ "/" | relative_url }}" style="display: inline-block; line-height: 0;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+          <a href="{{ "/" | relative_url }}">
+            <svg viewBox="0 0 815 424" xmlns="http://www.w3.org/2000/svg">
+              <path d="M202.4,423.3 L8,229 C-1.4,219.6 -1.4,204.4 8,195.1 L202.4,0.7 L258.1,57.2 L137.6,172 L815,172 L815,252 L137.6,252 L258.1,366.8 L202.4,423.3 Z"></path>
+            </svg>
           </a>
         </footer>
       </article>
