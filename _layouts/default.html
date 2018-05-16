@@ -1,6 +1,9 @@
 ---
 layout: compress
 ---
+{% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
+{% assign fc = "#484848" %}
+{% assign bc = "#FFF" %}
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8">
@@ -8,73 +11,6 @@ layout: compress
   <meta name="description" content="Web designer, developer, and educator.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  {% assign today =  site.time | date: '%m%d' %}
-  {% if today > '1221' %}
-    {% assign zodiac = "Capricorn ♑" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "blue" %}
-    {% assign fc = "white" %}
-  {% elsif today > '1122' %}
-    {% assign zodiac = "Sagittarius ♐" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "violet" %}
-    {% assign fc = "white" %}
-  {% elsif today > '1023' %}
-    {% assign zodiac = "Scorpio ♏" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "red" %}
-    {% assign fc = "white" %}
-  {% elsif today > '0923' %}
-    {% assign zodiac = "Libra ♎" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "green" %}
-    {% assign fc = "white" %}
-  {% elsif today > '0822' %}
-    {% assign zodiac = "Virgo ♍" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "blue" %}
-    {% assign fc = "white" %}
-  {% elsif today > '0722' %}
-    {% assign zodiac = "Leo ♌" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "yellow" %}
-    {% assign fc = "white" %}
-  {% elsif today > '0621' %}
-    {% assign zodiac = "Cancer ♋" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "violet" %}
-    {% assign fc = "white" %}
-  {% elsif today > '0521' %}
-    {% assign zodiac = "Gemini ♊" %}
-    {% assign fc = "#b056ad" %}
-    {% assign bc = "#fdff9f" %}
-    {% assign ff = "Georgia,Times,Times New Roman,serif" %}
-  {% elsif today > '0420' %}
-    {% assign zodiac = "Taurus ♉" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "#55ab55" %}
-    {% assign fc = "#fdfdfd" %}
-  {% elsif today > '0320' %}
-    {% assign zodiac = "Aries ♈" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "red" %}
-    {% assign fc = "white" %}
-  {% elsif today > '0219' %}
-    {% assign zodiac = "Pisces ♓" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "green" %}
-    {% assign fc = "white" %}
-  {% elsif today > '0120' %}
-    {% assign zodiac = "Aquarius ♒" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "green" %}
-    {% assign fc = "white" %}
-  {% else %}
-    {% assign zodiac = "Capricorn ♑" %}
-    {% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-    {% assign bc = "blue" %}
-    {% assign fc = "white" %}
-  {% endif %}
   <style>
     *, *:before, *:after {
       box-sizing: border-box;
@@ -119,8 +55,9 @@ layout: compress
     }
     h1 {
       font-size: 1.5em;
-      line-height: 1.25;
+      line-height: 1;
       font-weight: 400;
+      margin-bottom: 0.5em;
     }
     h2 {
       font-size: 1em;
@@ -134,18 +71,34 @@ layout: compress
       font-size: 1em;
     }
     a {
-      text-decoration: none;
+      text-decoration: underline;
+      -webkit-text-decoration-skip: ink;
+      text-decoration-skip: ink;
       color: inherit;
-      border-bottom: 2px dotted {{ fc }};
     }
     a:hover {
-      border-bottom-style: solid;
+      text-decoration: none;
+      background: {{ fc }};
+      color: {{ bc }};
     }
     pre, blockquote {
       display: block;
       padding: 1em;
       margin: 1em 0;
       border: none;
+      background: {{ fc }};
+      color: {{ bc }};
+    }
+    time {
+      display: inline-block; 
+      margin: 0 0 2em 0;
+      padding: 0 0.25em;
+      background: {{ fc }};
+      color: {{ bc }};
+    }
+    .inverse {
+      display: inline-block;
+      padding: 0 0.25em;
       background: {{ fc }};
       color: {{ bc }};
     }
@@ -176,191 +129,135 @@ layout: compress
       margin: 0 auto;
       padding: 4em 0.5em;
     }
+    footer small {
+      display: block;
+      line-height: 1.4;
+      margin-top: 0.75em;
+      max-width: 40em;
+    }
+    footer svg {
+      fill: {{ fc }};
+      max-width: 100%;
+      width: 1.5em;
+      margin: 0.25em;
+    }
+    footer a:hover svg {
+      fill: {{ bc }};
+    }
+    .index-heading h1,
+    .index-heading span,
+    .index-heading p {
+      display: block;
+      font-size: 1em;
+      line-height: 1.25;
+    }
+    .index-heading h1 {
+      margin-bottom: 0;
+    }
+    .index-heading a {
+      text-decoration: none;
+    }
+    .index-heading span {
+      padding: 0 0.5em;
+      display: none;
+    }
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;      
+    }
     .items a {
-      display: inline-block;
-      margin: 0 0.5em 0.75em 0;
-      padding: 0.125em 0.25em;
-      border: 2px dotted;
+      margin: 0 0 0.5em 0;
+      padding: 0.25em;
+      border: 1px solid;
       color: inherit;
       text-decoration: none;
-      line-height: 1.4;
       text-align: left;
       background: none;
       vertical-align: middle;
+      width: 100%;      
+      min-height: 8em;
+      line-height: 1.1;
     }
     .items a:hover, .items a:focus {
       background: {{ fc }};
       color: {{ bc }};
       border: 2px solid {{ fc }};
     }
-    .items .writings,
-    .items .writings:hover,
-    .items .writings:active,
-    .items .writings:focus,
-    #filtering .items .writings {
-      border-style: dotted;
+    @media (min-width: 15em) {
+      .items a {
+         width: 49%;
+         margin: 0 1% 1% 0;
+      }      
     }
-    .items .websites,
-    .items .websites:hover,
-    .items .websites:active,
-    .items .websitess:focus,
-    #filtering .items .websites  {
-      border-style: dashed;
-    }    
-    .items .other,
-    .items .other:hover,    
-    .items .other:active,
-    .items .other:focus,
-    #filtering .items .other {
-      border-style: solid;
+    @media (min-width: 30em) {      
+      .items a {
+         width: 32.33%;
+      }
+      .index-heading h1,
+      .index-heading span,
+      .index-heading p {
+        display: inline-block;
+      }
     }
-    .items .filter,
-    .items .filter:hover,
-    .items .filter:active,
-    .items .filter:focus,
-    #filtering .items .filter {
-      display: inline-block;
-      font-size: 0.75em;
-      border-width: 2px;
-      margin: 0 1em 0 0;
-      padding: 0.125em 0.25em;
-      line-height: 1.5;
-      cursor: pointer;
-      color: {{ fc }};
-      background-color: {{ bc }};
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-    #filtering .items a {
-      display: none;
-    }    
-    #filtering.writings .items .writings,
-    #filtering.websites .items .websites,
-    #filtering.other .items .other {
-      display: inline-block;
-    }
-    #filtering .filter {
-      opacity: 0.25;
-    }
-    #filtering.writings .filter.writings,
-    #filtering.websites .filter.websites,
-    #filtering.other .filter.other {
-      opacity: 1;
-    }
-    @media (min-width: 30em) {
+    @media (min-width: 40em) {
       body {
         font-size: 1.5em;
       }
+      h1 {
+        font-size: 3em;
+      }
       .items a {
-        max-width: 45%;
+         width: 24%;
       }
     }
   </style>
   <body>
+    <main>
     {% if page.url == '/' %}
     {% assign count = 0 %}
-    {% if site.posts.size > 0 %}
-    <main>
-      <h1>{{ site.title }}</h1>
+      <div class="index-heading">
+        <h1>{{ site.title }}</h1>
+        <span>/</span>
+        <p><a href="https://twitter.com/systemdefaults">@systemdefaults</a></p>
+      </div>
       <div class="items">
         {% for post in site.posts %}
         {% if count == 0 %}
         {% assign modified = post.date | date: "%b %-d, %Y" %}
-        <a href="#writings" class="filter writings">Writings</a>
-        <a href="#websites" class="filter websites">Websites</a>
-        <a href="#other" class="filter other">Other</a>
-        <hr>
         {% endif %}
         {% assign count = count | plus: 1 %}
         {% assign cat = post.categories | first | downcase %}
-        {% if cat == 'websites' %}
-        <a href="{{ post.content | strip_html }}" class="{{ cat }}">
-          {{ post.title | escape }}
-        </a>
-        {% else %}
         <a href="{{ post.url | relative_url }}" class="{{ cat }}">
           {{ post.title | escape }}
         </a>
-        {% endif %}
         {% endfor %}
-        <div><small>Last modified: {{ modified }}</small></div>
       </div>
-    </main>
-    <script>
-      var writings = document.querySelector('.filter.writings');
-      var websites = document.querySelector('.filter.websites');
-      var other = document.querySelector('.filter.other');
-      writings.addEventListener('click', function() { filterToggle('writings') });
-      websites.addEventListener('click', function() { filterToggle('websites') });
-      other.addEventListener('click', function() { filterToggle('other') });
-      function filterToggle(clsNm) {
-        if (document.querySelector('body.' + clsNm)) {
-          document.body.className = '';
-          document.querySelector('.filter.' + clsNm).href = '#';
-        } else {
-          document.body.className = clsNm;
-          document.querySelector('.filter.' + clsNm).href = '#' + clsNm;
-        }
-        if (document.body.className !== '') {
-          if (document.body.id !== 'filtering') {
-            document.body.id = 'filtering';
-          }
-        }
-        if (document.body.className.trim() === '') {
-          document.body.id = '';          
-        }
-      }
-      function hashCheck() {
-        if (window.location.hash !== '') {
-          var hash = window.location.hash;
-          hash = hash.replace('#', '');
-          document.body.id = 'filtering';         
-          filterToggle(hash);
-        }
-      }
-      hashCheck();
-    </script>
-    {% endif %}
-    {% else %}
-    <main>
-      <article>
-        {% if page.title != "Info" %}
-        <h1>{{ page.title | escape }}</h1>
-        <span rel="author" style="display: none;">Ian G. McDonald</span>
-        {{ content }}
-        <br>
-        <p>
-          <time datetime="{{ page.date | date_to_xmlschema }}"
-                itemprop="datePublished">
-            {{ page.date | date: "%b %-d, %Y"}}
-          </time>
-        </p>
-        {% else %}
-        <p>
-          <a href="mailto:&#105;&#097;&#110;&#103;&#114;&#101;&#103;&#111;&#114;&#121;&#106;&#097;&#109;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Ian G. McDonald</a>
-          is a St. Catharines-based web designer, developer, and
-          educator.  Currently teaching web design and building
-          websites at Niagara College.  Previously at Form &amp;
-          Affect. He has studied design, arts, and culture at both
-          Niagara College and Brock University, and writes about the
-          societal effects of the Web and technology.
-        </p>
-        <p>
+      <footer>
+        <small>
           This site is built with <a href="https://jekyllrb.com/">Jekyll</a>,
           hosted on <a href="https://pages.github.com/">GitHub Pages</a>,
           written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>,
-          and uses system default fonts. The colors of the site rotate along
-          with the tropical zodiac; {{ zodiac }} is the current theme.
+          and uses system default fonts.
           All of the code is available on
           <a href="https://github.com/ianmcdonald/">GitHub</a>.
-        </p>
-        <br>
-        {% endif %}
-        <hr>
+        </small>
+        <small>Last modified: {{ modified }}</small>
+      </footer>
+    {% else %}
+      <article>
+        <h1>{{ page.title | escape }}</h1>
+        <span rel="author" style="display: none;">Ian G. McDonald</span>
+        <time datetime="{{ page.date | date_to_xmlschema }}"
+              itemprop="datePublished">
+          {{ page.date | date: "%b %-d, %Y"}}
+        </time>
+        {{ content }}
         <footer>
-          <a href="{{ "/" | relative_url }}">Back to index</a>
+          <a href="{{ "/" | relative_url }}" style="display: inline-block; line-height: 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+          </a>
         </footer>
       </article>
-    </main>
     {% endif %}
+    </main>
