@@ -59,6 +59,7 @@ layout: compress
       line-height: 0.875;
       font-weight: 400;
       margin-bottom: 1em;
+      letter-spacing: -0.05em;
     }
     h2 {
       font-size: 1em;
@@ -113,9 +114,9 @@ layout: compress
       margin-top: 1em;
     }
     main {
-      max-width: 40em;
+      max-width: 35em;
       margin: 0 auto;
-      padding: 0.5em 0.5em 4em 0.5em;
+      padding: 0.5em;
     }
     .index-heading {
       margin-bottom: 4em;
@@ -138,39 +139,44 @@ layout: compress
       display: none;
     }
     .items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      display: block;
     }
     .items a {
+      display: inline-block;
+      position: relative;
       margin: 0 0 0.5em 0;
-      padding: 0.25em;
-      border-top: 0.25rem solid;
       color: inherit;
+      background: {{ bc }};
       text-decoration: none;
       text-align: left;
-      background: none;
-      vertical-align: middle;
+      vertical-align: top;
       width: 100%;
-      min-height: 7em;
-      line-height: 1.1;
+      min-height: 4em;
+      line-height: 1.2;
+      border-top: 0.125em solid;
+      padding: 0.125em;
     }
     .items a:hover, .items a:focus {
       background: {{ fc }};
       color: {{ bc }};
-      border-top: 0.25rem solid {{ fc }};
+      border-top-color: {{ fc }};
     }
     article h1 {
-      border-bottom: 0.25rem solid;
       padding-bottom: 0.75rem;
-      margin-bottom: 0.5rem;      
+      margin-bottom: 0.5rem;
+      word-spacing: 40em;      
     }
     time {
       display: inline-block;
-      margin: 0 0 5em 0;
+      margin: 0 0 4em 0;
     }
     footer {
-      padding-top: 2em;
+      padding: 4em 0;
+    }
+    footer small {
+      display: block;
+      line-height: 1.4;
+      margin: 0 0 1em 0;
     }
     article footer a {
       display: inline-block;
@@ -186,8 +192,9 @@ layout: compress
     }
     @media (min-width: 20em) {
       .items a {
-         width: 48%;
-         margin: 0 2% 2% 0;
+        width: 48%;
+        margin: 0 1% 1em 0;
+        min-height: 6em;
       }
     }
     @media (min-width: 30em) {
@@ -234,24 +241,26 @@ layout: compress
         {% endfor %}
       </div>
       <footer>
-        <p>
+        <small>
           This site is built with <a href="https://jekyllrb.com/">Jekyll</a>,
           hosted on <a href="https://pages.github.com/">GitHub Pages</a>,
           written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>,
           and uses system default fonts.
           All of the code is available on
           <a href="https://github.com/ianmcdonald/">GitHub</a>.
-        </p>
-        <p>Last modified: {{ modified }}</p>
+        </small>
+        <small>Last modified: {{ modified }}</small>
       </footer>
     {% else %}
       <article>
-        <h1>{{ page.title | escape }}</h1>
-        <span rel="author" style="display: none;">Ian G. McDonald</span>
-        <time datetime="{{ page.date | date_to_xmlschema }}"
-              itemprop="datePublished">
-          {{ page.date | date: "%b %-d, %Y"}}
-        </time>
+        <header>
+          <h1>{{ page.title | escape }}</h1>
+          <span rel="author" style="display: none;">Ian G. McDonald</span>
+          <time datetime="{{ page.date | date_to_xmlschema }}"
+                itemprop="datePublished">
+            {{ page.date | date: "%b %-d, %Y"}}
+          </time>
+        </header>
         {{ content }}
         <footer>
           <a href="{{ "/" | relative_url }}">
