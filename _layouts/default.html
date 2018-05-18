@@ -1,9 +1,9 @@
 ---
 layout: compress
 ---
-{% assign ff = "-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif" %}
-{% assign fc = "#383838" %}
-{% assign bc = "#FFF" %}
+{% assign ff = "Helvetica, Arial, sans-serif" %}
+{% assign fc = "#333" %}
+{% assign bc = "white" %}
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8">
@@ -20,22 +20,18 @@ layout: compress
     }
     body {
       margin: 0;
-      padding: 0;
+      padding: 0.5em;
       background: {{ bc }};
       color: {{ fc }};
       font-family: {{ ff }};
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.4;
       font-size: 1.25em;
       overflow-x: hidden;
     }
-    ul {
-      padding-left: 1em;
-    }
-    hr {
-      margin: 1em 0;
-      border: none;
-      border-top: 2px solid {{ fc }};
+    main {
+      margin: 0;
+      padding: 0;
     }
     img {
       max-width: 100%;
@@ -60,15 +56,12 @@ layout: compress
       text-transform: uppercase;
       line-height: 0.875;
       font-weight: 400;
-      margin-bottom: 1em;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.0675em;
     }
     p {
-      display: block;
       margin: 0 0 1em 0;
       font-weight: 400;
       font-size: 1em;
-      max-width: 40em;
     }
     a {
       text-decoration: underline;
@@ -78,10 +71,8 @@ layout: compress
     }
     a:hover {
       text-decoration: none;
-      background: {{ fc }};
-      color: {{ bc }};
     }
-    pre, blockquote {
+    pre {
       display: block;
       padding: 1em;
       margin: 1em 0;
@@ -94,26 +85,17 @@ layout: compress
       overflow: auto;
     }
     blockquote {
-      font-size: 1.25em;
-      line-height: 1.333;
+      margin: 2em 0;
+      padding: 0.25em;
+      font-family: georgia, serif;
+      border-left: 0.25rem solid;
+      border-top: 0.25rem solid;
+      font-size: 1.125em;
+      line-height: 1.2;
     }
-    blockquote:before, blockquote:after {
+    blockquote:before,
+    blockquote:after {
       content: '';
-    }
-    blockquote * {
-      margin: 0;
-      text-align: left;
-    }
-    blockquote p {
-      text-align: left;
-    }
-    blockquote small {
-      display: block;
-      margin-top: 1em;
-    }
-    main {
-      margin: 0;
-      padding: 0.5em;
     }
     .index-heading {
       margin-bottom: 4em;
@@ -127,6 +109,8 @@ layout: compress
     }
     .index-heading h1 {
       margin-bottom: 0;
+      text-transform: none;
+      letter-spacing: 0;
     }
     .index-heading a {
       text-decoration: none;
@@ -149,9 +133,10 @@ layout: compress
       vertical-align: top;
       width: 100%;
       line-height: 1;
-      border-top: 0.125em solid;
-      padding: 0.125em;
-      word-spacing: 40em;
+      border-top: 0.25rem solid;
+      border-left: 0.25rem solid;
+      padding: 0.25em;
+      word-spacing: 666em;
       letter-spacing: -0.05em;
       text-transform: uppercase; 
     }
@@ -159,11 +144,11 @@ layout: compress
       background: {{ fc }};
       color: {{ bc }};
       border-top-color: {{ fc }};
+      border-left-color: {{ fc }}; 
     }
     article h1 {
       padding-bottom: 0.75rem;
-      margin-bottom: 0;
-      word-spacing: 40em;      
+      word-spacing: 666em;      
     }
     time {
       display: block;
@@ -172,29 +157,19 @@ layout: compress
     footer {
       padding: 4em 0;
     }
-    article footer a {
-      display: inline-block;
-      line-height: 0;
-    }
     article footer svg {
       fill: {{ fc }};
       max-width: 100%;
-      width: 2.5em;
-    }
-    article footer a:hover {
-      background: {{ bc }};
+      width: 2em;
     }
     @media (min-width: 20em) {
       .items a {
         width: 48%;
-        margin: 0 1% 1em 0;
+        margin: 0 1% 0.5em 0;
         min-height: 6.5em;
       }
     }
-    @media (min-width: 30em) {
-      .items a {
-         width: 31.33%;
-      }
+    @media (min-width: 30em) {      
       .index-heading h1,
       .index-heading span,
       .index-heading p {
@@ -202,36 +177,33 @@ layout: compress
       }
     }
     @media (min-width: 40em) {
+      .items a {
+         width: 31.33%;
+      }
       body {
-        font-size: 1.5em;
+        font-size: 1.75em;
       }
       h1 {
         font-size: 3em;
-      }
-      .items a {
-         width: 23%;
-      }
+      }      
     }
-    @media (min-width: 65em) {
+    @media (min-width: 75em) {
       header {
         position: fixed;
         width: 48%;
-      }
+      }     
       .content {
         position: absolute;
         left: 50%;
-        width: 48%;
-        max-width: 40em;
+        width: 48%;     
       }
     }
     @media (min-width: 95em) {
-      article h1 {
-        font-size: 4.5em;
+     .items a {
+         width: 23%;
       }
-    }
-    @media (min-width: 125em) {
       article h1 {
-        font-size: 5.5em;
+        font-size: 4em;
       }
     }
   </style>
@@ -257,7 +229,8 @@ layout: compress
         {% endfor %}
       </div>
       <footer>
-        <p>Last modified: {{ modified }}. This site is built with <a href="https://jekyllrb.com/">Jekyll</a>, is written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>, and uses system default fonts. All of the code is available on <a href="https://github.com/ianmcdonald/">GitHub</a>.</p>
+        <p>Last modified: {{ modified }}</p>
+        <p>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>, is written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>, and uses system default fonts. All of the code is available on <a href="https://github.com/ianmcdonald/">GitHub</a>.</p>
         <p style="word-break: break-all;">dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5/</p>
       </footer>
     {% else %}
