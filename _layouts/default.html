@@ -12,7 +12,7 @@ layout: compress
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
   <style>
-    *, *:before, *:after {
+    * {
       box-sizing: border-box;
     }
     html {
@@ -26,7 +26,7 @@ layout: compress
       font-family: {{ ff }};
       font-weight: 400;
       line-height: 1.25;
-      font-size: 1.25em;
+      font-size: 1.3em;
       overflow-x: hidden;
     }
     img {
@@ -38,10 +38,15 @@ layout: compress
       display: block;
       margin: 2em auto;
     }
-    figcaption, small {
+    figcaption,
+    small {
       font-size: 0.75em;
     }
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       display: block;
       margin: 0;
       font-weight: 600;
@@ -83,8 +88,6 @@ layout: compress
       border: none;
       background: {{ fc }};
       color: {{ bc }};
-    }
-    pre {
       font-family: menlo, monospace;
       overflow: auto;
     }
@@ -129,17 +132,9 @@ layout: compress
       letter-spacing: -0.05em;
       margin: 0;
     }
-    .index-list a:last-child {
-      margin-bottom: 0;
-    }
-    .index-list a:hover,
-    .index-list a:focus {
+    .index-list a:hover {
       background: {{ fc }};
       color: {{ bc }};
-    }
-    .index-list a:last-child:hover,
-    .index-list a:last-child:focus {
-      transform: translateY(0);
     }
     time {
       display: block;
