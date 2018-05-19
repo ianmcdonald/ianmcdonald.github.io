@@ -2,8 +2,8 @@
 layout: compress
 ---
 {% assign ff = "Helvetica, Arial, sans-serif" %}
-{% assign fc = "#333" %}
-{% assign bc = "white" %}
+{% assign fc = "#0d690d" %}
+{% assign bc = "#fafafa" %}
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8">
@@ -22,16 +22,12 @@ layout: compress
       margin: 0;
       padding: 0.5em;
       background: {{ bc }};
-      color: {{ fc }};
+      color: #282828;
       font-family: {{ ff }};
       font-weight: 400;
       line-height: 1.4;
       font-size: 1.25em;
       overflow-x: hidden;
-    }
-    main {
-      margin: 0;
-      padding: 0;
     }
     img {
       max-width: 100%;
@@ -52,16 +48,18 @@ layout: compress
       font-size: 1em;
     }
     h1 {
-      font-size: 1.75em;
-      text-transform: uppercase;
-      line-height: 0.875;
+      font-size: 3em;
+      line-height: 0.9em;
       font-weight: 400;
-      letter-spacing: -0.0675em;
+      letter-spacing: -0.05em;
+      word-spacing: 666em;
+      color: {{ fc }};
     }
     p {
       margin: 0 0 1em 0;
       font-weight: 400;
       font-size: 1em;
+      color: #282828;
     }
     a {
       text-decoration: underline;
@@ -72,6 +70,9 @@ layout: compress
     a:hover {
       text-decoration: none;
     }
+    li {
+      margin-bottom: 0.5em;
+    }
     pre {
       display: block;
       padding: 1em;
@@ -81,142 +82,99 @@ layout: compress
       color: {{ bc }};
     }
     pre {
-      font-family: monospace;
+      font-family: menlo, monospace;
       overflow: auto;
     }
     blockquote {
       margin: 2em 0;
       padding: 0.25em;
       font-family: georgia, serif;
-      border-left: 0.25rem solid;
-      border-top: 0.25rem solid;
-      font-size: 1.125em;
+      border-left: 0.1em solid;
+      font-size: 1.25em;
       line-height: 1.2;
+      color: {{ fc }};
+    }
+    blockquote * {
+      color: {{ fc }};
     }
     blockquote:before,
     blockquote:after {
       content: '';
     }
-    .index-heading {
-      margin-bottom: 4em;
-    }
-    .index-heading h1,
-    .index-heading span,
-    .index-heading p {
-      display: block;
-      font-size: 1em;
-      line-height: 1.25;
-    }
     .index-heading h1 {
       margin-bottom: 0;
+      padding-bottom: 0;
       text-transform: none;
-      letter-spacing: 0;
+      font-size: 1em;
+      color: #282828;
+      word-spacing: normal;
+      letter-spacing: normal;
     }
-    .index-heading a {
-      text-decoration: none;
+    .index-list {
+      margin: 4em 0 2em -0.5em;
+      width: 100vw;
     }
-    .index-heading span {
-      padding: 0 0.5em;
-      display: none;
-    }
-    .items {
-      display: block;
-    }
-    .items a {
-      display: inline-block;
+    .index-list a {
       position: relative;
-      margin: 0 0 1.5em 0;
-      color: inherit;
-      background: {{ bc }};
+      display: block;
       text-decoration: none;
-      text-align: left;
-      vertical-align: top;
-      width: 100%;
+      padding: 0.5em 0.25em 0.5em 0.175em;
+      color: {{ fc }};
+      background: {{ bc }};
+      border-top: 0.05em solid {{ fc }};
       line-height: 1;
-      border-top: 0.25rem solid;
-      border-left: 0.25rem solid;
-      padding: 0.25em;
-      word-spacing: 666em;
+      font-size: 2em;
       letter-spacing: -0.05em;
-      text-transform: uppercase; 
+      margin: 0;
     }
-    .items a:hover, .items a:focus {
+    .index-list a:last-child {
+      margin-bottom: 0;
+    }
+    .index-list a:hover,
+    .index-list a:focus {
       background: {{ fc }};
       color: {{ bc }};
-      border-top-color: {{ fc }};
-      border-left-color: {{ fc }}; 
     }
-    article h1 {
-      padding-bottom: 0.75rem;
-      word-spacing: 666em;      
+    .index-list a:last-child:hover,
+    .index-list a:last-child:focus {
+      transform: translateY(0);
     }
     time {
       display: block;
-      margin: -0.5em 0 4em 0;
-    }    
+      margin: 0 0 4em 0;
+      letter-spacing: -0.05em;
+    }
     footer {
-      padding: 4em 0;
+      padding: 2em 0;
     }
-    article footer svg {
+    footer svg {
       fill: {{ fc }};
-      max-width: 100%;
-      width: 2em;
+      width: 3em;
     }
-    @media (min-width: 20em) {
-      .items a {
-        width: 48%;
-        margin: 0 1% 0.5em 0;
-        min-height: 6.5em;
-      }
-    }
-    @media (min-width: 30em) {      
-      .index-heading h1,
-      .index-heading span,
-      .index-heading p {
-        display: inline-block;
-      }
-    }
-    @media (min-width: 40em) {
-      .items a {
-         width: 31.33%;
-      }
+    @media (min-width: 30em) {
       body {
         font-size: 1.75em;
-      }
-      h1 {
-        font-size: 3em;
-      }      
+      }     
     }
-    @media (min-width: 75em) {
+    @media (min-width: 70em) {
       header {
         position: fixed;
         width: 48%;
-      }     
+      }
       .content {
         position: absolute;
         left: 50%;
-        width: 48%;     
-      }
-    }
-    @media (min-width: 95em) {
-     .items a {
-         width: 23%;
-      }
-      article h1 {
-        font-size: 4em;
+        width: 48%;
       }
     }
   </style>
   <body>
-    <main>
     {% if page.url == '/' %}
     {% assign count = 0 %}
       <div class="index-heading">
         <h1>{{ site.title }}</h1>
-        <span>/</span>
-        <p><a href="https://twitter.com/systemdefaults">@systemdefaults</a></p>
       </div>
-      <div class="items">
+      <div class="index-list">
         {% for post in site.posts %}
         {% if count == 0 %}
         {% assign modified = post.date | date: "%b %-d, %Y" %}
@@ -229,9 +187,12 @@ layout: compress
         {% endfor %}
       </div>
       <footer>
-        <p>Last modified: {{ modified }}</p>
-        <p>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>, is written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>, and uses system default fonts. All of the code is available on <a href="https://github.com/ianmcdonald/">GitHub</a>.</p>
-        <p style="word-break: break-all;">dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5/</p>
+        <ul>
+          <li>Last modified: {{ modified }}</li>
+          <li>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>, is written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>, and uses system default fonts</li>
+          <li>GitHub: <a href="https://github.com/ianmcdonald/">/ianmcdonald</a></li>
+                <li>Twitter: <a href="https://twitter.com/systemdefaults">@systemdefaults</a></li>
+        <li>p2p: <a href="dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5" style="word-break: break-all;">dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5/</a></li>
       </footer>
     {% else %}
       <article>
@@ -255,4 +216,3 @@ layout: compress
         </div>
       </article>
     {% endif %}
-    </main>
