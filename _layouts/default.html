@@ -1,9 +1,9 @@
 ---
 layout: compress
 ---
-{% assign ff = "Helvetica, Arial, sans-serif" %}
-{% assign fc = "#0d690d" %}
 {% assign bc = "#fafafa" %}
+{% assign fc = "#282828" %}
+{% assign ac = "#0d690d" %}
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8">
@@ -22,8 +22,8 @@ layout: compress
       margin: 0;
       padding: 0.5em;
       background: {{ bc }};
-      color: #282828;
-      font-family: {{ ff }};
+      color: {{ fc }};
+      font-family: helvetica, arial, sans-serif;
       font-weight: 400;
       line-height: 1.3;
       font-size: 1.25em;
@@ -32,21 +32,15 @@ layout: compress
     img {
       max-width: 100%;
       height: auto;
-      vertical-align: middle;
     }
     figure {
       display: block;
       margin: 2em auto;
     }
-    figcaption,
-    small {
+    figcaption, small {
       font-size: 0.75em;
     }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
+    h1, h2, h3, h4, h5 {
       display: block;
       margin: 0;
       font-weight: 600;
@@ -58,13 +52,10 @@ layout: compress
       font-weight: 400;
       letter-spacing: -0.05em;
       word-spacing: 666em;
-      color: {{ fc }};
+      color: {{ ac }};
     }
     p {
       margin: 0 0 1em 0;
-      font-weight: 400;
-      font-size: 1em;
-      color: #282828;
     }
     a {
       text-decoration: underline;
@@ -84,9 +75,9 @@ layout: compress
     pre {
       display: block;
       padding: 1em;
-      margin: 1em 0;
+      margin: 2em 0;
       border: none;
-      background: {{ fc }};
+      background: {{ ac }};
       color: {{ bc }};
       font-family: menlo, monospace;
       overflow: auto;
@@ -97,21 +88,21 @@ layout: compress
       font-family: georgia, serif;
       border-left: 0.125em solid;
       font-size: 1em;
-      color: {{ fc }};
+      color: {{ ac }};
     }
     blockquote * {
-      color: {{ fc }};
+      color: {{ ac }};
     }
     blockquote:before,
     blockquote:after {
       content: '';
     }
-    .index-heading h1 {
+    .index-heading {
       margin-bottom: 0;
       padding-bottom: 0;
       text-transform: none;
       font-size: 1em;
-      color: #282828;
+      color: {{ fc }};
       word-spacing: normal;
       letter-spacing: normal;
     }
@@ -120,21 +111,22 @@ layout: compress
       width: 100vw;
     }
     .index-list a {
-      position: relative;
       display: block;
       text-decoration: none;
       padding: 0.5em 0.25em 0.5em 0.175em;
-      color: {{ fc }};
-      background: {{ bc }};
-      border-top: 0.05em solid {{ fc }};
+      color: {{ ac }};
+      border-top: 0.05em solid {{ ac }};
       line-height: 1;
       font-size: 2em;
       letter-spacing: -0.05em;
       margin: 0;
     }
     .index-list a:hover {
-      background: {{ fc }};
+      background: {{ ac }};
       color: {{ bc }};
+    }
+    .word-break {
+      word-break: break-all;
     }
     time {
       display: block;
@@ -144,11 +136,8 @@ layout: compress
     footer {
       padding: 2em 0;
     }
-    .word-break {
-      word-break: break-all;
-    }
     footer svg {
-      fill: {{ fc }};
+      fill: {{ ac }};
       width: 3em;
     }
     @media (min-width: 35em) {
@@ -171,48 +160,48 @@ layout: compress
   <body>
     {% if page.url == '/' %}
     {% assign count = 0 %}
-      <div class="index-heading">
-        <h1>{{ site.title }}</h1>
-      </div>
-      <div class="index-list">
-        {% for post in site.posts %}
-        {% if count == 0 %}
-        {% assign modified = post.date | date: "%b %-d, %Y" %}
-        {% endif %}
-        {% assign count = count | plus: 1 %}
-        {% assign cat = post.categories | first | downcase %}
-        <a href="{{ post.url | relative_url }}" class="{{ cat }}">
-          {{ post.title | escape }}
-        </a>
-        {% endfor %}
-      </div>
-      <footer>
-        <ul>
-          <li>Last modified: {{ modified }}</li>
-          <li>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>, is written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>, and uses system default fonts</li>
-          <li>GitHub: <a href="https://github.com/ianmcdonald/">/ianmcdonald</a></li>
-                <li>Twitter: <a href="https://twitter.com/systemdefaults">@systemdefaults</a></li>
-        <li class="word-break">p2p: <a href="dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5"">dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5/</a></li>
-      </footer>
+    <h1 class="index-heading">{{ site.title }}</h1>
+    <div class="index-list">
+      {% for post in site.posts %}
+      {% if count == 0 %}
+      {% assign modified = post.date | date: "%b %-d, %Y" %}
+      {% endif %}
+      {% assign count = count | plus: 1 %}
+      {% assign cat = post.categories | first | downcase %}
+      <a href="{{ post.url | relative_url }}" class="{{ cat }}">
+        {{ post.title | escape }}
+      </a>
+      {% endfor %}
+    </div>
+    <footer>
+      <ul>
+        <li>Last modified: {{ modified }}</li>
+        <li>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>, is written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>, and uses system default fonts</li>
+        <li>GitHub: <a href="https://github.com/ianmcdonald/">/ianmcdonald</a></li>
+        <li>Twitter: <a href="https://twitter.com/systemdefaults">@systemdefaults</a></li>
+        <li class="word-break">p2p: <a href="dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5">dat://7d77d7674af8bc655473c52f95c8be255e1fb216e74e1de8085a5f86c80553b5/</a></li>
+      </ul>
+    </footer>
     {% else %}
-      <article>
-        <header>
-          <h1>{{ page.title | escape }}</h1>
-          <span rel="author" style="display: none;">Ian G McDonald</span>
-          <time datetime="{{ page.date | date_to_xmlschema }}"
-                itemprop="datePublished">
-            {{ page.date | date: "%b %-d, %Y"}}
-          </time>
-        </header>
-        <div class="content">
-          {{ content }}
-          <footer>
-            <a href="{{ "/" | relative_url }}">
-              <svg viewBox="0 0 815 424" xmlns="http://www.w3.org/2000/svg">
-                <path d="M202.4,423.3 L8,229 C-1.4,219.6 -1.4,204.4 8,195.1 L202.4,0.7 L258.1,57.2 L137.6,172 L815,172 L815,252 L137.6,252 L258.1,366.8 L202.4,423.3 Z"></path>
-              </svg>
-            </a>
-          </footer>
-        </div>
-      </article>
+    <article>
+      <header>
+        <h1>{{ page.title | escape }}</h1>
+        <span rel="author" style="display: none;">Ian G McDonald</span>
+        <time datetime="{{ page.date | date_to_xmlschema }}"
+              itemprop="datePublished">
+          {{ page.date | date: "%b %-d, %Y"}}
+        </time>
+      </header>
+      <div class="content">
+        {{ content }}
+        <footer>
+          <a href="{{ "/" | relative_url }}">
+            <svg viewBox="0 0 815 424" xmlns="http://www.w3.org/2000/svg">
+              <path d="M202.4,423.3 L8,229 C-1.4,219.6 -1.4,204.4 8,195.1 L202.4,0.7 L258.1,57.2 L137.6,172 L815,172 L815,252 L137.6,252 L258.1,366.8 L202.4,423.3 Z"></path>
+            </svg>
+          </a>
+        </footer>
+      </div>
+    </article>
     {% endif %}
+    
