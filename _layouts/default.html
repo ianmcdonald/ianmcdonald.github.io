@@ -61,7 +61,7 @@ layout: compress
       text-decoration: underline;
       -webkit-text-decoration-skip: ink;
       text-decoration-skip: ink;
-      color: inherit;
+      color: {{ fc }};
     }
     a:hover {
       text-decoration: none;
@@ -90,12 +90,14 @@ layout: compress
       font-size: 1em;
       color: {{ ac }};
     }
-    blockquote * {
-      color: {{ ac }};
-    }
     blockquote:before,
     blockquote:after {
       content: '';
+    }
+    time {
+      display: block;
+      margin: 0 0 4em 0;
+      letter-spacing: -0.05em;
     }
     .index-heading {
       margin-bottom: 0;
@@ -110,7 +112,7 @@ layout: compress
       margin: 4em 0 2em -0.5em;
       width: 100vw;
     }
-    .index-list a {
+    .index-list-item {
       display: block;
       text-decoration: none;
       padding: 0.5em 0.25em 0.5em 0.175em;
@@ -121,22 +123,15 @@ layout: compress
       letter-spacing: -0.05em;
       margin: 0;
     }
-    .index-list a:hover {
+    .index-list-item:hover {
       background: {{ ac }};
       color: {{ bc }};
     }
     .word-break {
       word-break: break-all;
     }
-    time {
-      display: block;
-      margin: 0 0 4em 0;
-      letter-spacing: -0.05em;
-    }
-    footer {
-      padding: 2em 0;
-    }
-    footer svg {
+    .back {
+      margin: 2em 0;
       fill: {{ ac }};
       width: 3em;
     }
@@ -167,8 +162,7 @@ layout: compress
       {% assign modified = post.date | date: "%b %-d, %Y" %}
       {% endif %}
       {% assign count = count | plus: 1 %}
-      {% assign cat = post.categories | first | downcase %}
-      <a href="{{ post.url | relative_url }}" class="{{ cat }}">
+      <a href="{{ post.url | relative_url }}" class="index-list-item">
         {{ post.title | escape }}
       </a>
       {% endfor %}
@@ -196,7 +190,7 @@ layout: compress
         {{ content }}
         <footer>
           <a href="{{ "/" | relative_url }}">
-            <svg viewBox="0 0 815 424" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 815 424" class="back">
               <path d="M202.4,423.3 L8,229 C-1.4,219.6 -1.4,204.4 8,195.1 L202.4,0.7 L258.1,57.2 L137.6,172 L815,172 L815,252 L137.6,252 L258.1,366.8 L202.4,423.3 Z"></path>
             </svg>
           </a>
@@ -204,4 +198,3 @@ layout: compress
       </div>
     </article>
     {% endif %}
-    
