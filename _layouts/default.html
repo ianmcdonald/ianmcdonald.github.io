@@ -37,22 +37,27 @@ layout: compress
       display: block;
       margin: 2em auto;
     }
-    figcaption, small {
+    figcaption {
       font-size: 0.75em;
     }
-    h1, h2, h3, h4, h5 {
-      display: block;
-      margin: 0;
-      font-weight: 600;
-      font-size: 1em;
+    small {
+      font-size: 0.75em;
     }
     h1 {
+      display: block;
+      margin: 0;
       font-size: 3em;
       line-height: 0.9em;
       font-weight: 400;
       letter-spacing: -0.05em;
       word-spacing: 666em;
       color: {{ ac }};
+    }
+    h2 {
+      display: block;
+      margin: 0;
+      font-weight: 600;
+      font-size: 1em;
     }
     p {
       margin: 0 0 1em 0;
@@ -74,25 +79,20 @@ layout: compress
     }
     pre {
       display: block;
-      padding: 1em;
       margin: 2em 0;
-      border: none;
+      padding: 0.5em;
       background: {{ ac }};
       color: {{ bc }};
       font-family: menlo, monospace;
       overflow: auto;
     }
     blockquote {
+      display: block;
       margin: 2em 0;
       padding: 0 0.5em;
       font-family: georgia, serif;
       border-left: 0.125em solid;
-      font-size: 1em;
       color: {{ ac }};
-    }
-    blockquote:before,
-    blockquote:after {
-      content: '';
     }
     time {
       display: block;
