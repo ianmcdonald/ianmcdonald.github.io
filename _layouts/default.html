@@ -1,14 +1,11 @@
----
-layout: compress
----
-{% assign bc = "white" %}
-{% assign fc = "black" %}
-{% assign ac = "black" %}
+{% assign fc = "#282828" %}
+{% assign bc = "#fafafa" %}
+{% assign ac = "#ffdfff" %}
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf-8">
   <meta name="author" content="{{ site.title }}">
-  <meta name="description" content="Web designer, developer, and educator.">
+  <meta name="description" content="Designer, developer, writer, and educator">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
   <style>
@@ -16,46 +13,46 @@ layout: compress
       box-sizing: border-box;
     }
     body {
-      margin: 0;
-      padding: 0.5em;
-      background: {{ bc }};
+      margin: 0 auto;
+      padding: 0.5em;    
       color: {{ fc }};
       font-family: helvetica, arial, roboto, sans-serif;
       font-weight: 400;
-      line-height: 1.25;
-      font-size: 1.25em;
+      line-height: 1.2;
+      font-size: 1em;
       overflow-x: hidden;
-    }
-    img {
       max-width: 100%;
-      height: auto;
+      background: {{ bc }};
+      background: -moz-linear-gradient(left, {{ ac }} 0%, {{ bc }} 100%);
+      background: -webkit-linear-gradient(left, {{ ac }} 0%, {{ bc }} 100%);
+      background: linear-gradient(to right, {{ ac }} 0%, {{ bc }} 100%); 
+    }
+    main {
+      display: block;
+      margin: 0.5em auto 2em auto;
+      width: 30em;
+      max-width: 100%;
+    }
+    article, time {
+      display: block;
+      margin: 0 0 2em 0;
     }
     figure {
       display: block;
       margin: 2em 0;
     }
-    figcaption {
-      font-size: 0.75em;
-    }
-    small {
-      font-size: 0.75em;
-    }
-    h1 {
-      margin: 0;
-      padding: 0;
-      font-size: 3em;
-      line-height: 0.85;
-      font-weight: 400;
-      letter-spacing: -0.05em;
-      word-spacing: 666em;
-      color: {{ ac }};
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 1em;
+    img {
+      max-width: 100%;
+      height: auto;
     }
     p {
-      margin: 0 0 1em 0;
+      margin: 0 0 0.75em 0;
+    }
+    h1, h2, h3, h4, h5 {
+      margin: 0;
+      padding: 0;
+      font-size: 1em;
+      font-weight: 400;
     }
     a {
       text-decoration: underline;
@@ -65,119 +62,80 @@ layout: compress
     }
     a:hover {
       text-decoration: none;
+      font-style: italic;
     }
-    ul {
-      padding-left: 0.75em;
+    pre, blockquote {
+      display: block;
+      margin: 2em 0;
+      padding: 0.5em 0.25em;
+      box-shadow: 0 0 1em 0.5em {{ ac }};
+      font-family: courier, monospace;
+      border-radius: 0.25em;
     }
     pre {
-      display: block;
-      margin: 2em 0;
-      padding: 0.5em;
-      background: {{ ac }};
-      color: {{ bc }};
-      font-family: menlo, monospace;
       overflow: auto;
     }
-    blockquote {
+    nav {
       display: block;
-      margin: 2em 0;
-      padding: 0 0.5em;
-      font-family: georgia, serif;
-      border-left: 0.125em solid;
-      color: {{ ac }};
+      margin: 2em 0 1em 0;
     }
-    time {
-      display: block;
-      margin: 0 0 4em 0;
-      letter-spacing: -0.05em;
+    nav a {
+      max-width: 75%;
+      display: inline-block;
+      vertical-align: text-top;
+      margin-bottom: 0.5em;
     }
-    .index-heading {
-      text-transform: none;
-      font-size: 1em;
-      color: {{ fc }};
-      word-spacing: normal;
-      letter-spacing: normal;
-    }
-    .index-list {
-      margin: 2em 0 2em -0.5em;
-      width: 100vw;
-    }
-    .index-list-item {
-      display: block;
-      text-decoration: none;
-      padding: 0.5em 0.25em 0.5em 0.175em;
-      color: {{ ac }};
-      border-top: 0.05em solid {{ ac }};
-      line-height: 0.85;
-      font-size: 2em;
-      letter-spacing: -0.05em;
-    }
-    .index-list-item:hover {
-      background: {{ ac }};
-      color: {{ bc }};
-    }
-    .word-break {
-      word-break: break-all;
-    }
-    .back {
-      margin: 2em 0;
-      fill: {{ ac }};
-      width: 3em;
+    @media (min-width: 20em) {
+      body {
+        font-size: 1.5em;
+      }
     }
     @media (min-width: 35em) {
       body {
         font-size: 2em;
       }
     }
-    @media (min-width: 70em) {
-      header {
-        position: fixed;
-        width: 48%;
-      }
-      .content {
-        position: absolute;
-        left: 50%;
-        width: 48%;
+    @media (min-width: 80em) {
+      body {
+        font-size: 2.5em;
       }
     }
   </style>
   <body>
-    {% if page.url == '/' %}
-    {% assign count = 0 %}
-    <h1 class="index-heading">{{ site.title }}</h1>
-    <div class="index-list">
-      {% for post in site.posts %}
-      {% if count == 0 %}
-      {% assign modified = post.date | date: "%b %-d, %Y" %}
+    <main>
+      {% if page.url == '/' %}
+      {% assign count = 0 %}
+      <h1>{{ site.title }}</h1>
+      <p>Designer, developer, writer, and educator</p>
+      <nav>
+        {% for post in site.posts %}
+        {% if count == 0 %}
+        {% assign modified = post.date | date: "%B %-d, %Y" %}
+        {% endif %}
+        {% assign count = count | plus: 1 %}
+        &mdash;<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><br>
+        {% endfor %}
+      </nav>
+      <br>
+      <p>
+        Last modified: {{ modified }}
+        <br>
+        <a href="https://twitter.com/systemdefaults">Twitter</a>,
+        <a href="https://are.na/ian-mcdonald">Are.na</a>,
+        <a href="https://github.com/ianmcdonald/">GitHub</a>
+      </p>
+      {% else %}
+      <article>
+        <header>
+          <h1>{{ page.title | escape }}</h1>
+          <span rel="author" style="display: none;">Ian G McDonald</span>
+          <time datetime="{{ page.date | date_to_xmlschema }}"
+                itemprop="datePublished">
+            {{ page.date | date: "%B %-d, %Y"}}
+          </time>
+        </header>
+          {{ content }}          
+      </article>
+      <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
       {% endif %}
-      {% assign count = count | plus: 1 %}
-      <a href="{{ post.url | relative_url }}" class="index-list-item">
-        {{ post.title | escape }}
-      </a>
-      {% endfor %}
-    </div>
-    <ul>
-      <li>Last modified: {{ modified }}</li>
-      <li>Elsewhere: <a href="https://github.com/ianmcdonald/">GitHub</a>, <a href="https://twitter.com/systemdefaults">Twitter</a>, <a href="https://are.na/ian-mcdonald">Are.na</a></li>
-      <li>This site is built with <a href="https://jekyllrb.com/">Jekyll</a>, is written in <a href="https://www.gnu.org/software/emacs/">Emacs</a>, and uses system default fonts</li>
-    </ul>
-    {% else %}
-    <article>
-      <header>
-        <h1>{{ page.title | escape }}</h1>
-        <span rel="author" style="display: none;">Ian G McDonald</span>
-        <time datetime="{{ page.date | date_to_xmlschema }}"
-              itemprop="datePublished">
-          {{ page.date | date: "%b %-d, %Y"}}
-        </time>
-      </header>
-      <div class="content">
-        {{ content }}
-        <a href="{{ "/" | relative_url }}">
-          <svg viewBox="0 0 815 424" class="back">
-            <path d="M202.4,423.3 L8,229 C-1.4,219.6 -1.4,204.4 8,195.1 L202.4,0.7 L258.1,57.2 L137.6,172 L815,172 L815,252 L137.6,252 L258.1,366.8 L202.4,423.3 Z"></path>
-          </svg>
-        </a>
-      </div>
-    </article>
-    {% endif %}
+    </main>
