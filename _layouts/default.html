@@ -24,7 +24,7 @@
       background: linear-gradient(to left, {{ ac }} 0%, {{ bc }} 100%);
       letter-spacing: -0.0125em;
     }
-    main, article, figure, nav, header, footer {
+    main, article, nav, header, footer, section {
       display: block;
       margin: 0 0 2em 0;
       padding: 0;
@@ -50,21 +50,32 @@
       text-decoration: none;
       font-style: italic;
     }
-    pre, blockquote {
+    pre, blockquote, figure {
       display: block;
       margin: 2em 0;
-      padding: 0.5em;
-      box-shadow: 0 0 1em 0.5em {{ ac }};
+      padding: 1em 0.5em;
+      box-shadow: 0 1em 1em {{ ac }};
       font-family: courier, monospace;     
     }
     pre {
       overflow: auto;
     }
-    nav a {
+    small, figcaption {
+      font-size: 0.75em;
+    }
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 1em;
+    }
+    li {
+      padding: 0.25em 0;
+    }
+    ul > li:before {
       display: inline-block;
-      max-width: 85%;
-      vertical-align: text-top;
-      margin-bottom: 0.5em;
+      content: '\2014';
+      width: 1em;
+      margin-left: -1em;
     }
     @media (min-width: 20em) {
       body {
@@ -78,28 +89,27 @@
     }
     @media (min-width: 80em) {
       body {
-        font-size: 3vw;
-      }
-    }
-    @media (min-width: 90em) {
-      body {
-        font-size: 3vw;
+        font-size: 2.5vw;
       }
     }
   </style>
   <body>
     <main>{% if page.url == '/' %}{% assign count = 0 %}
-      <header>
-        <h1>{{ site.title }}</h1>
-        <p>Designer, developer, writer, and educator</p>
-      </header>
-      <nav>{% for post in site.posts %}{% if count == 0 %}{% assign modified = post.date | date: "%B %-d, %Y" %}{% endif %}
-{% assign count = count | plus: 1 %}&mdash;<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><br>{% endfor %}
-      </nav>
-      <p>Last modified: {{ modified }}<br>
-        <a href="https://twitter.com/systemdefaults">Twitter</a>,
-        <a href="https://are.na/ian-mcdonald">Are.na</a>,
-        <a href="https://github.com/ianmcdonald/">GitHub</a></p>{% else %}
+      <section>
+        <header>
+          <h1>{{ site.title }}</h1>
+          <p>Designer, developer, writer, and educator<br>
+            <a href="https://twitter.com/systemdefaults">Twitter</a>,
+            <a href="https://are.na/ian-mcdonald">Are.na</a>,
+            <a href="https://github.com/ianmcdonald/">GitHub</a></p>
+        </header>
+        <nav>
+          <ul>{% for post in site.posts %}{% if count == 0 %}{% assign modified = post.date | date: "%B %-d, %Y" %}{% endif %}
+            {% assign count = count | plus: 1 %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}
+          </ul>
+        </nav>
+        <blockquote>Last modified on {{ modified }}</blockquote>
+      </section>{% else %}
       <article>
         <header>
           <h1>{{ page.title | escape }}</h1>
