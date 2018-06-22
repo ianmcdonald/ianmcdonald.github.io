@@ -5,100 +5,72 @@
   <meta name="description" content="Designer, developer, writer, and educator">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <style>{% assign fc = "#282828" %}{% assign bc = "#fafafa" %}{% assign ac = "#ffdaff" %}
-    * {
-      box-sizing: border-box;
-    }
+  <style>
     body {
-      margin: 0 auto;
-      padding: 0.5em;
-      max-width: 100%;
       font-family: helvetica, arial, roboto, sans-serif;
       font-size: 24px;
-      color: {{ fc }};
-      background: {{ bc }};
-      background: linear-gradient(to left, {{ ac }} 0%, {{ bc }} 100%);
+      color: black;
+      background-color:white;
     }
-    main, article, nav, header, footer, section {
-      display: block;
-      margin: 0 0 2em 0;
-      padding: 0;
+    @media (min-width: 50em) {
+      body { font-size: 3vw; }
+    }
+    a {
+      color: black;
     }
     img {
       max-width: 100%;
       height: auto;
+      filter: grayscale(1);
     }
-    h1 {
-      margin: 0;
-      padding: 0;
-      font-size: 1em;
-      font-weight: 400;
-    }
-    p {
-      margin: 0 0 0.75em 0;
-    }
-    a {
-      text-decoration: underline;
-      color: {{ fc }};
-    }
-    a:hover {
-      text-decoration: none;
-      font-style: italic;
-    }
-    pre, blockquote, figure {
-      display: block;
-      margin: 1em;
-      padding: 1em 0.5em;
-      box-shadow: 0 1em 1em {{ ac }};
-      font-family: courier, monospace;
-      overflow: auto;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0 0 0.75em 0;
-      padding-left: 1em;
-    }
-    li {
-      padding: 0.25em 0;
-    }
-    ul > li:before {
+    h1, .links a {     
       display: inline-block;
-      content: '\2014';
-      width: 1em;
-      margin-left: -1em;
+      margin: 0 0 0.5em 0;
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: normal;
+      line-height: 1;
     }
-    @media (min-width: 35em) {
-      body {
-        font-size: 2em;
-      }
+    .links a * {
+      display: inline;
+      vertical-align: middle;    
+    }
+    .links a span {
+      color: white;
+    }
+    .links a:hover span {
+      color: black;
     }
   </style>
   <body>
     <main>{% if page.url == '/' %}{% assign count = 0 %}
-      <section>
-        <header>
-          <h1>{{ site.title }}</h1>
-          <p>Designer, developer, writer, and educator<br>
-            <a href="https://twitter.com/systemdefaults">Twitter</a>,
-            <a href="https://are.na/ian-mcdonald">Are.na</a>,
-            <a href="https://github.com/ianmcdonald/">GitHub</a></p>
-        </header>
-        <nav>
-          <ul>{% for post in site.posts %}{% if count == 0 %}{% assign modified = post.date | date: "%B %-d, %Y" %}{% endif %}
-            {% assign count = count | plus: 1 %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}
-          </ul>
-        </nav>
-        <blockquote>Last modified on {{ modified }}</blockquote>
-      </section>{% else %}
+      <div class="links">{% for post in site.posts %}{% if count == 0 %}{% assign modified = post.date | date: "%B %-d, %Y" %}{% endif %}
+        {% assign count = count | plus: 1 %}
+        <a href="{{ post.url | relative_url }}">
+          <span>{{ post.title | escape }}</span>
+          <svg height="1em" width="1em">
+            <circle cx="0.5em" cy="0.5em" r="0.425em" stroke="none" fill="black" />
+          </svg>
+        </a>
+        {% endfor %}
+      </div>
+      <p>Last modified on {{ modified }}</p>
+      <p>
+        <a href="https://twitter.com/systemdefaults">Twitter</a>,
+        <a href="https://are.na/ian-mcdonald">Are.na</a>,
+        <a href="https://github.com/ianmcdonald/">GitHub</a>
+      </p>
+      {% else %}
       <article>
         <header>
-          <h1>{{ page.title | escape }}</h1>
-          <span rel="author" style="display: none;">Ian G McDonald</span>
+          <h1>{{ page.title | escape }}</h1><br>
+          <div rel="author" style="display: none;">Ian McDonald</div>
           <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y"}}</time>
         </header>
+        <br>
         {{ content }}
       </article>
       <footer>
-        <a href="{{ "/" | relative_url }}">Back to index</a>
+        <a href="{{ "/" | relative_url }}">Back to index</a><br><br>
       </footer>{% endif %}
     </main>
