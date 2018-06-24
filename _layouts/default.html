@@ -19,7 +19,7 @@
     img {
       max-width: 100%;
     }
-    a, .essay:hover .essay-title {
+    a, a:hover > * {
       color: black;
     }
     h1, .essay {
@@ -33,15 +33,10 @@
     }
     .essay-title {
       display: inline;
-      position: relative;
-      padding-right: 1em;
       color: rgba(255,255,255,0);
     }
-    .essay-title:after  {
-      content: '';
-      position: absolute;
-      bottom: 0
-      right: 0;
+    .dot {
+      display: inline-block;
       width: 1em;
       height: 1em;
       background: black;
@@ -60,6 +55,7 @@
         {% assign count = count | plus: 1 %}
         <a href="{{ post.url | relative_url }}" class="essay">
           <span class="essay-title">{{ post.title | escape }}</span>
+          <span class="dot">&nbsp;</span>
         </a>
         {% endfor %}
       </div>
@@ -71,7 +67,7 @@
       {% else %}
       <article>
         <header>
-          <h1>{{ page.title | escape }}</h1><br>
+          <h1>{{ page.title | escape }} <span class="dot">&nbsp;</span></h1><br>
           <div rel="author" style="display: none;">Ian McDonald</div>
           <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y"}}</time>
         </header>
