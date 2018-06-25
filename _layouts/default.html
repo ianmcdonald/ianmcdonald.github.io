@@ -1,81 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <meta charset="utf-8">
-  <meta name="author" content="{{ site.title }}">
-  <meta name="description" content="Designer, developer, writer, and educator">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
-  <style>
-    body {
-      font-family: helvetica, arial, roboto, sans-serif;
-      font-size: 24px;
-      color: black;
-      background: white;
-      filter: grayscale(1);
-    }
-    @media (min-width: 50em) {
-      body { font-size: 3vw }
-    }
-    img {
-      max-width: 100%;
-    }
-    a, a:hover > * {
-      color: black;
-    }
-    h1, .essay {
-      display: inline-block;
-      margin: 0.5em 0;
-      padding: 0;
-      text-decoration: none;
-      font-size: 2em;
-      font-weight: normal;
-      line-height: 1;
-    }
-    .essay-title {
-      display: inline;
-      color: rgba(255,255,255,0);
-    }
-    .dot {
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      background: black;
-      border-radius: 50%;
-    }
-  </style>
-  <body>
-    <main>
-      {% if page.url == '/' %}
-      {% assign count = 0 %}
-      <div class="essays">
-        {% for post in site.posts %}
-        {% if count == 0 %}
-        {% assign modified = post.date | date: "%B %-d, %Y" %}
-        {% endif %}
-        {% assign count = count | plus: 1 %}
-        <a href="{{ post.url | relative_url }}" class="essay">
-          <span class="essay-title">{{ post.title | escape }}</span>
-          <span class="dot">&nbsp;</span>
-        </a>
-        {% endfor %}
-      </div>
-      <p>Last modified on {{ modified }}<br>
-        <a href="https://twitter.com/systemdefaults">Twitter</a>,
-        <a href="https://are.na/ian-mcdonald">Are.na</a>,
-        <a href="https://github.com/ianmcdonald/">GitHub</a>
-      </p>
-      {% else %}
-      <article>
-        <header>
-          <h1>{{ page.title | escape }} <span class="dot">&nbsp;</span></h1><br>
-          <div rel="author" style="display: none;">Ian McDonald</div>
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y"}}</time>
-        </header>
-        <br>
-        {{ content }}
-      </article>
-      <footer>
-        <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
-      </footer>
-      {% endif %}
-    </main>
+<meta charset="utf-8">
+<meta name="author" content="{{ site.title }}">
+<meta name="description" content="Designer, developer, writer, and educator">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<style>
+  body {
+    font-family: helvetica,arial,roboto,sans-serif;
+    font-size: 24px;
+    color: black;
+    background: white;
+  }
+  img {
+    max-width: 100%;
+  }
+  p, h1 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0 0 1em 0;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.25;
+  }
+  a:hover {
+    opacity: 1;
+  }
+  @media (min-width: 50em) {
+    body { font-size: 3vw; }
+  }
+</style>
+<body>
+  {% if page.url == '/' %}{% assign count = 0 %}
+  <p>{% for post in site.posts %}{% if count == 0 %}{% assign modified = post.date | date: "%B %-d, %Y" %}{% endif %}{% assign count = count | plus: 1 %}{% if count > 1 %}, {% endif %}<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>{% endfor %}</p>
+  <p>Last modified on {{ modified }}<br>
+    <a href="https://twitter.com/systemdefaults">Twitter</a>,
+    <a href="https://are.na/ian-mcdonald">Are.na</a>,
+    <a href="https://github.com/ianmcdonald/">GitHub</a>
+  </p>
+  {% else %}
+  <article>
+    <h1>{{ page.title | escape }}</h1>
+    {{ content }}
+  </article>
+  <footer>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y"}}</time>
+    <p rel="author">Ian McDonald</p>
+    <p><a href="{{ "/" | relative_url }}">Back to index</a></p>
+  </footer>
+  {% endif %}
