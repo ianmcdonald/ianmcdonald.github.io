@@ -51,7 +51,7 @@
     (function() {
       "use strict";
       document.body.addEventListener('mousemove', handleMouseMove);
-      document.body.addEventListener('touchmove', handleMouseMove);
+      document.body.addEventListener('touchmove', handleTouchMove);
       function handleMouseMove(event) {
         var qfwfq, eventDoc, doc, body, pageX, pageY;
         event = event || window.event;
@@ -72,7 +72,19 @@
         qfwfq.style.top = event.pageY + 'px';
         document.body.appendChild(qfwfq);
       }
-    })();
+      function handleTouchMove(event) {
+        var qfwfq, body, x, y;
+        event = event;
+        body = document.body;
+        x = event.touches[0].clientX;
+        y = event.touches[0].clientY;
+        qfwfq = document.createElement('div');
+        qfwfq.className = 'qfwfq';
+        qfwfq.style.left = x + 'px';
+        qfwfq.style.top = y + 'px';
+        document.body.appendChild(qfwfq);
+      }
+    })();    
   </script>
   {% else %}
   <article>
