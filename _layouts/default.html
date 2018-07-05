@@ -45,7 +45,7 @@
     {% if count == 0 %}
     {% assign modified = post.date | date: "%B %-d, %Y" %}
     {% endif %}
-    {% count = count + 1 %}
+    {% assign count = count | plus: 1 %}
     <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>,
     {% endfor %}
     <a href="https://ianmcdonald.github.io/click-here">Click Here</a>,
