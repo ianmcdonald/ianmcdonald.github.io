@@ -33,10 +33,11 @@
   }
   .qfwfq {
     position: absolute;
-    width: 0;
-    height: 2em;
+    width: 32px;
+    height: 0;
     border: 1px dotted;
     z-index: -1;
+    transform: rotate(-45deg);
   }
   @media (min-width: 50em) {
     body { font-size: 3vw; }
@@ -58,6 +59,7 @@
     <a href="https://ianmcdonald.github.io/anxiety-blocks">Anxiety Blocks</a>,
     <a href="https://ianmcdonald.github.io/untitled">Untitled</a>,
     <a href="http://mushroom-maven.com">Mushroom Maven</a>,
+    <a href="https://are.na/ian-mcdonald/the-web-is">The Web is&hellip;</a>,
     <a href="https://ianmcdonald.github.io/kaleidoscope">Kaleidoscope</a>
   </p>
   <p>Last modified on {{ modified }}<br>
@@ -102,6 +104,7 @@
         qfwfq.style.top = y + 'px';
         document.body.appendChild(qfwfq);
       }
+      document.body.style.cursor = 'all-scroll'
     })();    
   </script>
   {% else %}
