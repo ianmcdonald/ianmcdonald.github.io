@@ -10,31 +10,25 @@ body {
   line-height: 1.2;
   margin: 0 auto;  
   padding: 0;
-  color: #2f4177;
-  background-color: #ffffff;
+  color: black;
+  background-color: white;
   max-width: 100%;
 }
 main {
-  margin: 0;
-  border-bottom: 50vh solid;
+  display: block;
+  margin: 0 auto;
+  padding: 1.5em 0.5em;
+  max-width: 37.5em;
 }
-section,
+section {
+  display: block;
+  margin: 0;
+  padding: 2em 0;
+}
 article {
   display: block;
-  margin: 0 auto;
-  padding: 3em 0.25em;
-  max-width: 37.5em;
-}
-footer {
-  display: block;
-  margin: 0 auto;
-  padding: 2em 0.25em 4em 0.25em;
-  max-width: 37.5em;
-}
-hr {
-  border: none;
-  border-bottom: 0.1em solid;
-  margin: 6em auto 0 auto;
+  margin: 0;
+  padding: 0 0 4em 0;
 }
 a {
   color: inherit;
@@ -44,10 +38,10 @@ a:hover,
 a:focus {
   color: inherit;
   outline: none;
-  text-decoration: none
+  text-decoration: none;
 }
 ul {
-  margin: 0 0 1em 0;
+  margin: 1em 0;
   padding: 0;
 }
 li {
@@ -64,7 +58,7 @@ li:before {
 h1, h2 {
   font-weight: 600;
   font-size: 1em;
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
   text-transform: uppercase;
 }
 h3 {
@@ -79,13 +73,20 @@ h4 {
   padding: 0;
 }
 p {
-  margin: 0 0 1em 0;
+  margin: 0;
+  text-indent: 0;
+}
+p + p {
+  text-indent: 1.5em;
+}
+footer p {
+  text-indent: 0;
 }
 blockquote {
   display: block;
-  margin: 2em auto;
+  margin: 1em auto;
   padding: 1.5em 0.5em;
-  background-color: #2f4177;
+  background-color: black;
   color: white;
 }
 img {
@@ -103,19 +104,23 @@ figcaption {
   font-size: 1em;
   margin: 0 auto;
 }
-header {
+.banner {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #2f4177;
+  background-color: black;
   color: white;
   margin: 0;
 }
-header h1 {
+footer.banner { 
+  transform: scale(-1);
+}
+.banner .name {
   position: relative;
+  text-transform: uppercase;
   font-weight: 600;
   font-size: 1em;
   margin: 0;
@@ -124,24 +129,25 @@ header h1 {
   color: transparent;
   background-color: transparent;  
   z-index: 0;
-  border: 0.1em solid white;
+  border: 0.1em solid;
   border-radius: 50%;
   height: 7em;
   width: 7em;
   text-align: center;
   transform: rotate(-19deg);
 }
-header h1:after {
+.banner .name:after {
   content: 'IAN';
   display: block;
   transform: scale(-1,-1);
+  line-height: 0.875;
 }
 .hovering {
   color: transparent;
 }
-.hovering h1 {
-  color: #2f4177;
-  background-color: white;
+.hovering .name {
+  color: white;
+  background-color: black;
 }
 .line {
   border-bottom: 0.1em solid;
@@ -179,9 +185,13 @@ header h1:after {
 .link-right {
   right: 0;
 }
-
 @media (min-width: 40em) {
   body {
     font-size: 1.5em;
+  }
+}
+@media (min-width: 60em) {
+  body {
+    font-size: 1.75em;
   }
 }
