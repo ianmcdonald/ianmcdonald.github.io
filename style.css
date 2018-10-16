@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  background-color: black;
+}
 body {
   font-family: Helvetica, Arial, Roboto, sans-serif;
   font-size: 18px;
@@ -41,7 +44,7 @@ a:focus {
   text-decoration: none;
 }
 ul {
-  margin: 1em 0;
+  margin: 0;
   padding: 0;
 }
 li {
@@ -58,7 +61,8 @@ li:before {
 h1, h2 {
   font-weight: 600;
   font-size: 1em;
-  margin: 0 0 1em 0;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
 }
 h3 {
@@ -116,7 +120,7 @@ figcaption {
   margin: 0;
 }
 footer.banner { 
-  transform: scale(-1);
+  transform: scale(1,-1);
 }
 .banner .name {
   position: relative;
