@@ -60,18 +60,18 @@ li:before {
 h1, h2 {
   font-weight: 600;
   font-size: 1em;
-  margin: 0;
+  margin: 0 0 0.5em 0;
   padding: 0;
   text-transform: uppercase;
 }
 h3, h4, h5, h6 {
   font-size: 1em;
   font-weight: 600;
-  margin: 1em 0;
+  margin: 0.5em 0;
   padding: 0;
 }
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
   text-indent: 0;
 }
 blockquote {
@@ -89,7 +89,7 @@ img {
   height: auto;
 }
 figure {
-  margin: 2em auto;
+  margin: 1em auto;
   padding: 0;
   display: block;
   text-align: center;
@@ -163,6 +163,7 @@ footer.banner {
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
+  border-bottom: none;
 }
 .line a:hover {
   color: white;
