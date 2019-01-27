@@ -208,6 +208,7 @@ footer.banner {
   border: 0.1em solid black;
   color: white;
   text-transform: uppercase;
+  font-weight: 600;
 }
 .posts li a:hover, .posts li a:focus {
   background-color: white;
