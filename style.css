@@ -113,6 +113,7 @@ small {
   background-color: black;
   color: white;
   margin: 0;
+  font-weight: 600;
 }
 footer.banner { 
   transform: scale(1,-1);
