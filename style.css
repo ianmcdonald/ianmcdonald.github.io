@@ -204,15 +204,16 @@ footer.banner {
   margin: 0;
   display: inline-block;
   padding: 0 0.25em;
-  background-color: black;
+  background-color: transparent;
   border: 0.1em solid black;
-  color: white;
+  color: black;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
 }
 .posts li a:hover, .posts li a:focus, .items li a:hover, .items li a:focus {
-  background-color: white;
+  background-color: transparent;
   color: black;
+  border-color: transparent;
 }
 .posts li:before, .items li:before {
   content: '';
