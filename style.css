@@ -19,7 +19,7 @@ main {
   display: block;
   margin: 0 auto;
   padding: 1.5em 0.5em;
-  max-width: 28em;
+  max-width: 30em;
 }
 section {
   display: block;
@@ -186,7 +186,7 @@ footer.banner {
 .link-right {
   right: 0;
 }
-.posts {
+.posts, .items {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -195,26 +195,26 @@ footer.banner {
   width: 100%;
   width: calc(100% + 0.5em);
 }
-.posts li {
+.posts li, .items li {
   display: inline-block;
   margin: 0 0.25em 0.25em 0;
   padding: 0;
 }
-.posts li a {
+.posts li a, .items li a {
   margin: 0;
   display: inline-block;
-  padding: 0.25em;
+  padding: 0 0.25em;
   background-color: black;
   border: 0.1em solid black;
   color: white;
   text-transform: uppercase;
   font-weight: 600;
 }
-.posts li a:hover, .posts li a:focus {
+.posts li a:hover, .posts li a:focus, .items li a:hover, .items li a:focus {
   background-color: white;
   color: black;
 }
-.posts li:before {
+.posts li:before, .items li:before {
   content: '';
 }
 @media (min-width: 40em) {
