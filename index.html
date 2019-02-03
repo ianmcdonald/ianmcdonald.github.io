@@ -101,5 +101,10 @@
     function bannerLinkUnhover() {
       this.parentElement.parentElement.classList.remove('hovering')
     }
+    window.addEventListener('load', function() {
+      setTimeout(function(){
+        window.scrollTo(0, 1)
+      }, 0)
+    })
   </script>
 </body>
