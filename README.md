@@ -1,3 +1,3 @@
 # ianmcdonald
 
-My personal webpage/blog. Built with Jekyll.
+My personal homepage.
