@@ -10,8 +10,8 @@ body {
   line-height: 1.25;
   margin: 0 auto;  
   padding: 0;
-  color: hotpink;
-  background-color: blueviolet;
+  color: blueviolet;
+  background-color: thistle;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -78,8 +78,8 @@ blockquote {
   display: block;
   margin: 1em auto;
   padding: 1.5em 0.5em;
-  background-color: hotpink;
-  color: blueviolet;
+  background-color: blueviolet;
+  color: thistle;
 }
 blockquote p {
   margin: 0;
@@ -110,8 +110,8 @@ small {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: hotpink;
-  color: blueviolet;
+  background-color: blueviolet;
+  color: thistle;
   margin: 0;
   font-weight: 600;
 }
@@ -146,8 +146,8 @@ footer.banner {
   color: transparent;
 }
 .hovering .name {
-  color: blueviolet;
-  background-color: hotpink;
+  color: thistle;
+  background-color: blueviolet;
 }
 .line {
   border-bottom: 0.1em solid;
@@ -167,7 +167,7 @@ footer.banner {
   border-bottom: none;
 }
 .line a:hover {
-  color: blueviolet;
+  color: thistle;
 }
 .line-a {
   transform: rotate(69deg);
