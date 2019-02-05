@@ -10,8 +10,8 @@ body {
   line-height: 1.25;
   margin: 0 auto;  
   padding: 0;
-  color: black;
-  background-color: white;
+  color: hotpink;
+  background-color: blueviolet;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -78,8 +78,8 @@ blockquote {
   display: block;
   margin: 1em auto;
   padding: 1.5em 0.5em;
-  background-color: black;
-  color: white;
+  background-color: hotpink;
+  color: blueviolet;
 }
 blockquote p {
   margin: 0;
@@ -110,8 +110,8 @@ small {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: black;
-  color: white;
+  background-color: hotpink;
+  color: blueviolet;
   margin: 0;
   font-weight: 600;
 }
@@ -146,8 +146,8 @@ footer.banner {
   color: transparent;
 }
 .hovering .name {
-  color: white;
-  background-color: black;
+  color: blueviolet;
+  background-color: hotpink;
 }
 .line {
   border-bottom: 0.1em solid;
@@ -167,7 +167,7 @@ footer.banner {
   border-bottom: none;
 }
 .line a:hover {
-  color: white;
+  color: blueviolet;
 }
 .line-a {
   transform: rotate(69deg);
@@ -205,14 +205,11 @@ footer.banner {
   display: inline-block;
   padding: 0.025em 0.25em 0 0.25em;
   background-color: transparent;
-  border: 0.1em solid black;
-  color: black;
+  border: 0.1em solid;
   text-transform: uppercase;
   font-weight: 400;
 }
 .posts li a:hover, .posts li a:focus, .items li a:hover, .items li a:focus {
-  background-color: transparent;
-  color: black;
   border-color: transparent;
 }
 .posts li:before, .items li:before {
