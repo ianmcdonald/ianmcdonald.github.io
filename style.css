@@ -78,8 +78,8 @@ blockquote {
   display: block;
   margin: 1em auto;
   padding: 1.5em 0.5em;
-  background-color: blueviolet;
-  color: thistle;
+  background-color: black;
+  color: white;
 }
 blockquote p {
   margin: 0;
@@ -164,7 +164,7 @@ footer.banner {
   border-bottom: none;
 }
 .line a:hover {
-  color: thistle;
+  color: black;
 }
 .line-a {
   transform: rotate(69deg);
