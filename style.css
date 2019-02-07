@@ -10,8 +10,8 @@ body {
   line-height: 1.25;
   margin: 0 auto;  
   padding: 0;
-  color: blueviolet;
-  background-color: thistle;
+  color: black;
+  background-color: white;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -109,9 +109,7 @@ small {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
-  background-color: blueviolet;
-  color: thistle;
+  height: 95vh;
   margin: 0;
   font-weight: 600;
 }
@@ -146,15 +144,14 @@ footer.banner {
   color: transparent;
 }
 .hovering .name {
-  color: thistle;
-  background-color: blueviolet;
+  color: black;
 }
 .line {
   border-bottom: 0.1em solid;
   position: absolute;
   height: 0;
-  width: 95vh;
-  max-width: 95vh;
+  width: 90vh;
+  max-width: 90vh;
   transform-origin: center;
   z-index: 1;
 }
