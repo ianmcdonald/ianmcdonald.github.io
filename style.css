@@ -111,7 +111,7 @@ small {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 95vh;
+  height: 90vh;
   margin: 0;
   font-weight: 400;
   background-color: mediumpurple;
@@ -136,14 +136,13 @@ footer.banner {
   height: 5em;
   width: 5em;
   text-align: center;
-  transform: rotate(-19deg);
 }
 .line {
   border-bottom: 0.1em solid black;
   position: absolute;
   height: 0;
-  width: 90vh;
-  max-width: 90vh;
+  width: 85vh;
+  max-width: 85vh;
   transform-origin: center;
   z-index: 1;
 }
