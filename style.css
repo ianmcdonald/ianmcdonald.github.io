@@ -32,8 +32,7 @@ section:last-child {
 article {
   display: block;
   margin: 0;
-  padding: 0 0 4em 0;
-  max-width: 40em;
+  padding: 0;
 }
 a {
   color: inherit;
@@ -106,6 +105,12 @@ figcaption {
 small {
   font-size: 0.5em;
   display: inline-block;
+}
+footer {
+  margin: 0;
+  padding: 1em 0.5em;
+  background-color: #FF8822;
+  color: white;
 }
 .banner {
   position: relative;
@@ -181,6 +186,9 @@ footer.banner {
 }
 .col {
   width: 100%;
+}
+.blog {
+  border-top: 0.1em solid #FF8822;
 }
 @media (min-width: 30em) {
   .col {
