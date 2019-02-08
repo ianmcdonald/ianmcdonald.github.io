@@ -190,14 +190,12 @@ footer.banner {
 .blog {
   border-top: 0.1em solid #FF8822;
 }
-@media (min-width: 30em) {
-  .col {
-    width: 49%;
-  }
-}
 @media (min-width: 40em) {
   body {
     font-size: 1.5em;
+  }
+  .col {
+    width: 49%;
   }
 }
 @media (min-width: 75em) {
