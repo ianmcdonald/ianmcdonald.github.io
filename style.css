@@ -37,7 +37,7 @@ article {
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 0.1em solid;
+  border-bottom: 0.1em solid mediumpurple;
 }
 a:hover, a:focus {
   color: inherit;
@@ -105,12 +105,6 @@ figcaption {
 small {
   font-size: 0.5em;
   display: inline-block;
-}
-footer {
-  margin: 0;
-  padding: 1em 0.5em;
-  background-color: mediumpurple;
-  color: white;
 }
 .banner {
   position: relative;
@@ -189,6 +183,15 @@ footer.banner {
 }
 .blog {
   border-top: 0.1em solid mediumpurple;
+}
+.blog footer {
+  margin: 0;
+  padding: 1em 0.5em;
+  background-color: mediumpurple;
+  color: white;
+}
+.blog footer a {
+  border-bottom-color: black;
 }
 @media (min-width: 40em) {
   body {
