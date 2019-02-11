@@ -43,7 +43,7 @@ a:hover, a:focus {
   color: inherit;
   outline: none;
   text-decoration: none;
-  border-bottom-color: mediumpurple;
+  border-bottom-color: transparent;
 }
 ul {
   margin: 0;
