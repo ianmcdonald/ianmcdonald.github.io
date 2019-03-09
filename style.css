@@ -59,9 +59,8 @@ li:before {
 h1, h2 {
   font-weight: 400;
   font-size: 1em;
-  margin: 0 0 0.25em 0;
+  margin: 0;
   padding: 0;
-  text-transform: uppercase;
 }
 h3, h4, h5, h6 {
   font-size: 1em;
