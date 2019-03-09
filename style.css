@@ -39,7 +39,7 @@ a:hover, a:focus {
   color: inherit;
   outline: none;
   text-decoration: none;
-  border-bottom-color: transparent;
+  border-bottom-color: blue;
 }
 ul {
   margin: 0;
@@ -127,6 +127,7 @@ footer.banner {
   padding: 2em 0.5em;
   line-height: 1;
   color: transparent;
+  background-color: blue;
   z-index: 0;
   border: 0.1em solid;
   border-radius: 50%;
