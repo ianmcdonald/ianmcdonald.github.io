@@ -9,8 +9,8 @@ body {
   line-height: 1.2;
   margin: 0 auto;  
   padding: 0.25em;
-  color: black;
-  background-color: white;
+  color: #6d6d6d;
+  background-color: #1d1d1d;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -48,6 +48,9 @@ blockquote p {
 img {
   max-width: 100%;
   height: auto;
+}
+h1 + img {
+  margin-top: -1em;
 }
 ul, ol {
   margin-top: 0;
