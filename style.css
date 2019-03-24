@@ -28,6 +28,7 @@ header {
   font-size: 3em;
   line-height: 0.8;
   margin-bottom: 1em;
+  margin-left: -0.5rem;
   letter-spacing: -0.025em;
 }
 a {
