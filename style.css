@@ -4,7 +4,7 @@
 }
 body {
   font-family: Times, 'Times New Roman', serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.2;
   margin: 0 auto;  
@@ -37,7 +37,20 @@ blockquote {
   margin: 1em auto;
   padding: 0;
   font-family: Helvetica, Arial, Roboto, sans-serif;
-  font-size: 1em;
+  position: relative;  
+}
+blockquote:before {
+  content: '“';
+  font-family: Times, 'Times New Roman', serif;
+  position: absolute;
+  left: -0.375em;
+  margin-top: -0.125em;
+}
+blockquote:after {
+  content: '”';
+  font-family: Times, 'Times New Roman', serif;
+  position: relative;
+  margin-top: -0.125em;
 }
 img {
   max-width: 100%;
@@ -56,6 +69,9 @@ li {
 }
 li:before {
   content: '\2014';
+}
+.sans {
+  font-family: Helvetica, Arial, Roboto, sans-serif;
 }
 .buttons {
   display: flex;
