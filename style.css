@@ -69,12 +69,15 @@ ul, ol {
   list-style-type: none;
 }
 li {
-  display: block;
-  margin: 0 0 0.5em 0;
-  padding: 0;
+    display: block;
+    margin: 0 0 0.5em 1em;
+    padding: 0;
+    position: relative;
 }
 li:before {
   content: '\2014';
+  position: absolute;
+  left: -1em;
 }
 .sans {
   font-family: Helvetica, Arial, Roboto, sans-serif;
