@@ -8,7 +8,7 @@ body {
   font-weight: 400;
   line-height: 1.2;
   margin: 0 auto;  
-  padding: 0.5em;
+  padding: 0.75em;
   color: #1d1d1d;
   background-color: #fafafa;
   max-width: 100%;
@@ -43,7 +43,7 @@ blockquote:before {
   content: '“';
   font-family: Times, 'Times New Roman', serif;
   position: absolute;
-  left: -0.375em;
+  left: -0.5em;
   margin-top: -0.125em;
 }
 blockquote:after {
@@ -51,6 +51,9 @@ blockquote:after {
   font-family: Times, 'Times New Roman', serif;
   position: relative;
   margin-top: -0.125em;
+}
+blockquote * {
+  display: inline;
 }
 img {
   max-width: 100%;
