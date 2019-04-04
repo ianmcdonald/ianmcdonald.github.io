@@ -122,4 +122,7 @@ li:before {
   .col {
     width: 49%;
   }
+  body {
+    font-size: 28px;
+  }
 }
