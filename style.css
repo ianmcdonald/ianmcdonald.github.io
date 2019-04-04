@@ -112,12 +112,8 @@ li:before {
 }
 .why {
   border-radius: 50%;
-  filter: blur(0.666em);
   margin: 0 auto;
   display: block;
-}
-.why:hover {
-  filter: blur(0);
 }
 @media (min-width: 60em) {
   .col {
