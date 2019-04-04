@@ -118,11 +118,13 @@ li:before {
   margin: 0 auto;
   display: block;
 }
+@media (min-width: 40em) {
+  body {
+    font-size: 28px;
+  }
+}
 @media (min-width: 60em) {
   .col {
     width: 49%;
-  }
-  body {
-    font-size: 28px;
   }
 }
