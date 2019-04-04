@@ -3,15 +3,14 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Helvetica, Arial, Roboto, sans-serif;
-  font-size: 22px;
+  font-family: Times, 'Times New Roman', serif;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
   margin: 0 auto;  
-  padding: 1em 0.25em;
-  color: #6d6d6d;
-  background-color: #1d1d1d;
-  border-top: 0.5em solid yellow;
+  padding: 0.5em;
+  color: #1d1d1d;
+  background-color: #fafafa;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -20,52 +19,63 @@ main, article {
   margin: 0 auto;
   padding: 0;
 }
-section, header {
-  display: block;
-  margin: 0 0 0.25em 0;
-  padding: 0;
-}
-header {
-  font-size: 3em;
-  line-height: 0.8;
-  margin-bottom: 1em;
-  margin-left: -0.5rem;
-  letter-spacing: -0.025em;
-}
 a {
   color: inherit;
   text-decoration: underline;
 }
 a:hover, a:focus {
   text-decoration: none;
-  color: #1d1d1d;
-  background-color: #6d6d6d;
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
   font-weight: 400;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
   padding: 0;
 }
 blockquote {
   display: block;
   margin: 1em auto;
-  padding: 1em 0.5em;
-  border: 0.1em solid;
-}
-blockquote p {
-  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, Roboto, sans-serif;
+  font-size: 1em;
 }
 img {
   max-width: 100%;
   height: auto;
 }
-h1 + img {
-  margin: -0.5em 0 0.5em 0;
-}
 ul, ol {
-  margin-top: 0;
-  padding-top: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  display: block;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+li:before {
+  content: '\2014';
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.button {
+  display: block;
+  padding: 0.25em 0.5em;
+  margin: 0 0.5em 0.5em 0;
+  border: 1px solid #1d1d1d;
+  border-radius: 1em;
+  text-decoration: none;
+}
+.dashed {
+  border-style: dashed;
+}
+.button:hover,
+.button:focus {
+  border-style: dotted;
 }
 .grid {
   display: flex;
@@ -75,25 +85,17 @@ ul, ol {
 .col {
   width: 100%;
 }
-.text-right {
-  text-align: right;
+.why {
+  border-radius: 50%;
+  filter: blur(0.666em);
+  margin: 0 auto;
+  display: block;
 }
-header .col {
-  width: 50%;
+.why:hover {
+  filter: blur(0);
 }
-@media (min-width: 40em) {
-  body {
-    font-size: 1.5em;
-  }
+@media (min-width: 60em) {
   .col {
     width: 49%;
-  }
-  header {
-    font-size: 5em;
-  }
-}
-@media (min-width: 75em) {
-  body {
-    font-size: 2vw;
   }
 }
