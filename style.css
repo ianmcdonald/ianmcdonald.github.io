@@ -20,12 +20,13 @@ main, article {
   padding: 0;
 }
 a {
-  color: forestgreen;
+  color: pink;
   text-decoration: none;
   font-family: Helvetica, Arial, Roboto, sans-serif;
 }
 a:hover, 
 a:focus {
+  color: pink;
   text-decoration: none;
   font-style: italic;
 }
