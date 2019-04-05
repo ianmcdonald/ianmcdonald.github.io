@@ -103,6 +103,7 @@ li:before {
   border-radius: 1em;
   text-decoration: none;
   font-family: inherit;
+  color: inherit;
 }
 .dashed {
   border-style: dashed;
