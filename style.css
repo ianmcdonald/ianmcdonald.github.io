@@ -90,20 +90,16 @@ li:before {
   display: block;
   padding: 0.25em 0.5em;
   margin: 0 0.5em 0.5em 0;
-  border: 1px solid;
-  border-radius: 0.25em;
+  border: 1px dotted;
+  border-radius: 1em;
   text-decoration: none;
   font-family: inherit;
   color: inherit;
   flex-grow: 2;
-  min-height: 5em;
-}
-.dashed {
-  border-style: dashed;
 }
 .button:hover,
 .button:focus {
-  border-style: dotted;
+  border-style: solid;
   font-style: normal;
 }
 .grid {
