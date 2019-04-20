@@ -11,14 +11,14 @@ body {
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.0175em;
-  margin: 0 auto;
+  margin: 0 auto 6.66em auto;;
   padding: 0.5em 0.75em;
   color: #1d1d1d;
   background-color: #fafafa;
   max-width: 100%;
   overflow-x: hidden;
-  -webkit-transform: skewY(-1deg);
-  transform: skewY(-1deg);  
+  -webkit-transform: skewY(0.666deg);
+  transform: skewY(0.666deg); 
 }
 main, article {
   display: block;
