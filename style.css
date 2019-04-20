@@ -41,12 +41,11 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 h1 {
-  margin-bottom: 0;  
-}
-article h1 {
+  margin-bottom: 0;
   text-transform: lowercase;
 }
 h2 {
+  text-transform: lowercase;
   margin-bottom: 0.5em;
 }
 blockquote {
