@@ -1,6 +1,10 @@
+
 /* Ian Mcdonald */
 * {
   box-sizing: border-box;
+}
+html {
+  background-color: #1d1d1d;
 }
 body {
   font-family: Helvetica, Arial, Roboto, sans-serif;
