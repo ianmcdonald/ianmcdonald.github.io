@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 h1 {
   margin-bottom: 0;
+  text-transform: lowercase;
 }
 blockquote {
   display: block;
@@ -94,6 +95,7 @@ li:before {
   margin: 0 0.5em 0.5em 0;
   border: 1px solid;
   text-decoration: none;
+  text-transform: lowercase;
   font-family: inherit;
   color: inherit;
   flex-grow: 2;
