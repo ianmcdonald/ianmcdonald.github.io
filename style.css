@@ -2,6 +2,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  background-color: #1d1d1d;
+}
 body {
   font-family: Helvetica, Arial, Roboto, sans-serif;
   font-size: 22px;
@@ -14,6 +17,8 @@ body {
   background-color: #fafafa;
   max-width: 100%;
   overflow-x: hidden;
+  -webkit-transform: skewY(-1deg);
+  transform: skewY(-1deg);  
 }
 main, article {
   display: block;
