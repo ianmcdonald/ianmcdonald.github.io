@@ -95,13 +95,13 @@ li:before {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-right: -0.5em;
+  border: 1px solid #fafafa;
 }
 .button {
   display: block;
   padding: 0.125em 0.25em;
-  margin: 0 0.5em 0.5em 0;
-  border: 1px solid;
+  margin: 0;
+  border: 1px solid #fafafa;
   text-decoration: none;
   text-transform: lowercase;
   font-family: inherit;
