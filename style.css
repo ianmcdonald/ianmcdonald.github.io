@@ -25,14 +25,12 @@ main, article {
   padding: 0;
 }
 a {
-  color: blue;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
-  color: blue;
-  text-decoration: none;
-  font-style: italic;
+  text-decoration: line-through;
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
@@ -96,6 +94,7 @@ li:before {
   flex-wrap: wrap;
   justify-content: flex-start;
   border: 1px solid #fafafa;
+  margin: -0.25em 0 2em 0;
 }
 .button {
   display: block;
@@ -111,6 +110,7 @@ li:before {
 .button:hover,
 .button:focus {
   font-style: normal;
+  text-decoration: line-through;
 }
 .grid {
   display: flex;
