@@ -10,10 +10,10 @@ body {
   font-family: Helvetica, Arial, Roboto, sans-serif;
   font-size: 22px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: -0.0175em;
   margin: 0 auto;;
-  padding: 0.5em 0.75em;
+  padding: 0.5em;
   background-color: #1d1d1d;
   color: #fafafa;
   max-width: 100%;
@@ -55,7 +55,7 @@ blockquote {
 blockquote:before {
   content: '“';
   position: absolute;
-  left: -0.5em;
+  left: -0.425em;
   margin-top: -0.125em;
   font-family: Times, 'Times New Roman', serif;
 }
