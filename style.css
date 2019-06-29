@@ -46,6 +46,9 @@ h2 {
   text-transform: lowercase;
   margin-bottom: 0.5em;
 }
+h1 a, h2 a {
+  text-decoration: none;
+}
 blockquote {
   display: block;
   margin: 1em auto;
