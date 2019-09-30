@@ -125,6 +125,9 @@ li:before {
 .serif {
   font-family: Times, 'Times New Roman', serif;
 }
+p[rel=author] {
+  text-transform: lowercase;
+}
 @media (min-width: 50em) {
   body {
     font-size: 3vw;
