@@ -105,7 +105,7 @@ li:before {
   text-transform: lowercase;
   font-family: inherit;
   color: inherit;
-  border-radius: 1.5em;
+  border-radius: 1em;
 }
 .button:hover,
 .button:focus {
