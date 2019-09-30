@@ -13,7 +13,7 @@ body {
   margin: 0 auto;;
   padding: 0.5em;
   background-color: white;
-  color: #338dcc;
+  color: blue;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -94,14 +94,14 @@ li:before {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  border: 1px solid #338dcc;
+  border: 1px solid blue;
   margin: -0.25em 0 2em 0;
 }
 .button {
   display: block;
   padding: 0.125em 0.25em;
   margin: 0;
-  border: 1px solid #338dcc;
+  border: 1px solid blue;
   text-decoration: none;
   text-transform: lowercase;
   font-family: inherit;
