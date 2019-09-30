@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  background-color: #1d1d1d;
+  background-color: white;
 }
 body {
   font-family: Helvetica, Arial, Roboto, sans-serif;
@@ -14,8 +14,8 @@ body {
   letter-spacing: -0.0175em;
   margin: 0 auto;;
   padding: 0.5em;
-  background-color: #1d1d1d;
-  color: #fafafa;
+  background-color: white;
+  color: #338dcc;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -96,14 +96,14 @@ li:before {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  border: 1px solid #fafafa;
+  border: 1px solid #338dcc;
   margin: -0.25em 0 2em 0;
 }
 .button {
   display: block;
   padding: 0.125em 0.25em;
   margin: 0;
-  border: 1px solid #fafafa;
+  border: 1px solid #338dcc;
   text-decoration: none;
   text-transform: lowercase;
   font-family: inherit;
