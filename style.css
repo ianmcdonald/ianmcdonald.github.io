@@ -94,19 +94,21 @@ li:before {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  border: 1px solid blue;
-  margin: -0.25em 0 2em 0;
+  margin: 0 0 2em 0;
 }
 .button {
   display: block;
-  padding: 0.125em 0.25em;
-  margin: 0;
-  border: 1px solid blue;
+  padding: 0.5em 0.5em;
+  margin: 0 1px 4px 0;
+  border: 1px solid;
   text-decoration: none;
   text-transform: lowercase;
   font-family: inherit;
   color: inherit;
   flex-grow: 2;
+  border-radius: 1.5em;
+  text-align: center;
+  box-shadow: inset 0.25em -0.25em 0.5em 0;
 }
 .button:hover,
 .button:focus {
