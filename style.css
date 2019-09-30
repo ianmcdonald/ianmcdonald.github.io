@@ -106,7 +106,6 @@ li:before {
   font-family: inherit;
   color: inherit;
   border-radius: 1.5em;
-  text-align: center;
 }
 .button:hover,
 .button:focus {
