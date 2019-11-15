@@ -13,13 +13,14 @@ body {
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
+  font-weight: normal;
   margin: 0 0 1em 0;
   padding: 0;
 }
 img {
   max-width: 100%;
 }
-article {
-  margin: 0 0 0 auto;
-  max-width: 40em;
+main {
+  margin: 0 auto;
+  max-width: 35em;
 }
