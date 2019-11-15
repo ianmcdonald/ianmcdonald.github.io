@@ -1,138 +1,25 @@
 * {
   box-sizing: border-box;
 }
-html {
-  background-color: white;
-}
 body {
-  font-family: Helvetica, Arial, Roboto, sans-serif;
   font-size: 22px;
-  font-weight: 400;
-  line-height: 1.1;
+  font-weight: normal;
+  line-height: 1.25;
   letter-spacing: -0.0175em;
-  margin: 0 auto;;
+  margin: 0;
   padding: 0.25em;
   background-color: white;
-  color: blue;
+  color: black;
   max-width: 100%;
-  overflow-x: hidden;
-}
-main, article {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-}
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-a:hover,
-a:focus {
-  text-decoration: line-through;
+  font-family: georgia, times, serif;
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
-  font-weight: 400;
+  font-weight: normal;
   margin: 0 0 1em 0;
   padding: 0;
-}
-h1 {
-  margin-bottom: 0;
-  text-transform: lowercase;
-}
-h2 {
-  text-transform: lowercase;
-  margin-bottom: 0.5em;
-}
-h1 a, h2 a {
-  text-decoration: none;
-}
-blockquote {
-  display: block;
-  margin: 1em auto;
-  padding: 0;
-  position: relative;
-}
-blockquote:before {
-  content: '“';
-  position: absolute;
-  left: -0.425em;
-  margin-top: -0.125em;
-  font-family: Times, 'Times New Roman', serif;
-}
-blockquote:after {
-  content: '”';
-  position: relative;
-  margin-top: -0.125em;
-  font-family: Times, 'Times New Roman', serif;
-}
-blockquote * {
-  display: inline;
+  max-width: 30em
 }
 img {
   max-width: 100%;
-  height: auto;
-}
-ul, ol {
-  display: block;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-li {
-    display: block;
-    margin: 0 0 0.5em 1em;
-    padding: 0;
-    position: relative;
-}
-li:before {
-  content: '\2014';
-  position: absolute;
-  left: -1em;
-}
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 0 0 2em 0;
-}
-.button {
-  display: block;
-  padding: 0.25em;
-  margin: 0 1px 0.125em 0;
-  border: 1px solid black;
-  text-decoration: none;
-  text-transform: lowercase;
-  font-family: inherit;
-  color: inherit;
-  border-radius: 1em;
-}
-.button:hover,
-.button:focus {
-  font-style: normal;
-  text-decoration: line-through;
-}
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.col {
-  width: 100%;
-}
-.serif {
-  font-family: Times, 'Times New Roman', serif;
-}
-p[rel=author] {
-  text-transform: lowercase;
-}
-@media (min-width: 50em) {
-  body {
-    font-size: 3vw;
-  }
-}
-@media (min-width: 60em) {
-  .col {
-    width: 49%;
-  }
 }
