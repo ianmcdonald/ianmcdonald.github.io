@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: normal;
   margin: 0;
   padding: 0.25em;
@@ -21,6 +21,6 @@ img {
   max-width: 100%;
 }
 main {
-  margin: 0 auto;
-  max-width: 35em;
+  margin: 0;
+  max-width: 40em;
 }
