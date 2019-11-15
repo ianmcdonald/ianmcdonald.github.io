@@ -4,8 +4,6 @@
 body {
   font-size: 22px;
   font-weight: normal;
-  line-height: 1.25;
-  letter-spacing: -0.0175em;
   margin: 0;
   padding: 0.25em;
   background-color: white;
@@ -15,10 +13,9 @@ body {
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
-  font-weight: normal;
   margin: 0 0 1em 0;
   padding: 0;
-  max-width: 30em
+  max-width: 40em
 }
 img {
   max-width: 100%;
