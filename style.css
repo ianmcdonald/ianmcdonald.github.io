@@ -11,7 +11,7 @@ body {
   background-color: white;
   color: black;
   max-width: 100%;
-  font-family: georgia, times, serif;
+  font-family: helvetica, arial, roboto, sans-serif;
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
