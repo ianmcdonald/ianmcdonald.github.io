@@ -10,18 +10,28 @@ body {
   color: black;
   font-family: helvetica, arial, roboto, sans-serif;
 }
+img {
+  max-width: 100%;
+}
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
   font-weight: bold;
   margin: 0 0 1em 0;
   padding: 0;
 }
-h1 {
-  margin-bottom: 3em;
+header {
+  display: block;
+  margin: 0 auto 2em auto;
+  padding: 0;
+  max-width: 30em;
   text-align: center;
 }
-img {
-  max-width: 100%;
+footer {
+  display: block;
+  margin: 3em auto 0 auto;
+  padding: 0;
+  max-width: 30em;
+  text-align: center;
 }
 main {
   margin: 0 auto;
