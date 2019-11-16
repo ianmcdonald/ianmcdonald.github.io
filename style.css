@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 html {
-  background: black;
+  background: #bd28eb;
 }
 body {
   font-size: 24px;
@@ -11,9 +11,16 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.25em;
-  background: white;
-  color: black;
+  background: #d3d3d3;
+  color: #bd28eb;
   font-family: helvetica, arial, roboto, sans-serif;
+}
+a {
+  color: #bd28eb;
+  text-decoration: underline;
+}
+a:hover, a:focus {
+  text-decoration: line-through;
 }
 img {
   max-width: 100%;
