@@ -3,17 +3,16 @@
 }
 body {
   font-size: 24px;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0;
   padding: 0.25em;
-  background-color: white;
+  background: white;
   color: black;
-  max-width: 100%;
   font-family: helvetica, arial, roboto, sans-serif;
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0 0 1em 0;
   padding: 0;
 }
