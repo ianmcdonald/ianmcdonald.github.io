@@ -47,12 +47,3 @@ main {
   margin: 0;
   padding: 0;
 }
-@media (min-width: 59em) {
-  html {
-    animation: bg 1s linear 0s infinite normal;
-  }
-}
-@keyframes bg {
-  from { background-position: 0 0, 4px 4px; }
-  to { background-position: 0 16px, 4px 12px; }
-}
