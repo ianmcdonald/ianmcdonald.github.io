@@ -1,17 +1,10 @@
 * {
   box-sizing: border-box;
 }
-html {
-  background-color: #ffffff;
-  background-image: radial-gradient(#0000ff 15%, transparent 16%), radial-gradient(#0000ff 15%, transparent 16%);
-  background-size: 8px 8px;
-  background-position: 0 0, 4px 4px;
-  background-attachment: fixed;
-}
 body {
   font-size: 24px;
   font-weight: bold;
-  max-width: 40em;
+  max-width: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0.25em;
@@ -46,4 +39,9 @@ footer {
 main {
   margin: 0;
   padding: 0;
+}
+@media (min-width: 60em) {
+  body {
+    font-size: 2.5vw;
+  }
 }
