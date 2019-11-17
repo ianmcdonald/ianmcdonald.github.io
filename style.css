@@ -9,8 +9,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.125em;
-  background: #000000;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   font-family: helvetica, arial, roboto, sans-serif;
 }
 a {
