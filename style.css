@@ -55,7 +55,7 @@ form {
   color: blue;
 }
 button, input {
-  border: 2px solid;
+  border: 2px solid blue;
   background: transparent;
   color: inherit;
   margin: 0 0.25em 0.25em 0;
