@@ -47,6 +47,24 @@ form {
   display: block;
   width: 100%;
 }
+button, input {
+  border: 2px solid;
+  background: transparent;
+  color: inherit;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1;
+  padding: 0 0.25em;
+  font-weight: bold;
+  border-radius: 0.25em;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  height: 1.5em;
+}
+input:focus, input:hover, button:hover, button:focus, button:active {
+    border-style: dashed;
+} 
 @media (min-width: 60em) {
   body {
     font-size: 2.5vw;
