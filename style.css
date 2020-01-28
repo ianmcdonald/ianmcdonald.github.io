@@ -19,6 +19,8 @@ a {
 }
 a:hover, a:focus {
   text-decoration: line-through;
+  outline: none;
+  box-shadow: none;
 }
 img {
   max-width: 100%;
@@ -43,9 +45,14 @@ main {
 }
 form {
   margin: 5em 0;
+  margin: calc(50vh - 1.5em) 0;
   padding: 0;
   display: block;
   width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+  color: blue;
 }
 button, input {
   border: 2px solid;
@@ -63,7 +70,8 @@ button, input {
   height: 1.5em;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
-    border-style: dashed;
+  background: blue;
+  color: white;
 } 
 @media (min-width: 60em) {
   body {
