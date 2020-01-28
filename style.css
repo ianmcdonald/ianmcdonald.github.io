@@ -52,3 +52,9 @@ form {
     font-size: 2.5vw;
   }
 }
+@media (prefers-color-scheme: dark) {
+   body {
+     background: #ffffff;
+     color: #000000;
+  }
+}
