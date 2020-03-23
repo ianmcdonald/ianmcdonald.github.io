@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.125em;
-  background: white;
+  background: black;
   color: blue;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
@@ -79,10 +79,5 @@ input:focus, input:hover, button:hover, button:focus, button:active {
 @media (min-width: 60em) {
   body {
     font-size: 2.275vw;
-  }
-}
-@media (prefers-color-scheme: dark) {
-   body {
-     background: black;
   }
 }
