@@ -9,8 +9,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.125em;
-  background: #ffffff;
-  color: #000000;
+  background: white;
+  color: blue;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
 }
@@ -57,7 +57,7 @@ form {
   color: blue;
 }
 button, input {
-  border: 2px solid blue;
+  border: 2px solid red;
   background: transparent;
   color: inherit;
   margin: 0 0.25em 0.25em 0;
@@ -73,7 +73,7 @@ button, input {
   max-width: 85%;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
-  background: blue;
+  background: red;
   color: white;
 } 
 @media (min-width: 60em) {
@@ -83,7 +83,7 @@ input:focus, input:hover, button:hover, button:focus, button:active {
 }
 @media (prefers-color-scheme: dark) {
    body {
-     background: #000000;
-     color: #ffffff;
+     background: blue;
+     color: white;
   }
 }
