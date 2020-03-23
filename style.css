@@ -54,10 +54,10 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: black;
+  color: red;
 }
 button, input {
-  border: 2px solid black;
+  border: 2px solid red;
   background: transparent;
   color: inherit;
   margin: 0 0.25em 0.25em 0;
@@ -73,7 +73,7 @@ button, input {
   max-width: 85%;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
-  background: black;
+  background: red;
   color: white;
 } 
 @media (min-width: 60em) {
@@ -83,7 +83,6 @@ input:focus, input:hover, button:hover, button:focus, button:active {
 }
 @media (prefers-color-scheme: dark) {
    body {
-     background: blue;
-     color: white;
+     background: black;
   }
 }
