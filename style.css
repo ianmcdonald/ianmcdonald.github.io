@@ -54,10 +54,10 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: red;
+  color: mediumpurple;
 }
 button, input {
-  border: 2px solid red;
+  border: 2px solid mediumpurple;
   background: transparent;
   color: inherit;
   margin: 0 0.25em 0.25em 0;
@@ -73,7 +73,7 @@ button, input {
   max-width: 85%;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
-  background: red;
+  background: mediumpurple;
   color: white;
 } 
 @media (min-width: 60em) {
