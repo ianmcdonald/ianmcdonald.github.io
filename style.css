@@ -74,7 +74,7 @@ button, input {
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   background: mediumpurple;
-  color: white;
+  color: black;
 } 
 @media (min-width: 60em) {
   body {
