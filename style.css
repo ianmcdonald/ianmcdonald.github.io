@@ -54,7 +54,7 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: blue;
+  color: red;
 }
 button, input {
   border: 2px solid red;
