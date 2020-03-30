@@ -44,6 +44,7 @@ footer {
 main {
   margin: 0;
   padding: 0;
+  max-width: 30em;
 }
 form {
   margin: 5em 0;
