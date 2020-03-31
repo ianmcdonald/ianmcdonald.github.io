@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.25em;
-  background: #d3d3d3;
+  background: #ccccff;
   color: #000000;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
@@ -55,10 +55,10 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: mediumpurple;
+  color: #0000ff;
 }
 button, input {
-  border: 2px solid mediumpurple;
+  border: 2px solid #0000ff;
   background: transparent;
   color: inherit;
   margin: 0 0.25em 0.25em 0;
@@ -74,7 +74,7 @@ button, input {
   max-width: 85%;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
-  background: mediumpurple;
+  background: #0000ff;
   color: black;
 } 
 /* @media (min-width: 60em) {
