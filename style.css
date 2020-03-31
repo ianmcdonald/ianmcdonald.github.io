@@ -58,7 +58,7 @@ form {
   color: #0000ff;
 }
 button, input {
-  border: 2px solid #0000ff;
+  border: 1px dotted #0000ff;
   background: transparent;
   color: inherit;
   margin: 0 0.25em 0.25em 0;
@@ -66,7 +66,7 @@ button, input {
   line-height: 1;
   padding: 0 0.25em;
   font-weight: bold;
-  border-radius: 0.25em;
+  border-radius: 0;
   outline: none;
   box-shadow: none;
   cursor: pointer;
@@ -74,11 +74,5 @@ button, input {
   max-width: 85%;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
-  background: #0000ff;
-  color: black;
+  border-style: solid;
 } 
-/* @media (min-width: 60em) {
-  body {
-    font-size: 2.275vw;
-  }
-} */
