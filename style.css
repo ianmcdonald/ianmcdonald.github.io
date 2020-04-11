@@ -9,8 +9,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.25em;
-  background: #ccccff;
-  color: #000000;
+  background: black;
+  color: white;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
 }
@@ -55,10 +55,10 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: #0000ff;
+  color: blue;
 }
 button, input {
-  border: 1px dotted #0000ff;
+  border: 1px dotted blue;
   background: transparent;
   color: inherit;
   margin: 0 0.25em 0.25em 0;
