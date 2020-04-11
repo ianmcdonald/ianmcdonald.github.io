@@ -13,7 +13,7 @@ body {
   color: #000000;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
-  border-top: 5px solid #ffff4d;
+/*   border-top: 5px solid #ffff4d; */
 }
 @media (min-width: 55em) {
   body {
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, p {
   word-break: break-word;
 }
 header {
-  margin: 0 0 2em 0;
+  margin: 0 0 6em 0;
   padding: 0;
 }
 footer {
