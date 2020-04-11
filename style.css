@@ -13,6 +13,7 @@ body {
   color: black;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
+  border-top: 5px solid #ffff4d;
 }
 @media (min-width: 55em) {
   body {
