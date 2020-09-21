@@ -3,17 +3,16 @@
 }
 body {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.2;
   max-width: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0.25em;
-  background: #fcfcfc;
-  color: #000000;
+  background: black;
+  color: mediumpurple;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
-/*   border-top: 5px solid #ffff4d; */
 }
 @media (min-width: 55em) {
   body {
@@ -34,7 +33,7 @@ img {
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0 0 1em 0;
   padding: 0;
   word-break: break-word;
@@ -61,12 +60,12 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: blue;
+  color: white;
 }
 button, input {
-  border: 1px dotted blue;
+  border: 1px dotted white;
   background: transparent;
-  color: inherit;
+  color: white;
   margin: 0 0.25em 0.25em 0;
   font-size: 1em;
   line-height: 1;
@@ -81,4 +80,5 @@ button, input {
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
+  background: black;
 } 
