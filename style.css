@@ -64,7 +64,7 @@ form {
 }
 button, input {
   border: 1px dotted white;
-  background: transparent;
+  background: black;
   color: white;
   margin: 0 0.25em 0.25em 0;
   font-size: 1em;
