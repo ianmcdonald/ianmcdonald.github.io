@@ -60,12 +60,12 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: white;
+  color: mediumpurple;
 }
 button, input {
-  border: 1px dotted white;
+  border: 1px dotted mediumpurple;
   background: black;
-  color: white;
+  color: mediumpurple;
   margin: 0 0.25em 0.25em 0;
   font-size: 1em;
   line-height: 1;
