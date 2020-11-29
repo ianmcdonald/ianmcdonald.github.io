@@ -9,8 +9,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.25em;
-  background: black;
-  color: mediumpurple;
+  background-color: #e7e7e7;
+  color: #191919;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
 }
@@ -60,12 +60,12 @@ form {
   text-align: center;
   position: fixed;
   z-index: 2;
-  color: mediumpurple;
+  color: #191919;
 }
 button, input {
-  border: 1px dotted mediumpurple;
-  background: black;
-  color: mediumpurple;
+  border: 1px dotted #191919;
+  background: #e7e7e7;
+  color: #191919;
   margin: 0 0.25em 0.25em 0;
   font-size: 1em;
   line-height: 1;
@@ -80,5 +80,5 @@ button, input {
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
-  background: black;
+  background: #e7e7e7;
 } 
