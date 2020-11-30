@@ -59,12 +59,11 @@ main {
   color: #e7e7e7;
 }
 form {
-  padding: 0;
+  padding: 0.25em 0;
   display: block;
   width: 100%;
-  text-align: ;
-  position: fixed;
   color: #191919;
+  max-width: 24.5em;
 }
 button, input {
   border: 1px dotted #191919;
@@ -80,6 +79,8 @@ button, input {
   box-shadow: none;
   cursor: pointer;
   height: 1.5em;
+  display: block;
+  width: 100%;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
@@ -90,5 +91,10 @@ input:focus, input:hover, button:hover, button:focus, button:active {
   body {
     font-size: 2vw;
     grid-template-columns: 50% 50%;
+  }
+  form {
+    position: fixed;
+    top: 0;
+    left: 0.25em;
   }
 }
