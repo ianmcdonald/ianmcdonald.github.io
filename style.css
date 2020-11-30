@@ -92,7 +92,7 @@ input:focus, input:hover, button:hover, button:focus, button:active {
     font-size: 2vw;
     grid-template-columns: 50% 50%;
   }
-  form {
+  form, header h1 {
     position: fixed;
     top: 0;
     left: 0.25em;
