@@ -81,6 +81,7 @@ button, input {
   height: 1.5em;
   display: block;
   width: 100%;
+  font-family: courier, monospace;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
