@@ -101,5 +101,6 @@ input:focus, input:hover, button:hover, button:focus, button:active {
     position: fixed;
     top: 0;
     left: 0.25em;
+    padding: 0.25em 0;
   }
 }
