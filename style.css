@@ -9,20 +9,22 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #e7e7e7;
-  color: #191919;
+  background-color: #000000;
+  color: #ff1493;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
   display: grid;
 }
 a {
-  color: inherit;
-  text-decoration: underline;
+  color: #008080;
+  text-decoration: none;
 }
 a:hover, a:focus {
-  text-decoration: line-through;
+  text-decoration: none;
   outline: none;
   box-shadow: none;
+  background-color: #008080;
+  color: #000000;
 }
 img {
   max-width: 100%;
@@ -41,6 +43,7 @@ header {
   margin: 0;
   padding: 0.25em;
   min-height: 50vh;
+  border-right: 1px solid;
 }
 header h1 {
   font-family: courier, monospace;
@@ -53,26 +56,24 @@ footer {
 hr {
   margin: 0 0 1em 0;
   border: none;
-  border-top: 1px dotted;
+  border-top: 1px solid;
 }
 main {
   margin: 0;
   padding: 0.25em;
   min-height: 50vh;
-  background-color: #191919;
-  color: #e7e7e7;
 }
 form {
   padding: 0.25em 0;
   display: block;
   width: 100%;
-  color: #191919;
+  color: #008080;
   max-width: 24.5em;
 }
 button, input {
-  border: 1px dotted #191919;
-  background: #e7e7e7;
-  color: #191919;
+  border: 1px solid #ff1493;
+  background: #000000;
+  color: #008080;
   margin: 0 0.25em 0.25em 0;
   font-size: 1em;
   line-height: 1;
@@ -89,8 +90,8 @@ button, input {
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
-  background: #191919;
-  color:  #e7e7e7;
+  background: #ff1493;
+  color:  #000000;
 }
 @media (min-width: 50em) {
   body {
@@ -103,4 +104,7 @@ input:focus, input:hover, button:hover, button:focus, button:active {
     left: 0.25em;
     padding: 0.25em 0;
   }
+  header {
+    border-right: none;
+    border-bottom: 1px solid;
 }
