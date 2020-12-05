@@ -43,7 +43,7 @@ header {
   margin: 0;
   padding: 0.25em;
   min-height: 50vh;
-  border-right: 1px solid;
+  border-bottom: 1px solid;
 }
 header h1 {
   font-family: courier, monospace;
@@ -105,6 +105,6 @@ input:focus, input:hover, button:hover, button:focus, button:active {
     padding: 0.25em 0;
   }
   header {
-    border-right: none;
-    border-bottom: 1px solid;
+    border-bottom: none;
+    border-right: 1px solid;
 }
