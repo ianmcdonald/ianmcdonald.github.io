@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  color: #ff66cc;
+  color: #ffffff;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
   display: grid;
@@ -43,7 +43,7 @@ header {
   margin: 0;
   padding: 0.25em;
   min-height: 50vh;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #ff66cc;
 }
 header h1 {
   font-family: courier, monospace;
@@ -56,7 +56,7 @@ footer {
 hr {
   margin: 0 0 1em 0;
   border: none;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #ff66cc;
 }
 main {
   margin: 0;
@@ -106,5 +106,5 @@ input:focus, input:hover, button:hover, button:focus, button:active {
   }
   header {
     border-bottom: none;
-    border-right: 1px solid #ffffff;
+    border-right: 1px solid #ff66cc;
 }
