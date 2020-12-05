@@ -10,20 +10,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  color: #ff1493;
+  color: #ff66cc;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
   display: grid;
 }
 a {
-  color: #008080;
+  color: #209ccc;
   text-decoration: none;
 }
 a:hover, a:focus {
   text-decoration: none;
   outline: none;
   box-shadow: none;
-  background-color: #008080;
+  background-color: #209ccc;
   color: #000000;
 }
 img {
@@ -67,13 +67,13 @@ form {
   padding: 0.25em 0;
   display: block;
   width: 100%;
-  color: #008080;
+  color: #209ccc;
   max-width: 24.5em;
 }
 button, input {
-  border: 1px solid #ff1493;
+  border: 1px solid #ff66cc;
   background: #000000;
-  color: #008080;
+  color: #209ccc;
   margin: 0 0.25em 0.25em 0;
   font-size: 1em;
   line-height: 1;
@@ -90,7 +90,7 @@ button, input {
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
-  background: #008080;
+  background: #209ccc;
   color:  #000000;
 }
 @media (min-width: 50em) {
