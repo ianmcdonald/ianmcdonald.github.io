@@ -90,7 +90,7 @@ button, input {
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
-  background: #ff1493;
+  background: #008080;
   color:  #000000;
 }
 @media (min-width: 50em) {
