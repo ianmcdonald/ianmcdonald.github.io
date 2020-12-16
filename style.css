@@ -14,8 +14,12 @@ body {
   background-color: #702b40;
   color: black;
 }
-img, svg {
+img {
   max-width: 100%;
+}
+svg {
+  max-width: 100%;
+  width: 2em;
 }
 svg path {
   fill: black;
