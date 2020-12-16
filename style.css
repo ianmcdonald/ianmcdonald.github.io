@@ -41,6 +41,13 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   word-break: break-word;
 }
+ul {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 1em;
+}
+li {
+  margin: 0 0 0.25em 0;
+}
 header {
   margin: 0;
   padding: 0.25em;
