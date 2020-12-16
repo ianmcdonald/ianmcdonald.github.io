@@ -19,11 +19,12 @@ img {
   max-width: 100%;
 }
 a {
-  color: black;
-  text-decoration: underline;
+  color: white;
+  text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6, p {
   font-size: 1em;
