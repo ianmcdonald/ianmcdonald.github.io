@@ -9,22 +9,11 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #000000;
-  color: #ffffff;
   font-family: helvetica, arial, roboto, sans-serif;
   text-transform: lowercase;
   display: grid;
-}
-a {
-  color: #209ccc;
-  text-decoration: underline;
-}
-a:hover, a:focus {
-  text-decoration: none;
-  outline: none;
-  box-shadow: none;
-  background-color: #209ccc;
-  color: #000000;
+  background-color: white;
+  color: black;
 }
 img {
   max-width: 100%;
@@ -35,20 +24,12 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 4em 0;
   padding: 0;
   word-break: break-word;
-  color: #ffffff;
-}
-h1 {
-  margin-bottom: 5em;
 }
 header {
   margin: 0;
   padding: 0.25em;
   min-height: 50vh;
-  border-bottom: 1px solid #ff66cc;
-}
-header h1 {
-  font-family: courier, monospace;
-  max-width: 24.5em;
+  border-bottom: 1px solid;
 }
 footer {
   margin: 2em 0;
@@ -57,7 +38,7 @@ footer {
 hr {
   margin: 0 0 1em 0;
   border: none;
-  border-top: 1px solid #ff66cc;
+  border-top: 1px solid;
 }
 main {
   margin: 0;
@@ -68,13 +49,12 @@ form {
   padding: 0.25em 0;
   display: block;
   width: 100%;
-  color: #209ccc;
   max-width: 24.5em;
 }
 button, input {
-  border: 1px solid #ff66cc;
-  background: #000000;
-  color: #209ccc;
+  border: 1px solid black;
+  background: white;
+  color: black;
   margin: 0 0.25em 0.25em 0;
   font-size: 1em;
   line-height: 1;
@@ -91,8 +71,8 @@ button, input {
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
   border-style: solid;
-  background: #209ccc;
-  color:  #000000;
+  background: black;
+  color:  white;
 }
 @media (min-width: 50em) {
   body {
@@ -107,5 +87,5 @@ input:focus, input:hover, button:hover, button:focus, button:active {
   }
   header {
     border-bottom: none;
-    border-right: 1px solid #ff66cc;
+    border-right: 1px solid;
 }
