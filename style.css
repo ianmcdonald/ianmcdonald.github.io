@@ -10,7 +10,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Times New Roman", "Times", serif;
-  display: grid;
   background-color: #702b40;
   color: black;
 }
@@ -94,15 +93,21 @@ input:focus, input:hover, button:hover, button:focus, button:active {
 @media (min-width: 50em) {
   body {
     font-size: 2vw;
-    grid-template-columns: 50% 50%;
-  }
-  form, header h1 {
-    position: fixed;
-    top: 0;
-    left: 0.25em;
-    padding: 0.25em 0;
   }
   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    min-height: 100vh;
     border-bottom: none;
     border-right: 1px solid;
+  }
+  main {
+    position: absolute;
+    left: 50vw;
+    top: 0;
+    width: 50vw;
+    min-height: 100vh;
+  }
 }
