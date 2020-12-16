@@ -86,7 +86,6 @@ button, input {
   font-family: courier, monospace;
 }
 input:focus, input:hover, button:hover, button:focus, button:active {
-  border-style: solid;
   background: black;
   color:  #702b40;
 }
